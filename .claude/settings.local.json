@@ -6,7 +6,8 @@
       "Bash(npm --version:*)",
       "Bash(where:*)",
       "Bash(cmd.exe /c \"where node\")",
-      "Bash(cmd.exe /c \"where npm\")"
+      "Bash(cmd.exe /c \"where npm\")",
+      "Bash(node --version:*)"
     ]
   }
 }
