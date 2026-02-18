@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "experience": "Erfahrung",
+    "projects": "Projekte",
+    "skills": "Fähigkeiten",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "name": "S. Kaan Oğuzkan",
+    "subtitle": "Informatikstudent | Softwareentwickler",
+    "tagline": "Ich entwickle saubere, skalierbare Software.",
+    "cta": "Meine Projekte"
+  },
+  "about": {
+    "title": "Über mich",
+    "paragraph1": "Ich bin Informatikstudent an der <strong>Bilkent-Universität</strong> mit praktischer Erfahrung in der Entwicklung von Full-Stack-Webanwendungen. Ich entwerfe gerne Backend-Systeme, die zuverlässig, performant und wartungsfreundlich sind.",
+    "paragraph2": "Derzeit arbeite ich als Teilzeit-Softwareentwickler bei <strong>Look & Cash</strong>, wo ich Echtzeitfunktionen, Reporting-Dashboards und produktiv eingesetzte Supportsysteme entwickle.",
+    "labels": {
+      "education": "Ausbildung",
+      "period": "Zeitraum",
+      "location": "Standort"
+    },
+    "education": "B.Sc. Informatik, Bilkent-Universität",
+    "period": "Sep 2023 – Heute",
+    "location": "Ankara, Türkei"
+  },
+  "experience": {
+    "title": "Erfahrung",
+    "jobs": [
+      {
+        "role": "Teilzeit-Softwareentwickler",
+        "company": "Look & Cash — Ankara, Türkei",
+        "date": "Feb 2025 – Heute",
+        "bullets": [
+          "<strong>Ticket-basiertes Supportsystem:</strong> Entwicklung eines Ticket-Workflows für Web/Mobil mit Priorität, Kommentaren, Anhängen und Status. 13 REST-Endpunkte, 4 Ticketstatus und 5 Admin-Aktionen; durchschnittliche Admin-Bearbeitungszeit um 25 % reduziert.",
+          "<strong>Echtzeit-Mobile-Support-Chat:</strong> Implementierung eines Echtzeit-Ticket-Chats auf Mobilgeräten mit Backend-Persistenz und Zustandssynchronisation. 300 ms p95-Nachrichtenzustellung und 99,5 % Zustellungserfolg bei 150 gleichzeitigen Sitzungen.",
+          "<strong>Reporting & Diagrammerstellung:</strong> Entwicklung von KPI-Reporting-APIs über MongoDB mit Datumsbereich- und Kampagnenfiltern. 14 Dashboard-Datensätze für 4 Diagrammtypen; Berichterstellungszeit von 6,2 s auf 1,9 s reduziert.",
+          "<strong>Admin-Landing-Page-Dashboard:</strong> Entwicklung eines Admin-Dashboards mit 12 KPIs und einer Seitenleiste zu 9 Admin-Seiten; Navigation von 5 Klicks auf 2 Klicks für häufige Admin-Aufgaben reduziert."
+        ],
+        "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "React", "React Native"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projekte",
+    "items": [
+      {
+        "name": "Artifactum",
+        "label": "CS319 — Software-Engineering-Projekt",
+        "description": "Verantwortlich für Artefaktaufnahme und LLM-Funktionen einer MERN-Anwendung. Gemini-Integration für Artefaktgenerierung/-analyse mit 6 Prompt-Workflows und 1 % LLM-Aufruf-Fehlerrate. S3-Multi-Datei- und ZIP-Massenupload-System für bis zu 50 MB / 200 Dateien. MongoDB-Sammlungen mit 8 Indizes entworfen; p95-Abfragelatenz von 420 ms auf 90 ms verbessert.",
+        "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "AWS S3", "Gemini API"],
+        "github": "https://github.com/kaanoguzkan/artifactum",
+        "linkText": "Auf GitHub ansehen"
+      },
+      {
+        "name": "NutriApp",
+        "label": "Amazon University Engagement Program",
+        "description": "Backend-Services für eine Mahlzeitenplanungs-App entwickelt. 16 serverlose REST-API-Endpunkte auf AWS Lambda mit p95-Latenz von 450 ms implementiert. People's Choice Award gewonnen — Platz 1 von 7 Teams.",
+        "tags": ["Node.js", "AWS Lambda", "DynamoDB", "REST"],
+        "github": "https://github.com/kaanoguzkan/nutriapp",
+        "linkText": "Auf GitHub ansehen"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Fähigkeiten",
+    "categories": [
+      { "name": "Sprachen", "items": ["C++", "Java", "JavaScript", "TypeScript"] },
+      { "name": "Backend", "items": ["Node.js", "Express", "AWS Lambda"] },
+      { "name": "Datenbanken", "items": ["MongoDB", "DynamoDB"] },
+      { "name": "Werkzeuge", "items": ["Git", "GitHub"] }
+    ]
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "text": "Schreiben Sie mir gerne, wenn Sie sich vernetzen oder zusammenarbeiten möchten.",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht gesendet! Ich melde mich bald bei Ihnen.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 S. Kaan Oğuzkan. Alle Rechte vorbehalten."
+  }
+}

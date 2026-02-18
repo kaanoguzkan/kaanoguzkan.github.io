@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "S. Kaan Oguzkan",
+    "subtitle": "Computer Engineering Student | Software Engineer",
+    "tagline": "Building clean, scalable software.",
+    "cta": "View My Work"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I'm a Computer Engineering student at <strong>Bilkent University</strong> with hands-on experience building full-stack web applications. I enjoy designing backend systems that are reliable, performant, and easy to maintain.",
+    "paragraph2": "Currently working as a Part-Time Software Engineer at <strong>Look & Cash</strong>, where I build real-time features, reporting dashboards, and support systems used in production.",
+    "labels": {
+      "education": "Education",
+      "period": "Period",
+      "location": "Location"
+    },
+    "education": "B.Sc. Computer Engineering, Bilkent University",
+    "period": "Sep 2023 – Present",
+    "location": "Ankara, Turkey"
+  },
+  "experience": {
+    "title": "Experience",
+    "jobs": [
+      {
+        "role": "Part-Time Software Engineer",
+        "company": "Look & Cash — Ankara, Turkey",
+        "date": "Feb 2025 – Present",
+        "bullets": [
+          "<strong>Ticket-Based Support System:</strong> Built a ticket workflow for web/mobile with priority, comments, attachments, and statuses. Shipped 13 REST endpoints, 4 ticket states, and 5 admin actions; reduced average admin handling time by 25%.",
+          "<strong>Real-Time Mobile Support Chat:</strong> Implemented real-time ticket chat on mobile with backend persistence and state sync. Achieved 300 ms p95 message delivery and 99.5% delivery success under 150 concurrent sessions.",
+          "<strong>Reporting & Graph Generation:</strong> Built KPI reporting APIs over MongoDB with date-range and campaign filters. Generated 14 dashboard datasets powering 4 chart types; cut report generation time from 6.2s to 1.9s.",
+          "<strong>Admin Landing Page Dashboard:</strong> Built an admin dashboard showing 12 KPIs with a sidebar linking to 9 admin pages; reduced navigation from 5 clicks to 2 clicks for common tasks."
+        ],
+        "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "React", "React Native"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "name": "Artifactum",
+        "label": "CS319 — Software Engineering Project",
+        "description": "Owned artifact ingestion and LLM features for a MERN application. Integrated Gemini for artifact generation/analysis with 6 prompt workflows and 1% LLM-call failure rate. Built S3 multi-file and ZIP bulk uploads processing up to 50 MB / 200 files. Designed MongoDB collections with 8 indexes, improving p95 query latency from 420 ms to 90 ms.",
+        "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "AWS S3", "Gemini API"],
+        "github": "https://github.com/kaanoguzkan/artifactum",
+        "linkText": "View on GitHub"
+      },
+      {
+        "name": "NutriApp",
+        "label": "Amazon University Engagement Program",
+        "description": "Built backend services for a meal-planning app. Implemented 16 serverless REST API endpoints on AWS Lambda with p95 latency of 450 ms. Won the People's Choice Award — top 1 of 7 teams.",
+        "tags": ["Node.js", "AWS Lambda", "DynamoDB", "REST"],
+        "github": "https://github.com/kaanoguzkan/nutriapp",
+        "linkText": "View on GitHub"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": [
+      { "name": "Languages", "items": ["C++", "Java", "JavaScript", "TypeScript"] },
+      { "name": "Backend", "items": ["Node.js", "Express", "AWS Lambda"] },
+      { "name": "Databases", "items": ["MongoDB", "DynamoDB"] },
+      { "name": "Tools", "items": ["Git", "GitHub"] }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "text": "Feel free to reach out if you'd like to connect or collaborate.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent! I'll get back to you soon.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 S. Kaan Oguzkan. All rights reserved."
+  }
+}

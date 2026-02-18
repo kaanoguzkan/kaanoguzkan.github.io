@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "about": "Hakkımda",
+    "experience": "Deneyim",
+    "projects": "Projeler",
+    "skills": "Yetenekler",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "name": "S. Kaan Oğuzkan",
+    "subtitle": "Bilgisayar Mühendisliği Öğrencisi | Yazılım Mühendisi",
+    "tagline": "Temiz ve ölçeklenebilir yazılımlar geliştiriyorum.",
+    "cta": "Projelerimi Gör"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "paragraph1": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği öğrencisiyim. Full-stack web uygulamaları geliştirme konusunda uygulamalı deneyime sahibim. Güvenilir, performanslı ve bakımı kolay backend sistemleri tasarlamaktan keyif alıyorum.",
+    "paragraph2": "Şu anda <strong>Look & Cash</strong>'te Yarı Zamanlı Yazılım Mühendisi olarak çalışıyorum. Gerçek zamanlı özellikler, raporlama panoları ve üretimde kullanılan destek sistemleri geliştiriyorum.",
+    "labels": {
+      "education": "Eğitim",
+      "period": "Dönem",
+      "location": "Konum"
+    },
+    "education": "Bilgisayar Mühendisliği Lisans, Bilkent Üniversitesi",
+    "period": "Eyl 2023 – Devam Ediyor",
+    "location": "Ankara, Türkiye"
+  },
+  "experience": {
+    "title": "Deneyim",
+    "jobs": [
+      {
+        "role": "Yarı Zamanlı Yazılım Mühendisi",
+        "company": "Look & Cash — Ankara, Türkiye",
+        "date": "Şub 2025 – Devam Ediyor",
+        "bullets": [
+          "<strong>Destek Talep Sistemi:</strong> Web/mobil için öncelik, yorum, ek dosya ve durum bilgisi içeren bir destek talebi iş akışı oluşturdum. 13 REST endpoint, 4 talep durumu ve 5 yönetici aksiyonu geliştirdim; toplu işlemler ve gelişmiş filtreleme ile ortalama yönetici işlem süresini %25 azalttım.",
+          "<strong>Gerçek Zamanlı Mobil Destek Sohbeti:</strong> Mobilde backend kalıcılığı ve durum senkronizasyonu ile gerçek zamanlı destek sohbeti uyguladım. 300 ms p95 mesaj iletimi ve 150 eşzamanlı oturum altında %99,5 iletim başarısı elde ettim.",
+          "<strong>Raporlama ve Grafik Oluşturma:</strong> MongoDB üzerinde tarih aralığı ve kampanya filtreli KPI raporlama API'leri geliştirdim. 4 grafik türünü besleyen 14 panel veri seti oluşturdum; rapor oluşturma süresini 6,2 saniyeden 1,9 saniyeye düşürdüm.",
+          "<strong>Yönetici Ana Sayfa Panosu:</strong> 12 KPI gösteren ve 9 yönetici sayfasına bağlanan bir yönetici panosu oluşturdum; sık yapılan yönetici görevleri için navigasyonu 5 tıklamadan 2 tıklamaya indirdim."
+        ],
+        "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "React", "React Native"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projeler",
+    "items": [
+      {
+        "name": "Artifactum",
+        "label": "CS319 — Yazılım Mühendisliği Projesi",
+        "description": "MERN uygulaması için artifakt alma ve LLM özelliklerini geliştirdim. 6 prompt iş akışı ve %1 LLM çağrı hata oranıyla Gemini entegrasyonu yaptım. 50 MB / 200 dosyaya kadar S3 çoklu dosya ve ZIP toplu yükleme sistemi kurdum. 8 indeks ile MongoDB koleksiyonları tasarladım; p95 sorgu gecikmesini 420 ms'den 90 ms'ye düşürdüm.",
+        "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "AWS S3", "Gemini API"],
+        "github": "https://github.com/kaanoguzkan/artifactum",
+        "linkText": "GitHub'da Gör"
+      },
+      {
+        "name": "NutriApp",
+        "label": "Amazon Üniversite Katılım Programı",
+        "description": "Yemek planlama uygulaması için backend servisleri geliştirdim. AWS Lambda üzerinde 450 ms p95 gecikme ile 16 sunucusuz REST API endpoint'i oluşturdum. Halkın Tercihi Ödülü'nü kazandım — 7 takım arasında birinci.",
+        "tags": ["Node.js", "AWS Lambda", "DynamoDB", "REST"],
+        "github": "https://github.com/kaanoguzkan/nutriapp",
+        "linkText": "GitHub'da Gör"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Yetenekler",
+    "categories": [
+      { "name": "Programlama Dilleri", "items": ["C++", "Java", "JavaScript", "TypeScript"] },
+      { "name": "Backend", "items": ["Node.js", "Express", "AWS Lambda"] },
+      { "name": "Veritabanları", "items": ["MongoDB", "DynamoDB"] },
+      { "name": "Araçlar", "items": ["Git", "GitHub"] }
+    ]
+  },
+  "contact": {
+    "title": "İletişime Geçin",
+    "text": "Bağlantı kurmak veya iş birliği yapmak isterseniz çekinmeden yazın.",
+    "form": {
+      "name": "İsim",
+      "email": "E-posta",
+      "message": "Mesaj",
+      "send": "Mesaj Gönder",
+      "sending": "Gönderiliyor...",
+      "success": "Mesajınız gönderildi! En kısa sürede dönüş yapacağım.",
+      "error": "Bir hata oluştu. Lütfen tekrar deneyin."
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 S. Kaan Oğuzkan. Tüm hakları saklıdır."
+  }
+}
