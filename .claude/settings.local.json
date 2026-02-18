@@ -10,7 +10,8 @@
       "Bash(node --version:*)",
       "Bash(npm install:*)",
       "Bash(ls:*)",
-      "Bash(npm config get:*)"
+      "Bash(npm config get:*)",
+      "Bash(npx vite build)"
     ]
   }
 }

@@ -2,9 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 
-// Replace YOUR_FORM_ID with your Formspree form ID.
-// Sign up at https://formspree.io, create a form, and paste the ID here.
-const FORMSPREE_URL = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORMSPREE_URL = 'https://formspree.io/f/xbdakqdq';
 
 function Contact() {
   const { t } = useTranslation();
