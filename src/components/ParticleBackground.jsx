@@ -7,17 +7,23 @@ function ParticleBackground() {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    let animationId;
+    let animationId = null;
     let particles = [];
+
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    const MAX_PARTICLES = isMobile ? 20 : 50;
+    const CONNECTION_DISTANCE = 120;
+    const CONNECTION_DISTANCE_SQ = CONNECTION_DISTANCE * CONNECTION_DISTANCE;
 
     const resize = () => {
       canvas.width = canvas.parentElement.offsetWidth;
       canvas.height = canvas.parentElement.offsetHeight;
+      createParticles();
     };
 
     const createParticles = () => {
       particles = [];
-      const count = Math.min(50, Math.floor((canvas.width * canvas.height) / 15000));
+      const count = Math.min(MAX_PARTICLES, Math.floor((canvas.width * canvas.height) / 15000));
       for (let i = 0; i < count; i++) {
         particles.push({
           x: Math.random() * canvas.width,
@@ -47,19 +53,22 @@ function ParticleBackground() {
         ctx.fillStyle = `rgba(${p.color}, ${p.opacity})`;
         ctx.fill();
 
-        for (let j = i + 1; j < particles.length; j++) {
-          const p2 = particles[j];
-          const dx = p.x - p2.x;
-          const dy = p.y - p2.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
+        if (!isMobile) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const dx = p.x - p2.x;
+            const dy = p.y - p2.y;
+            const distSq = dx * dx + dy * dy;
 
-          if (dist < 120) {
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(56, 189, 248, ${0.06 * (1 - dist / 120)})`;
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
+            if (distSq < CONNECTION_DISTANCE_SQ) {
+              const dist = Math.sqrt(distSq);
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = `rgba(56, 189, 248, ${0.06 * (1 - dist / CONNECTION_DISTANCE)})`;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
           }
         }
       }
@@ -67,18 +76,37 @@ function ParticleBackground() {
       animationId = requestAnimationFrame(draw);
     };
 
-    resize();
-    createParticles();
-    draw();
+    const startDraw = () => {
+      if (!animationId) {
+        animationId = requestAnimationFrame(draw);
+      }
+    };
 
-    window.addEventListener('resize', () => {
-      resize();
-      createParticles();
-    });
+    const stopDraw = () => {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+      }
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopDraw();
+      } else {
+        startDraw();
+      }
+    };
+
+    resize();
+    startDraw();
+
+    window.addEventListener('resize', resize);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
-      cancelAnimationFrame(animationId);
+      stopDraw();
       window.removeEventListener('resize', resize);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, []);
 

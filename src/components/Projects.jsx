@@ -1,3 +1,4 @@
+import { useState, useMemo, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 
@@ -14,17 +15,57 @@ const CodeIcon = () => (
 );
 
 function Projects() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const ref = useScrollFadeIn();
   const items = t('projects.items', { returnObjects: true });
+  const [activeTag, setActiveTag] = useState(null);
+
+  useEffect(() => {
+    setActiveTag(null);
+  }, [i18n.language]);
+
+  const allTags = useMemo(() => {
+    const tagSet = new Set();
+    items.forEach(p => p.tags.forEach(tag => tagSet.add(tag)));
+    return Array.from(tagSet).sort();
+  }, [items]);
+
+  const filteredItems = useMemo(() => {
+    if (!activeTag) return items;
+    return items.filter(p => p.tags.includes(activeTag));
+  }, [items, activeTag]);
+
+  const handleTagClick = (tag) => {
+    setActiveTag(prev => prev === tag ? null : tag);
+  };
 
   return (
     <section id="projects" className="fade-in" ref={ref}>
       <div className="container">
         <h2 className="section-title">{t('projects.title')}</h2>
+
+        <div className="project-filter-bar" role="group" aria-label="Filter projects by technology">
+          <button
+            className={`filter-tag${!activeTag ? ' filter-tag--active' : ''}`}
+            onClick={() => setActiveTag(null)}
+          >
+            {t('projects.filterAll')}
+          </button>
+          {allTags.map(tag => (
+            <button
+              key={tag}
+              className={`filter-tag${activeTag === tag ? ' filter-tag--active' : ''}`}
+              onClick={() => handleTagClick(tag)}
+              aria-pressed={activeTag === tag}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
+
         <div className="projects-grid">
-          {items.map((project, i) => (
-            <article className="glass-card project-card" key={i}>
+          {filteredItems.map((project) => (
+            <article className="glass-card project-card" key={project.name}>
               <div className="project-accent"></div>
               <div className="project-image-placeholder">
                 <CodeIcon />
@@ -35,7 +76,14 @@ function Projects() {
                 <p>{project.description}</p>
                 <div className="tech-tags">
                   {project.tags.map((tag) => (
-                    <span className="tag" key={tag}>{tag}</span>
+                    <button
+                      className={`tag tag--interactive${activeTag === tag ? ' tag--active' : ''}`}
+                      key={tag}
+                      onClick={() => handleTagClick(tag)}
+                      aria-pressed={activeTag === tag}
+                    >
+                      {tag}
+                    </button>
                   ))}
                 </div>
                 <a
@@ -51,6 +99,10 @@ function Projects() {
             </article>
           ))}
         </div>
+
+        {filteredItems.length === 0 && (
+          <p className="projects-empty">{t('projects.noResults')}</p>
+        )}
       </div>
     </section>
   );

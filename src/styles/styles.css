@@ -151,6 +151,23 @@ section {
 /* ===========================
    6. Navigation
    =========================== */
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--accent-violet));
+    z-index: 1001;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.05s linear;
+    pointer-events: none;
+    border-radius: 0 2px 2px 0;
+}
+
 #navbar {
     position: fixed;
     top: 0;
@@ -638,6 +655,62 @@ section {
 /* ===========================
    10. Projects Section
    =========================== */
+
+/* Project Filter Bar */
+.project-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.filter-tag {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: var(--muted);
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all var(--transition);
+}
+
+.filter-tag:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.filter-tag--active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--bg);
+}
+
+/* Interactive tag button inside project cards */
+.tag.tag--interactive {
+    background: rgba(56, 189, 248, 0.1);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.tag.tag--active {
+    background: rgba(56, 189, 248, 0.25);
+    outline: 1px solid var(--primary);
+    outline-offset: 1px;
+}
+
+/* Empty state */
+.projects-empty {
+    color: var(--muted);
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 0.95rem;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -865,6 +938,27 @@ section {
 .contact-form textarea {
     resize: vertical;
     min-height: 130px;
+}
+
+/* Form field wrapper for validation layout */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Error state on input/textarea */
+.contact-form input.field-error,
+.contact-form textarea.field-error {
+    border-color: #f87171;
+    box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.1);
+}
+
+/* Inline error message */
+.field-error-msg {
+    font-size: 0.78rem;
+    color: #f87171;
+    padding-left: 0.25rem;
 }
 
 .form-status {

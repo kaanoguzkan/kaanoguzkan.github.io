@@ -65,6 +65,8 @@
   },
   "projects": {
     "title": "Projeler",
+    "filterAll": "Tümü",
+    "noResults": "Bu teknoloji ile eşleşen proje bulunamadı.",
     "items": [
       {
         "name": "Artifactum",
@@ -140,7 +142,7 @@
   },
   "contact": {
     "title": "İletişime Geçin",
-    "text": "Bağlantı kurmak veya iş birliği yapmak isterseniz çekinmeden yazın.",
+    "text": "Bağlantı kurmak veya iş birliği yapmak isterseniz yazabilirsiniz.",
     "infoTitle": "İletişim Bilgileri",
     "location": "Ankara, Türkiye",
     "form": {
@@ -151,6 +153,13 @@
       "sending": "Gönderiliyor...",
       "success": "Mesajınız gönderildi! En kısa sürede dönüş yapacağım.",
       "error": "Bir hata oluştu. Lütfen tekrar deneyin."
+    },
+    "validation": {
+      "nameRequired": "Lütfen adınızı girin.",
+      "emailRequired": "Lütfen e-posta adresinizi girin.",
+      "emailInvalid": "Lütfen geçerli bir e-posta adresi girin.",
+      "messageRequired": "Lütfen bir mesaj girin.",
+      "messageTooShort": "Mesajınız en az 10 karakter olmalıdır."
     }
   },
   "resume": {

@@ -65,6 +65,8 @@
   },
   "projects": {
     "title": "Projects",
+    "filterAll": "All",
+    "noResults": "No projects match this technology.",
     "items": [
       {
         "name": "Artifactum",
@@ -151,6 +153,13 @@
       "sending": "Sending...",
       "success": "Message sent! I'll get back to you soon.",
       "error": "Something went wrong. Please try again."
+    },
+    "validation": {
+      "nameRequired": "Please enter your name.",
+      "emailRequired": "Please enter your email address.",
+      "emailInvalid": "Please enter a valid email address.",
+      "messageRequired": "Please enter a message.",
+      "messageTooShort": "Your message should be at least 10 characters."
     }
   },
   "resume": {

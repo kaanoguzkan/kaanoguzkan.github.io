@@ -4,25 +4,78 @@ import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 
 const FORMSPREE_URL = 'https://formspree.io/f/xbdakqdq';
 
+const EMPTY_FIELDS = { name: '', email: '', message: '' };
+const EMPTY_ERRORS = { name: '', email: '', message: '' };
+const EMPTY_TOUCHED = { name: false, email: false, message: false };
+
+function validate(fields, t) {
+  const errors = { ...EMPTY_ERRORS };
+  if (!fields.name.trim()) {
+    errors.name = t('contact.validation.nameRequired');
+  }
+  if (!fields.email.trim()) {
+    errors.email = t('contact.validation.emailRequired');
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) {
+    errors.email = t('contact.validation.emailInvalid');
+  }
+  if (!fields.message.trim()) {
+    errors.message = t('contact.validation.messageRequired');
+  } else if (fields.message.trim().length < 10) {
+    errors.message = t('contact.validation.messageTooShort');
+  }
+  return errors;
+}
+
+function hasErrors(errors) {
+  return Object.values(errors).some(Boolean);
+}
+
 function Contact() {
   const { t } = useTranslation();
   const ref = useScrollFadeIn();
   const [status, setStatus] = useState('idle');
+  const [fields, setFields] = useState(EMPTY_FIELDS);
+  const [errors, setErrors] = useState(EMPTY_ERRORS);
+  const [touched, setTouched] = useState(EMPTY_TOUCHED);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    const updated = { ...fields, [name]: value };
+    setFields(updated);
+    if (touched[name]) {
+      const newErrors = validate(updated, t);
+      setErrors(prev => ({ ...prev, [name]: newErrors[name] }));
+    }
+  };
+
+  const handleBlur = (e) => {
+    const { name } = e.target;
+    setTouched(prev => ({ ...prev, [name]: true }));
+    const newErrors = validate(fields, t);
+    setErrors(prev => ({ ...prev, [name]: newErrors[name] }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('sending');
-    const form = e.target;
+    setTouched({ name: true, email: true, message: true });
+    const newErrors = validate(fields, t);
+    setErrors(newErrors);
+    if (hasErrors(newErrors)) return;
 
+    setStatus('sending');
     try {
+      const formData = new FormData();
+      Object.entries(fields).forEach(([k, v]) => formData.append(k, v));
       const res = await fetch(FORMSPREE_URL, {
         method: 'POST',
-        body: new FormData(form),
+        body: formData,
         headers: { Accept: 'application/json' },
       });
       if (res.ok) {
         setStatus('success');
-        form.reset();
+        setFields(EMPTY_FIELDS);
+        setErrors(EMPTY_ERRORS);
+        setTouched(EMPTY_TOUCHED);
       } else {
         setStatus('error');
       }
@@ -36,10 +89,55 @@ function Contact() {
       <div className="container">
         <h2 className="section-title">{t('contact.title')}</h2>
         <div className="contact-split">
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <input type="text" name="name" placeholder={t('contact.form.name')} required />
-            <input type="email" name="email" placeholder={t('contact.form.email')} required />
-            <textarea name="message" rows="5" placeholder={t('contact.form.message')} required />
+          <form className="contact-form" onSubmit={handleSubmit} noValidate>
+            <div className="form-field">
+              <input
+                type="text"
+                name="name"
+                value={fields.name}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                placeholder={t('contact.form.name')}
+                className={touched.name && errors.name ? 'field-error' : ''}
+                aria-invalid={!!(touched.name && errors.name)}
+                aria-describedby={errors.name ? 'error-name' : undefined}
+              />
+              {touched.name && errors.name && (
+                <span className="field-error-msg" id="error-name" role="alert">{errors.name}</span>
+              )}
+            </div>
+            <div className="form-field">
+              <input
+                type="email"
+                name="email"
+                value={fields.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                placeholder={t('contact.form.email')}
+                className={touched.email && errors.email ? 'field-error' : ''}
+                aria-invalid={!!(touched.email && errors.email)}
+                aria-describedby={errors.email ? 'error-email' : undefined}
+              />
+              {touched.email && errors.email && (
+                <span className="field-error-msg" id="error-email" role="alert">{errors.email}</span>
+              )}
+            </div>
+            <div className="form-field">
+              <textarea
+                name="message"
+                value={fields.message}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                rows="5"
+                placeholder={t('contact.form.message')}
+                className={touched.message && errors.message ? 'field-error' : ''}
+                aria-invalid={!!(touched.message && errors.message)}
+                aria-describedby={errors.message ? 'error-message' : undefined}
+              />
+              {touched.message && errors.message && (
+                <span className="field-error-msg" id="error-message" role="alert">{errors.message}</span>
+              )}
+            </div>
             <button type="submit" className="btn" disabled={status === 'sending'}>
               {status === 'sending' ? t('contact.form.sending') : t('contact.form.send')}
             </button>
