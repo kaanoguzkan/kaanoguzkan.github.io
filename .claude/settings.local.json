@@ -11,7 +11,8 @@
       "Bash(npm install:*)",
       "Bash(ls:*)",
       "Bash(npm config get:*)",
-      "Bash(npx vite build)"
+      "Bash(npx vite build)",
+      "WebFetch(domain:www.linkedin.com)"
     ]
   }
 }

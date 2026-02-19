@@ -4,32 +4,53 @@
     "experience": "Experience",
     "projects": "Projects",
     "skills": "Skills",
-    "contact": "Contact"
+    "volunteering": "Volunteering",
+    "contact": "Contact",
+    "resume": "Resume"
   },
   "hero": {
     "name": "S. Kaan Oguzkan",
-    "subtitle": "Computer Engineering Student | Software Engineer",
+    "subtitle": "CS @ Bilkent | SWE @ Look & Cash",
     "tagline": "Building clean, scalable software.",
-    "cta": "View My Work"
+    "cta": "View My Work",
+    "downloadResume": "Download Resume",
+    "typingPhrases": [
+      "Full-Stack Developer",
+      "DevOps Enthusiast",
+      "Problem Solver",
+      "Software Engineer"
+    ]
   },
   "about": {
     "title": "About Me",
-    "paragraph1": "I'm a Computer Engineering student at <strong>Bilkent University</strong> with hands-on experience building full-stack web applications. I enjoy designing backend systems that are reliable, performant, and easy to maintain.",
-    "paragraph2": "Currently working as a Part-Time Software Engineer at <strong>Look & Cash</strong>, where I build real-time features, reporting dashboards, and support systems used in production.",
+    "paragraph1": "I'm a Computer Science student at <strong>Bilkent University</strong> with hands-on experience building full-stack web applications. I enjoy designing backend systems that are reliable, performant, and easy to maintain.",
+    "paragraph2": "Currently working as a Software Engineer at <strong>Look & Cash</strong>, building full-stack & devops solutions using React, TypeScript, JavaScript, MongoDB and AWS.",
     "labels": {
-      "education": "Education",
-      "period": "Period",
-      "location": "Location"
+      "location": "Location",
+      "languages": "Languages"
     },
-    "education": "B.Sc. Computer Engineering, Bilkent University",
-    "period": "Sep 2023 – Present",
-    "location": "Ankara, Turkey"
+    "location": "Ankara, Turkey",
+    "languages": "Turkish (Native), English (Full Professional)",
+    "educationItems": [
+      {
+        "school": "Bilkent University",
+        "degree": "B.S. Computer Science",
+        "period": "Sep 2023 – Jun 2027",
+        "detail": "Activity: Formula Bilkent"
+      },
+      {
+        "school": "Meram Fen Lisesi",
+        "degree": "High School Diploma",
+        "period": "Sep 2019 – Jun 2023",
+        "detail": "GPA: 97.3/100 — Established the school's MUN branch"
+      }
+    ]
   },
   "experience": {
     "title": "Experience",
     "jobs": [
       {
-        "role": "Part-Time Software Engineer",
+        "role": "Software Engineer",
         "company": "Look & Cash — Ankara, Turkey",
         "date": "Feb 2025 – Present",
         "bullets": [
@@ -38,7 +59,7 @@
           "<strong>Reporting & Graph Generation:</strong> Built KPI reporting APIs over MongoDB with date-range and campaign filters. Generated 14 dashboard datasets powering 4 chart types; cut report generation time from 6.2s to 1.9s.",
           "<strong>Admin Landing Page Dashboard:</strong> Built an admin dashboard showing 12 KPIs with a sidebar linking to 9 admin pages; reduced navigation from 5 clicks to 2 clicks for common tasks."
         ],
-        "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "React", "React Native"]
+        "tags": ["React", "TypeScript", "Node.js", "Express", "MongoDB", "AWS", "React Native"]
       }
     ]
   },
@@ -54,11 +75,19 @@
         "linkText": "View on GitHub"
       },
       {
+        "name": "Immune Wars",
+        "label": "CS102 — Intro to Programming II (Feb – May 2024)",
+        "description": "Educational game about the immune system built as a semester project. Features a graph-based body model where players defend against pathogens using immune cells. Designed game mechanics, pathogen AI, and visual feedback systems.",
+        "tags": ["Java", "OOP", "Game Development", "Graph Data Structures"],
+        "github": "https://github.com/kaanoguzkan/CS102-ImmuneWars",
+        "linkText": "View on GitHub"
+      },
+      {
         "name": "NutriApp",
         "label": "Amazon University Engagement Program",
         "description": "Built backend services for a meal-planning app. Implemented 16 serverless REST API endpoints on AWS Lambda with p95 latency of 450 ms. Won the People's Choice Award — top 1 of 7 teams.",
         "tags": ["Node.js", "AWS Lambda", "DynamoDB", "REST"],
-        "github": "https://github.com/kaanoguzkan/nutriapp",
+        "github": "https://github.com/arcmrt/NutriTech",
         "linkText": "View on GitHub"
       }
     ]
@@ -66,15 +95,54 @@
   "skills": {
     "title": "Skills",
     "categories": [
-      { "name": "Languages", "items": ["C++", "Java", "JavaScript", "TypeScript"] },
-      { "name": "Backend", "items": ["Node.js", "Express", "AWS Lambda"] },
-      { "name": "Databases", "items": ["MongoDB", "DynamoDB"] },
-      { "name": "Tools", "items": ["Git", "GitHub"] }
+      { "name": "Languages", "icon": "code", "items": ["C++", "Java", "JavaScript", "TypeScript"] },
+      { "name": "Frontend", "icon": "code", "items": ["React.js", "React Native", "HTML/CSS"] },
+      { "name": "Backend", "icon": "server", "items": ["Node.js", "Express", "AWS Lambda", "AWS"] },
+      { "name": "Databases", "icon": "database", "items": ["MongoDB", "DynamoDB"] },
+      { "name": "Tools & Practices", "icon": "wrench", "items": ["Git", "GitHub", "OOP", "Software Design", "Project Management"] },
+      { "name": "Other", "icon": "brain", "items": ["Game Development", "DevOps"] }
+    ]
+  },
+  "volunteering": {
+    "title": "Volunteering",
+    "items": [
+      {
+        "role": "Advisory Board President",
+        "organization": "Formula Bilkent",
+        "date": "Sep 2024 – Present",
+        "description": "Leading the advisory board and guiding strategic direction of the Formula Student team."
+      },
+      {
+        "role": "Board Member",
+        "organization": "Formula Bilkent",
+        "date": "Sep 2023 – Sep 2024",
+        "description": "Organized 20+ events and contributed to team operations and outreach."
+      },
+      {
+        "role": "Editor in Chief",
+        "organization": "Mercek Dergi",
+        "date": "Jul 2024 – Apr 2025",
+        "description": "Led editorial team and managed publication of the university magazine."
+      },
+      {
+        "role": "Active Member",
+        "organization": "IEEE Bilkent",
+        "date": "Sep 2023 – Jul 2024",
+        "description": "Organized career summit and Mercedes Career Talks events."
+      },
+      {
+        "role": "Founding Member",
+        "organization": "Bilkent Data Science and Analytics Society",
+        "date": "May 2024 – Feb 2025",
+        "description": "Organized a 6-part Data Science workshop series for the university community."
+      }
     ]
   },
   "contact": {
     "title": "Get in Touch",
     "text": "Feel free to reach out if you'd like to connect or collaborate.",
+    "infoTitle": "Contact Info",
+    "location": "Ankara, Turkey",
     "form": {
       "name": "Name",
       "email": "Email",
@@ -85,7 +153,14 @@
       "error": "Something went wrong. Please try again."
     }
   },
+  "resume": {
+    "title": "Resume",
+    "download": "Download PDF",
+    "close": "Close"
+  },
   "footer": {
-    "copyright": "© 2026 S. Kaan Oguzkan. All rights reserved."
+    "copyright": "© 2026 S. Kaan Oguzkan. All rights reserved.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect"
   }
 }

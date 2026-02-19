@@ -4,32 +4,53 @@
     "experience": "Erfahrung",
     "projects": "Projekte",
     "skills": "Fähigkeiten",
-    "contact": "Kontakt"
+    "volunteering": "Ehrenamt",
+    "contact": "Kontakt",
+    "resume": "Lebenslauf"
   },
   "hero": {
     "name": "S. Kaan Oğuzkan",
-    "subtitle": "Informatikstudent | Softwareentwickler",
+    "subtitle": "CS @ Bilkent | SWE @ Look & Cash",
     "tagline": "Ich entwickle saubere, skalierbare Software.",
-    "cta": "Meine Projekte"
+    "cta": "Meine Projekte",
+    "downloadResume": "Lebenslauf herunterladen",
+    "typingPhrases": [
+      "Full-Stack-Entwickler",
+      "DevOps-Enthusiast",
+      "Problemlöser",
+      "Softwareingenieur"
+    ]
   },
   "about": {
     "title": "Über mich",
     "paragraph1": "Ich bin Informatikstudent an der <strong>Bilkent-Universität</strong> mit praktischer Erfahrung in der Entwicklung von Full-Stack-Webanwendungen. Ich entwerfe gerne Backend-Systeme, die zuverlässig, performant und wartungsfreundlich sind.",
-    "paragraph2": "Derzeit arbeite ich als Teilzeit-Softwareentwickler bei <strong>Look & Cash</strong>, wo ich Echtzeitfunktionen, Reporting-Dashboards und produktiv eingesetzte Supportsysteme entwickle.",
+    "paragraph2": "Derzeit arbeite ich als Softwareingenieur bei <strong>Look & Cash</strong> und entwickle Full-Stack- und DevOps-Lösungen mit React, TypeScript, JavaScript, MongoDB und AWS.",
     "labels": {
-      "education": "Ausbildung",
-      "period": "Zeitraum",
-      "location": "Standort"
+      "location": "Standort",
+      "languages": "Sprachen"
     },
-    "education": "B.Sc. Informatik, Bilkent-Universität",
-    "period": "Sep 2023 – Heute",
-    "location": "Ankara, Türkei"
+    "location": "Ankara, Türkei",
+    "languages": "Türkisch (Muttersprache), Englisch (Volle berufliche Kompetenz)",
+    "educationItems": [
+      {
+        "school": "Bilkent-Universität",
+        "degree": "B.S. Informatik",
+        "period": "Sep 2023 – Jun 2027",
+        "detail": "Aktivität: Formula Bilkent"
+      },
+      {
+        "school": "Meram Fen Lisesi",
+        "degree": "Abitur",
+        "period": "Sep 2019 – Jun 2023",
+        "detail": "Notendurchschnitt: 97,3/100 — MUN-Zweig der Schule gegründet"
+      }
+    ]
   },
   "experience": {
     "title": "Erfahrung",
     "jobs": [
       {
-        "role": "Teilzeit-Softwareentwickler",
+        "role": "Softwareingenieur",
         "company": "Look & Cash — Ankara, Türkei",
         "date": "Feb 2025 – Heute",
         "bullets": [
@@ -38,7 +59,7 @@
           "<strong>Reporting & Diagrammerstellung:</strong> Entwicklung von KPI-Reporting-APIs über MongoDB mit Datumsbereich- und Kampagnenfiltern. 14 Dashboard-Datensätze für 4 Diagrammtypen; Berichterstellungszeit von 6,2 s auf 1,9 s reduziert.",
           "<strong>Admin-Landing-Page-Dashboard:</strong> Entwicklung eines Admin-Dashboards mit 12 KPIs und einer Seitenleiste zu 9 Admin-Seiten; Navigation von 5 Klicks auf 2 Klicks für häufige Admin-Aufgaben reduziert."
         ],
-        "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "React", "React Native"]
+        "tags": ["React", "TypeScript", "Node.js", "Express", "MongoDB", "AWS", "React Native"]
       }
     ]
   },
@@ -48,17 +69,25 @@
       {
         "name": "Artifactum",
         "label": "CS319 — Software-Engineering-Projekt",
-        "description": "Verantwortlich für Artefaktaufnahme und LLM-Funktionen einer MERN-Anwendung. Gemini-Integration für Artefaktgenerierung/-analyse mit 6 Prompt-Workflows und 1 % LLM-Aufruf-Fehlerrate. S3-Multi-Datei- und ZIP-Massenupload-System für bis zu 50 MB / 200 Dateien. MongoDB-Sammlungen mit 8 Indizes entworfen; p95-Abfragelatenz von 420 ms auf 90 ms verbessert.",
+        "description": "Verantwortlich für Artefaktaufnahme und LLM-Funktionen einer MERN-Anwendung. Gemini-Integration für Artefaktgenerierung/-analyse mit 6 Prompt-Workflows und 1 % LLM-Aufruf-Fehlerrate. S3-Multi-Datei- und ZIP-Massenupload für bis zu 50 MB / 200 Dateien. MongoDB-Sammlungen mit 8 Indizes; p95-Abfragelatenz von 420 ms auf 90 ms verbessert.",
         "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "AWS S3", "Gemini API"],
         "github": "https://github.com/kaanoguzkan/artifactum",
         "linkText": "Auf GitHub ansehen"
       },
       {
+        "name": "Immune Wars",
+        "label": "CS102 — Einführung in die Programmierung II (Feb – Mai 2024)",
+        "description": "Lernspiel über das Immunsystem als Semesterprojekt. Grafbasiertes Körpermodell, in dem Spieler mit Immunzellen gegen Krankheitserreger verteidigen. Spielmechanik, Pathogen-KI und visuelle Feedbacksysteme entworfen.",
+        "tags": ["Java", "OOP", "Spieleentwicklung", "Graph-Datenstrukturen"],
+        "github": "https://github.com/kaanoguzkan/CS102-ImmuneWars",
+        "linkText": "Auf GitHub ansehen"
+      },
+      {
         "name": "NutriApp",
         "label": "Amazon University Engagement Program",
-        "description": "Backend-Services für eine Mahlzeitenplanungs-App entwickelt. 16 serverlose REST-API-Endpunkte auf AWS Lambda mit p95-Latenz von 450 ms implementiert. People's Choice Award gewonnen — Platz 1 von 7 Teams.",
+        "description": "Backend-Services für eine Mahlzeitenplanungs-App entwickelt. 16 serverlose REST-API-Endpunkte auf AWS Lambda mit p95-Latenz von 450 ms. People's Choice Award gewonnen — Platz 1 von 7 Teams.",
         "tags": ["Node.js", "AWS Lambda", "DynamoDB", "REST"],
-        "github": "https://github.com/kaanoguzkan/nutriapp",
+        "github": "https://github.com/arcmrt/NutriTech",
         "linkText": "Auf GitHub ansehen"
       }
     ]
@@ -66,15 +95,54 @@
   "skills": {
     "title": "Fähigkeiten",
     "categories": [
-      { "name": "Sprachen", "items": ["C++", "Java", "JavaScript", "TypeScript"] },
-      { "name": "Backend", "items": ["Node.js", "Express", "AWS Lambda"] },
-      { "name": "Datenbanken", "items": ["MongoDB", "DynamoDB"] },
-      { "name": "Werkzeuge", "items": ["Git", "GitHub"] }
+      { "name": "Sprachen", "icon": "code", "items": ["C++", "Java", "JavaScript", "TypeScript"] },
+      { "name": "Frontend", "icon": "code", "items": ["React.js", "React Native", "HTML/CSS"] },
+      { "name": "Backend", "icon": "server", "items": ["Node.js", "Express", "AWS Lambda", "AWS"] },
+      { "name": "Datenbanken", "icon": "database", "items": ["MongoDB", "DynamoDB"] },
+      { "name": "Tools & Praktiken", "icon": "wrench", "items": ["Git", "GitHub", "OOP", "Softwaredesign", "Projektmanagement"] },
+      { "name": "Sonstiges", "icon": "brain", "items": ["Spieleentwicklung", "DevOps"] }
+    ]
+  },
+  "volunteering": {
+    "title": "Ehrenamt",
+    "items": [
+      {
+        "role": "Vorsitzender des Beirats",
+        "organization": "Formula Bilkent",
+        "date": "Sep 2024 – Heute",
+        "description": "Leitung des Beirats und strategische Ausrichtung des Formula-Student-Teams."
+      },
+      {
+        "role": "Vorstandsmitglied",
+        "organization": "Formula Bilkent",
+        "date": "Sep 2023 – Sep 2024",
+        "description": "Organisation von über 20 Veranstaltungen und Beitrag zum Teambetrieb."
+      },
+      {
+        "role": "Chefredakteur",
+        "organization": "Mercek Dergi",
+        "date": "Jul 2024 – Apr 2025",
+        "description": "Leitung des Redaktionsteams und Koordination der Universitätszeitschrift."
+      },
+      {
+        "role": "Aktives Mitglied",
+        "organization": "IEEE Bilkent",
+        "date": "Sep 2023 – Jul 2024",
+        "description": "Organisation von Karrieregipfel und Mercedes Career Talks."
+      },
+      {
+        "role": "Gründungsmitglied",
+        "organization": "Bilkent Data Science and Analytics Society",
+        "date": "Mai 2024 – Feb 2025",
+        "description": "Organisation einer 6-teiligen Data-Science-Workshop-Reihe für die Universitätsgemeinschaft."
+      }
     ]
   },
   "contact": {
     "title": "Kontakt aufnehmen",
     "text": "Schreiben Sie mir gerne, wenn Sie sich vernetzen oder zusammenarbeiten möchten.",
+    "infoTitle": "Kontaktdaten",
+    "location": "Ankara, Türkei",
     "form": {
       "name": "Name",
       "email": "E-Mail",
@@ -85,7 +153,14 @@
       "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
     }
   },
+  "resume": {
+    "title": "Lebenslauf",
+    "download": "PDF herunterladen",
+    "close": "Schließen"
+  },
   "footer": {
-    "copyright": "© 2026 S. Kaan Oğuzkan. Alle Rechte vorbehalten."
+    "copyright": "© 2026 S. Kaan Oğuzkan. Alle Rechte vorbehalten.",
+    "quickLinks": "Schnellzugriff",
+    "connect": "Verbinden"
   }
 }

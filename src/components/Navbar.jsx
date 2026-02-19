@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useScrolledNav } from '../hooks/useScrolledNav';
+import { useResume } from '../context/ResumeContext';
 import LanguageSwitcher from './LanguageSwitcher';
 
 function Navbar() {
   const { t } = useTranslation();
   const scrolled = useScrolledNav();
+  const { open } = useResume();
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
@@ -26,7 +28,7 @@ function Navbar() {
     return () => observer.disconnect();
   }, []);
 
-  const navItems = ['about', 'experience', 'projects', 'skills', 'contact'];
+  const navItems = ['about', 'experience', 'projects', 'skills', 'volunteering', 'contact'];
 
   const handleLinkClick = () => setMenuOpen(false);
 
@@ -55,6 +57,11 @@ function Navbar() {
               </a>
             </li>
           ))}
+          <li>
+            <button className="nav-resume-btn" onClick={() => { open(); handleLinkClick(); }}>
+              {t('nav.resume')}
+            </button>
+          </li>
           <li><LanguageSwitcher /></li>
         </ul>
       </div>

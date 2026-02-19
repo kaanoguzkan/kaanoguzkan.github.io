@@ -10,27 +10,32 @@ function Experience() {
     <section id="experience" className="fade-in" ref={ref}>
       <div className="container">
         <h2 className="section-title">{t('experience.title')}</h2>
-        {jobs.map((job, i) => (
-          <div className="experience-card" key={i}>
-            <div className="experience-header">
-              <div>
-                <h3>{job.role}</h3>
-                <p className="company">{job.company}</p>
+        <div className="timeline">
+          {jobs.map((job, i) => (
+            <div className="timeline-entry" key={i}>
+              <div className="timeline-dot"></div>
+              <div className="glass-card timeline-card">
+                <div className="experience-header">
+                  <div>
+                    <h3>{job.role}</h3>
+                    <p className="company">{job.company}</p>
+                  </div>
+                  <span className="date-badge">{job.date}</span>
+                </div>
+                <ul className="experience-list">
+                  {job.bullets.map((bullet, j) => (
+                    <li key={j} dangerouslySetInnerHTML={{ __html: bullet }} />
+                  ))}
+                </ul>
+                <div className="tech-tags">
+                  {job.tags.map((tag) => (
+                    <span className="tag" key={tag}>{tag}</span>
+                  ))}
+                </div>
               </div>
-              <span className="date-badge">{job.date}</span>
             </div>
-            <ul className="experience-list">
-              {job.bullets.map((bullet, j) => (
-                <li key={j} dangerouslySetInnerHTML={{ __html: bullet }} />
-              ))}
-            </ul>
-            <div className="tech-tags">
-              {job.tags.map((tag) => (
-                <span className="tag" key={tag}>{tag}</span>
-              ))}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

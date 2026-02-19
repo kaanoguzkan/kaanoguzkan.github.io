@@ -7,6 +7,12 @@ const GitHubIcon = () => (
   </svg>
 );
 
+const CodeIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.4 }}>
+    <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+  </svg>
+);
+
 function Projects() {
   const { t } = useTranslation();
   const ref = useScrollFadeIn();
@@ -18,24 +24,30 @@ function Projects() {
         <h2 className="section-title">{t('projects.title')}</h2>
         <div className="projects-grid">
           {items.map((project, i) => (
-            <article className="project-card" key={i}>
-              <h3>{project.name}</h3>
-              <p className="project-label">{project.label}</p>
-              <p>{project.description}</p>
-              <div className="tech-tags">
-                {project.tags.map((tag) => (
-                  <span className="tag" key={tag}>{tag}</span>
-                ))}
+            <article className="glass-card project-card" key={i}>
+              <div className="project-accent"></div>
+              <div className="project-image-placeholder">
+                <CodeIcon />
               </div>
-              <a
-                href={project.github}
-                className="project-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GitHubIcon />
-                {project.linkText}
-              </a>
+              <div className="project-body">
+                <h3>{project.name}</h3>
+                <p className="project-label">{project.label}</p>
+                <p>{project.description}</p>
+                <div className="tech-tags">
+                  {project.tags.map((tag) => (
+                    <span className="tag" key={tag}>{tag}</span>
+                  ))}
+                </div>
+                <a
+                  href={project.github}
+                  className="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GitHubIcon />
+                  {project.linkText}
+                </a>
+              </div>
             </article>
           ))}
         </div>
