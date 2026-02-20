@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 
 function About() {
@@ -15,8 +15,8 @@ function About() {
             <img src="/assets/profile.jpg" alt="S. Kaan Oguzkan" />
           </div>
           <div className="about-text">
-            <p dangerouslySetInnerHTML={{ __html: t('about.paragraph1') }} />
-            <p dangerouslySetInnerHTML={{ __html: t('about.paragraph2') }} />
+            <p><Trans i18nKey="about.paragraph1" components={{ strong: <strong /> }} /></p>
+            <p><Trans i18nKey="about.paragraph2" components={{ strong: <strong /> }} /></p>
             <div className="about-education">
               {Array.isArray(educationItems) && educationItems.map((edu, i) => (
                 <div className="glass-card education-card" key={i}>

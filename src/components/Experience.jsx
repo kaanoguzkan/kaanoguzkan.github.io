@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 
 function Experience() {
@@ -23,8 +23,8 @@ function Experience() {
                   <span className="date-badge">{job.date}</span>
                 </div>
                 <ul className="experience-list">
-                  {job.bullets.map((bullet, j) => (
-                    <li key={j} dangerouslySetInnerHTML={{ __html: bullet }} />
+                  {job.bullets.map((_, j) => (
+                    <li key={j}><Trans i18nKey={`experience.jobs.${i}.bullets.${j}`} components={{ strong: <strong /> }} /></li>
                   ))}
                 </ul>
                 <div className="tech-tags">
