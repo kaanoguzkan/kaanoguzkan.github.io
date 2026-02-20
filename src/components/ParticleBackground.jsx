@@ -1,14 +1,27 @@
 import { useEffect, useRef } from 'react';
 
+function getThemeColors() {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  return {
+    primary: isLight ? '2, 132, 199' : '56, 189, 248',
+    accent: isLight ? '124, 58, 237' : '167, 139, 250',
+    maxOpacity: isLight ? 0.15 : 0.3,
+    baseOpacity: isLight ? 0.05 : 0.1,
+    connectionOpacity: isLight ? 0.04 : 0.06,
+  };
+}
+
 function ParticleBackground() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const ctx = canvas.getContext('2d');
     let animationId = null;
     let particles = [];
+    let colors = getThemeColors();
 
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
     const MAX_PARTICLES = isMobile ? 20 : 50;
@@ -31,8 +44,8 @@ function ParticleBackground() {
           size: Math.random() * 2 + 1,
           vx: (Math.random() - 0.5) * 0.4,
           vy: (Math.random() - 0.5) * 0.4,
-          color: Math.random() > 0.5 ? '56, 189, 248' : '167, 139, 250',
-          opacity: Math.random() * 0.3 + 0.1,
+          color: Math.random() > 0.5 ? colors.primary : colors.accent,
+          opacity: Math.random() * colors.maxOpacity + colors.baseOpacity,
         });
       }
     };
@@ -65,7 +78,7 @@ function ParticleBackground() {
               ctx.beginPath();
               ctx.moveTo(p.x, p.y);
               ctx.lineTo(p2.x, p2.y);
-              ctx.strokeStyle = `rgba(56, 189, 248, ${0.06 * (1 - dist / CONNECTION_DISTANCE)})`;
+              ctx.strokeStyle = `rgba(${colors.primary}, ${colors.connectionOpacity * (1 - dist / CONNECTION_DISTANCE)})`;
               ctx.lineWidth = 0.5;
               ctx.stroke();
             }
@@ -97,6 +110,17 @@ function ParticleBackground() {
       }
     };
 
+    // Watch for theme changes
+    const observer = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (mutation.attributeName === 'data-theme') {
+          colors = getThemeColors();
+          createParticles();
+        }
+      }
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
     resize();
     startDraw();
 
@@ -105,6 +129,7 @@ function ParticleBackground() {
 
     return () => {
       stopDraw();
+      observer.disconnect();
       window.removeEventListener('resize', resize);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };

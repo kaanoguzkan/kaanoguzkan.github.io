@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import GitHubActivity from './components/GitHubActivity';
 import Skills from './components/Skills';
 import Volunteering from './components/Volunteering';
 import Contact from './components/Contact';
@@ -13,14 +14,20 @@ import BackToTop from './components/BackToTop';
 function App() {
   return (
     <>
+      <a href="#main-content" className="skip-to-content">
+        Skip to content
+      </a>
       <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Volunteering />
-      <Contact />
+      <main id="main-content">
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <GitHubActivity />
+        <Skills />
+        <Volunteering />
+        <Contact />
+      </main>
       <Footer />
       <ResumeModal />
       <BackToTop />

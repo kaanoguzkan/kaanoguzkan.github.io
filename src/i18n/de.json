@@ -6,6 +6,7 @@
     "skills": "Fähigkeiten",
     "volunteering": "Ehrenamt",
     "contact": "Kontakt",
+    "github": "GitHub",
     "resume": "Lebenslauf"
   },
   "hero": {
@@ -67,6 +68,7 @@
     "title": "Projekte",
     "filterAll": "Alle",
     "noResults": "Keine Projekte für diese Technologie gefunden.",
+    "demoText": "Live-Demo",
     "items": [
       {
         "name": "Artifactum",
@@ -74,7 +76,9 @@
         "description": "Verantwortlich für Artefaktaufnahme und LLM-Funktionen einer MERN-Anwendung. Gemini-Integration für Artefaktgenerierung/-analyse mit 6 Prompt-Workflows und 1 % LLM-Aufruf-Fehlerrate. S3-Multi-Datei- und ZIP-Massenupload für bis zu 50 MB / 200 Dateien. MongoDB-Sammlungen mit 8 Indizes; p95-Abfragelatenz von 420 ms auf 90 ms verbessert.",
         "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "AWS S3", "Gemini API"],
         "github": "https://github.com/kaanoguzkan/artifactum",
-        "linkText": "Auf GitHub ansehen"
+        "linkText": "Auf GitHub ansehen",
+        "demo": "",
+        "image": ""
       },
       {
         "name": "Immune Wars",
@@ -82,7 +86,9 @@
         "description": "Lernspiel über das Immunsystem als Semesterprojekt. Grafbasiertes Körpermodell, in dem Spieler mit Immunzellen gegen Krankheitserreger verteidigen. Spielmechanik, Pathogen-KI und visuelle Feedbacksysteme entworfen.",
         "tags": ["Java", "OOP", "Spieleentwicklung", "Graph-Datenstrukturen"],
         "github": "https://github.com/kaanoguzkan/CS102-ImmuneWars",
-        "linkText": "Auf GitHub ansehen"
+        "linkText": "Auf GitHub ansehen",
+        "demo": "",
+        "image": ""
       },
       {
         "name": "NutriApp",
@@ -90,7 +96,9 @@
         "description": "Backend-Services für eine Mahlzeitenplanungs-App entwickelt. 16 serverlose REST-API-Endpunkte auf AWS Lambda mit p95-Latenz von 450 ms. People's Choice Award gewonnen — Platz 1 von 7 Teams.",
         "tags": ["Node.js", "AWS Lambda", "DynamoDB", "REST"],
         "github": "https://github.com/arcmrt/NutriTech",
-        "linkText": "Auf GitHub ansehen"
+        "linkText": "Auf GitHub ansehen",
+        "demo": "",
+        "image": ""
       }
     ]
   },
@@ -166,6 +174,10 @@
     "title": "Lebenslauf",
     "download": "PDF herunterladen",
     "close": "Schließen"
+  },
+  "github": {
+    "title": "GitHub-Aktivität",
+    "contributions": "Beitragsgrafik"
   },
   "footer": {
     "copyright": "© 2026 S. Kaan Oğuzkan. Alle Rechte vorbehalten.",

@@ -14,6 +14,12 @@ const CodeIcon = () => (
   </svg>
 );
 
+const ExternalLinkIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+  </svg>
+);
+
 function Projects() {
   const { t, i18n } = useTranslation();
   const ref = useScrollFadeIn();
@@ -68,7 +74,16 @@ function Projects() {
             <article className="glass-card project-card" key={project.name}>
               <div className="project-accent"></div>
               <div className="project-image-placeholder">
-                <CodeIcon />
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="project-image"
+                    loading="lazy"
+                  />
+                ) : (
+                  <CodeIcon />
+                )}
               </div>
               <div className="project-body">
                 <h3>{project.name}</h3>
@@ -86,15 +101,32 @@ function Projects() {
                     </button>
                   ))}
                 </div>
-                <a
-                  href={project.github}
-                  className="project-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GitHubIcon />
-                  {project.linkText}
-                </a>
+                <div className="project-links">
+                  {project.github ? (
+                    <a
+                      href={project.github}
+                      className="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <GitHubIcon />
+                      {project.linkText}
+                    </a>
+                  ) : (
+                    <span className="project-link-note">{project.linkText}</span>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      className="project-link project-link--demo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLinkIcon />
+                      {t('projects.demoText')}
+                    </a>
+                  )}
+                </div>
               </div>
             </article>
           ))}

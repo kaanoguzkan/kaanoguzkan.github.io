@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useResume } from '../context/ResumeContext';
 
@@ -6,20 +6,53 @@ function ResumeModal() {
   const { t, i18n } = useTranslation();
   const pdfUrl = `/assets/resume-${i18n.language}.pdf`;
   const { isOpen, close } = useResume();
+  const modalRef = useRef(null);
+  const previousFocusRef = useRef(null);
 
   useEffect(() => {
     if (!isOpen) return;
 
-    const handleEscape = (e) => {
-      if (e.key === 'Escape') close();
+    previousFocusRef.current = document.activeElement;
+    document.body.style.overflow = 'hidden';
+
+    const timer = setTimeout(() => {
+      const closeBtn = modalRef.current?.querySelector('.resume-close');
+      closeBtn?.focus();
+    }, 50);
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        close();
+        return;
+      }
+      if (e.key === 'Tab') {
+        const focusable = modalRef.current?.querySelectorAll(
+          'button, [href], input, select, textarea, iframe, [tabindex]:not([tabindex="-1"])'
+        );
+        if (!focusable || focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
     };
 
-    document.body.style.overflow = 'hidden';
-    document.addEventListener('keydown', handleEscape);
+    document.addEventListener('keydown', handleKeyDown);
 
     return () => {
       document.body.style.overflow = '';
-      document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('keydown', handleKeyDown);
+      clearTimeout(timer);
+      previousFocusRef.current?.focus();
     };
   }, [isOpen, close]);
 
@@ -27,9 +60,16 @@ function ResumeModal() {
 
   return (
     <div className="resume-overlay" onClick={close}>
-      <div className="resume-modal" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="resume-modal"
+        ref={modalRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="resume-modal-title"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="resume-modal-header">
-          <h3>{t('resume.title')}</h3>
+          <h3 id="resume-modal-title">{t('resume.title')}</h3>
           <button className="resume-close" onClick={close} aria-label="Close">
             &times;
           </button>

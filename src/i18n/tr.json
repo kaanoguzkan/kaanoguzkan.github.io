@@ -6,6 +6,7 @@
     "skills": "Yetenekler",
     "volunteering": "Gönüllülük",
     "contact": "İletişim",
+    "github": "GitHub",
     "resume": "Özgeçmiş"
   },
   "hero": {
@@ -67,6 +68,7 @@
     "title": "Projeler",
     "filterAll": "Tümü",
     "noResults": "Bu teknoloji ile eşleşen proje bulunamadı.",
+    "demoText": "Canlı Demo",
     "items": [
       {
         "name": "Artifactum",
@@ -74,7 +76,9 @@
         "description": "MERN uygulaması için artifakt alma ve LLM özelliklerini geliştirdim. 6 prompt iş akışı ve %1 LLM çağrı hata oranıyla Gemini entegrasyonu yaptım. 50 MB / 200 dosyaya kadar S3 çoklu dosya ve ZIP toplu yükleme sistemi kurdum. 8 indeks ile MongoDB koleksiyonları tasarladım; p95 sorgu gecikmesini 420 ms'den 90 ms'ye düşürdüm.",
         "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "AWS S3", "Gemini API"],
         "github": "https://github.com/kaanoguzkan/artifactum",
-        "linkText": "GitHub'da Gör"
+        "linkText": "GitHub'da Gör",
+        "demo": "",
+        "image": ""
       },
       {
         "name": "Immune Wars",
@@ -82,7 +86,9 @@
         "description": "Bağışıklık sistemi hakkında eğitici bir oyun. Graf tabanlı vücut modeli ile oyuncular bağışıklık hücrelerini kullanarak patojenlere karşı savunma yapıyor. Oyun mekaniği, patojen yapay zekası ve görsel geri bildirim sistemleri tasarladım.",
         "tags": ["Java", "OOP", "Oyun Geliştirme", "Graf Veri Yapıları"],
         "github": "https://github.com/kaanoguzkan/CS102-ImmuneWars",
-        "linkText": "GitHub'da Gör"
+        "linkText": "GitHub'da Gör",
+        "demo": "",
+        "image": ""
       },
       {
         "name": "NutriApp",
@@ -90,7 +96,9 @@
         "description": "Yemek planlama uygulaması için backend servisleri geliştirdim. AWS Lambda üzerinde 450 ms p95 gecikme ile 16 sunucusuz REST API endpoint'i oluşturdum. Halkın Tercihi Ödülü'nü kazandım — 7 takım arasında birinci.",
         "tags": ["Node.js", "AWS Lambda", "DynamoDB", "REST"],
         "github": "https://github.com/arcmrt/NutriTech",
-        "linkText": "GitHub'da Gör"
+        "linkText": "GitHub'da Gör",
+        "demo": "",
+        "image": ""
       }
     ]
   },
@@ -166,6 +174,10 @@
     "title": "Özgeçmiş",
     "download": "PDF İndir",
     "close": "Kapat"
+  },
+  "github": {
+    "title": "GitHub Aktivitesi",
+    "contributions": "Katkı Grafiği"
   },
   "footer": {
     "copyright": "© 2026 S. Kaan Oğuzkan. Tüm hakları saklıdır.",

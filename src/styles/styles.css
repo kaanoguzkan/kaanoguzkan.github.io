@@ -19,6 +19,22 @@
     --max-width: 1100px;
 }
 
+/* Light Theme */
+[data-theme="light"] {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --primary: #0284c7;
+    --primary-hover: #0369a1;
+    --accent-violet: #7c3aed;
+    --accent-gradient: linear-gradient(135deg, var(--primary), var(--accent-violet));
+    --text: #334155;
+    --heading: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(148, 163, 184, 0.2);
+}
+
 /* ===========================
    2. Reset & Base Styles
    =========================== */
@@ -74,6 +90,33 @@ img {
 
 ul {
     list-style: none;
+}
+
+/* Skip to content */
+.skip-to-content {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 9999;
+    background: var(--primary);
+    color: var(--bg);
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 0 0 var(--radius) 0;
+    text-decoration: none;
+}
+
+.skip-to-content:focus {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
 }
 
 /* ===========================
@@ -778,6 +821,34 @@ section {
     color: var(--primary-hover);
 }
 
+.project-links {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.project-link-note {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+.project-link--demo {
+    color: var(--accent-violet);
+}
+
+.project-link--demo:hover {
+    color: var(--primary-hover);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* ===========================
    11. Skills Section
    =========================== */
@@ -1255,6 +1326,7 @@ footer {
     .skills-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
 }
 
 /* Mobile */
@@ -1342,5 +1414,148 @@ footer {
 
     .contact-info-items {
         align-items: center;
+    }
+}
+
+/* ===========================
+   GitHub Activity Section
+   =========================== */
+.github-chart-wrapper {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.github-chart-wrapper h3 {
+    margin-bottom: 1rem;
+}
+
+.github-chart {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: var(--radius);
+}
+
+/* ===========================
+   18. Theme Toggle & Light Overrides
+   =========================== */
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition);
+}
+
+.theme-toggle:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+[data-theme="light"] #navbar.scrolled {
+    background-color: rgba(248, 250, 252, 0.9);
+}
+
+[data-theme="light"] .glass-card:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(2, 132, 199, 0.1);
+}
+
+[data-theme="light"] #hero {
+    background: radial-gradient(ellipse at 20% 50%, rgba(2, 132, 199, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(124, 58, 237, 0.04) 0%, transparent 50%),
+                var(--bg);
+}
+
+[data-theme="light"] .tag {
+    background: rgba(2, 132, 199, 0.1);
+}
+
+[data-theme="light"] .tag.tag--interactive {
+    background: rgba(2, 132, 199, 0.1);
+}
+
+[data-theme="light"] .tag.tag--active {
+    background: rgba(2, 132, 199, 0.25);
+}
+
+[data-theme="light"] .date-badge {
+    background: rgba(2, 132, 199, 0.1);
+}
+
+[data-theme="light"] .skill-badge {
+    background: rgba(2, 132, 199, 0.06);
+}
+
+[data-theme="light"] .skill-badge:hover {
+    background: rgba(2, 132, 199, 0.12);
+    border-color: rgba(2, 132, 199, 0.3);
+}
+
+[data-theme="light"] .timeline-dot {
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.25);
+}
+
+[data-theme="light"] .btn:hover {
+    box-shadow: 0 4px 20px rgba(2, 132, 199, 0.3);
+}
+
+[data-theme="light"] .hero-socials a:hover {
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.2);
+}
+
+[data-theme="light"] .back-to-top:hover {
+    box-shadow: 0 4px 20px rgba(2, 132, 199, 0.4);
+}
+
+[data-theme="light"] .resume-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] body::after {
+    opacity: 0.015;
+}
+
+[data-theme="light"] .project-image-placeholder {
+    background: linear-gradient(135deg, rgba(2, 132, 199, 0.06), rgba(124, 58, 237, 0.06));
+}
+
+@media (max-width: 767px) {
+    [data-theme="light"] .nav-links {
+        background: rgba(248, 250, 252, 0.98);
+    }
+}
+
+/* ===========================
+   19. Reduced Motion
+   =========================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .fade-in {
+        opacity: 1;
+        transform: none;
+    }
+
+    .stagger-item {
+        opacity: 1;
+        transform: none;
+    }
+
+    .typing-cursor {
+        animation: none;
     }
 }

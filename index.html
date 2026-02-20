@@ -28,12 +28,42 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://kaanoguzkan.com/" />
 
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "S. Kaan Oguzkan",
+        "jobTitle": "Software Engineer",
+        "url": "https://kaanoguzkan.com",
+        "sameAs": [
+            "https://github.com/kaanoguzkan",
+            "https://linkedin.com/in/kaan-oguzkan"
+        ],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Bilkent University"
+        },
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Look & Cash"
+        }
+    }
+    </script>
+
     <title>S. Kaan Oguzkan | Software Engineer & CS Student</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+    <script>
+        (function() {
+            var theme = localStorage.getItem('theme');
+            if (!theme) theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
 </body>
