@@ -73,8 +73,8 @@
         "label": "CS319 — Software Engineering Project",
         "description": "Owned artifact ingestion and LLM features for a MERN application. Integrated Gemini for artifact generation/analysis with 6 prompt workflows and 1% LLM-call failure rate. Built S3 multi-file and ZIP bulk uploads processing up to 50 MB / 200 files. Designed MongoDB collections with 8 indexes, improving p95 query latency from 420 ms to 90 ms.",
         "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "AWS S3", "Gemini API"],
-        "github": "https://github.com/kaanoguzkan/artifactum",
-        "linkText": "View on GitHub"
+        "github": "",
+        "linkText": "It is private due to university policies, but feel free to reach out if you'd like to see it!"
       },
       {
         "name": "Immune Wars",
