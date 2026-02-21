@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
 import { useScrolledNav } from '../hooks/useScrolledNav';
 import { useScrollProgress } from '../hooks/useScrollProgress';
 import { useResume } from '../context/ResumeContext';
@@ -20,6 +21,8 @@ const MoonIcon = () => (
 
 function Navbar() {
   const { t } = useTranslation();
+  const location = useLocation();
+  const isHome = location.pathname === '/';
   const scrolled = useScrolledNav();
   const progress = useScrollProgress();
   const { open } = useResume();
@@ -28,6 +31,7 @@ function Navbar() {
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
+    if (!isHome) return;
     const sections = document.querySelectorAll('section[id]');
     const observer = new IntersectionObserver(
       (entries) => {
@@ -42,7 +46,7 @@ function Navbar() {
 
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
-  }, []);
+  }, [isHome]);
 
   const navItems = ['about', 'experience', 'projects', 'github', 'skills', 'volunteering', 'contact'];
 
@@ -61,7 +65,7 @@ function Navbar() {
     />
     <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
       <div className="nav-container">
-        <a href="#hero" className="nav-logo">Kaan Oguzkan</a>
+        <Link to="/" className="nav-logo" onClick={handleLinkClick}>Kaan Oguzkan</Link>
         <button
           className={`hamburger${menuOpen ? ' active' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -72,17 +76,36 @@ function Navbar() {
           <span></span>
         </button>
         <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
-          {navItems.map((item) => (
-            <li key={item}>
-              <a
-                href={`#${item}`}
-                className={activeSection === item ? 'active' : ''}
-                onClick={handleLinkClick}
-              >
-                {t(`nav.${item}`)}
-              </a>
+          {isHome ? (
+            <>
+              {navItems.map((item) => (
+                <li key={item}>
+                  <a
+                    href={`#${item}`}
+                    className={activeSection === item ? 'active' : ''}
+                    onClick={handleLinkClick}
+                  >
+                    {t(`nav.${item}`)}
+                  </a>
+                </li>
+              ))}
+            </>
+          ) : (
+            <li>
+              <Link to="/" onClick={handleLinkClick}>
+                {t('nav.home')}
+              </Link>
             </li>
-          ))}
+          )}
+          <li>
+            <Link
+              to="/blog"
+              className={location.pathname.startsWith('/blog') ? 'active' : ''}
+              onClick={handleLinkClick}
+            >
+              {t('nav.blog')}
+            </Link>
+          </li>
           <li>
             <button className="nav-resume-btn" onClick={() => { open(); handleLinkClick(); }}>
               {t('nav.resume')}

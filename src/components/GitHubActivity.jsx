@@ -18,6 +18,8 @@ function GitHubActivity() {
             src={`https://ghchart.rshah.org/${GITHUB_USERNAME}`}
             alt="GitHub contribution graph"
             className="github-chart"
+            width="800"
+            height="112"
             loading="lazy"
             onError={(e) => { e.target.style.display = 'none'; }}
           />

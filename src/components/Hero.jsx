@@ -12,6 +12,8 @@ function Hero() {
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    if (isMobile) return;
     const handleScroll = () => setOffset(window.scrollY * 0.3);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);

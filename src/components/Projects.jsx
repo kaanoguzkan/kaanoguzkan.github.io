@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
+import { useProjectModal } from '../context/ProjectModalContext';
 
 const GitHubIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -23,6 +24,7 @@ const ExternalLinkIcon = () => (
 function Projects() {
   const { t, i18n } = useTranslation();
   const ref = useScrollFadeIn();
+  const { openProject } = useProjectModal();
   const items = t('projects.items', { returnObjects: true });
   const [activeTag, setActiveTag] = useState(null);
 
@@ -126,6 +128,12 @@ function Projects() {
                       {t('projects.demoText')}
                     </a>
                   )}
+                  <button
+                    className="project-link project-details-btn"
+                    onClick={() => openProject(project)}
+                  >
+                    {t('projects.viewDetails')}
+                  </button>
                 </div>
               </div>
             </article>

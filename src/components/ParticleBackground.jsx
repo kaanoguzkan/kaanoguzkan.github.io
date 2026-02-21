@@ -121,11 +121,19 @@ function ParticleBackground() {
     });
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
-    resize();
-    startDraw();
+    const init = () => {
+      resize();
+      startDraw();
+      window.addEventListener('resize', resize);
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+    };
 
-    window.addEventListener('resize', resize);
-    document.addEventListener('visibilitychange', handleVisibilityChange);
+    // Defer particle init so hero text paints first
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(init);
+    } else {
+      setTimeout(init, 100);
+    }
 
     return () => {
       stopDraw();

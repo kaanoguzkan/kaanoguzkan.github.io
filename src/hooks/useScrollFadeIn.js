@@ -1,11 +1,15 @@
 import { useEffect, useRef } from 'react';
 
-export function useScrollFadeIn() {
+export function useScrollFadeIn(direction = 'up') {
   const ref = useRef(null);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    if (direction !== 'up') {
+      el.classList.add(`fade-in-${direction}`);
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -19,7 +23,7 @@ export function useScrollFadeIn() {
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [direction]);
 
   return ref;
 }

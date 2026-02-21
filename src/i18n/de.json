@@ -7,7 +7,9 @@
     "volunteering": "Ehrenamt",
     "contact": "Kontakt",
     "github": "GitHub",
-    "resume": "Lebenslauf"
+    "resume": "Lebenslauf",
+    "blog": "Blog",
+    "home": "Startseite"
   },
   "hero": {
     "name": "S. Kaan Oğuzkan",
@@ -69,11 +71,22 @@
     "filterAll": "Alle",
     "noResults": "Keine Projekte für diese Technologie gefunden.",
     "demoText": "Live-Demo",
+    "viewDetails": "Details ansehen",
+    "highlightsTitle": "Wichtige Highlights",
     "items": [
       {
         "name": "Artifactum",
         "label": "CS319 — Software-Engineering-Projekt",
         "description": "Verantwortlich für Artefaktaufnahme und LLM-Funktionen einer MERN-Anwendung. Gemini-Integration für Artefaktgenerierung/-analyse mit 6 Prompt-Workflows und 1 % LLM-Aufruf-Fehlerrate. S3-Multi-Datei- und ZIP-Massenupload für bis zu 50 MB / 200 Dateien. MongoDB-Sammlungen mit 8 Indizes; p95-Abfragelatenz von 420 ms auf 90 ms verbessert.",
+        "detailedDescription": "Leitung von Design und Implementierung der Artefakt-Aufnahme-Pipeline und aller LLM-gestützten Funktionen für Artifactum, eine Full-Stack-MERN-Anwendung im Rahmen von CS319 Software Engineering. Die Plattform ermöglicht es Benutzern, Artefakte mittels KI hochzuladen, zu verwalten und zu analysieren. Google Gemini wurde für Artefaktgenerierung und -analyse über 6 verschiedene Prompt-Workflows integriert, mit einer LLM-Aufruf-Fehlerrate von 1 %. Ein robustes S3-basiertes Datei-Upload-System für Multi-Datei- und ZIP-Massenupload von bis zu 50 MB / 200 Dateien pro Batch wurde entwickelt. MongoDB-Sammlungen mit 8 Indizes wurden entworfen, wodurch die p95-Abfragelatenz von 420 ms auf 90 ms reduziert wurde.",
+        "highlights": [
+          "6 Prompt-Workflows mit Gemini-API-Integration",
+          "1 % LLM-Aufruf-Fehlerrate in der Produktion",
+          "S3 Multi-Datei- und ZIP-Massenupload (50 MB / 200 Dateien)",
+          "p95-Abfragelatenz von 420 ms auf 90 ms reduziert",
+          "8 MongoDB-Indizes für optimale Performance entworfen"
+        ],
+        "screenshots": [],
         "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "AWS S3", "Gemini API"],
         "github": "https://github.com/kaanoguzkan/artifactum",
         "linkText": "Auf GitHub ansehen",
@@ -84,6 +97,15 @@
         "name": "Immune Wars",
         "label": "CS102 — Einführung in die Programmierung II (Feb – Mai 2024)",
         "description": "Lernspiel über das Immunsystem als Semesterprojekt. Grafbasiertes Körpermodell, in dem Spieler mit Immunzellen gegen Krankheitserreger verteidigen. Spielmechanik, Pathogen-KI und visuelle Feedbacksysteme entworfen.",
+        "detailedDescription": "Immune Wars ist ein Lernspiel über das menschliche Immunsystem, entwickelt als Semesterprojekt für CS102. Das Spiel verfügt über ein grafbasiertes Körpermodell, in dem Spieler strategisch Immunzellen einsetzen, um gegen verschiedene Krankheitserreger zu verteidigen. Ich habe die Kernspiel-Mechaniken entworfen, einschließlich Pathogen-KI-Verhalten, Immunzell-Interaktionen und visuelle Feedbacksysteme. Die Graph-Datenstruktur modelliert die verbundenen Systeme des Körpers, sodass sich Krankheitserreger realistisch über benachbarte Knoten ausbreiten.",
+        "highlights": [
+          "Grafbasiertes Körpermodell mit realistischer Pathogen-Ausbreitung",
+          "Pathogen-KI mit adaptiver Schwierigkeit",
+          "Mehrere Immunzelltypen mit einzigartigen Fähigkeiten",
+          "Visuelle Feedbacksysteme für Spieleraktionen",
+          "In die Spielmechanik integrierte Lerninhalte"
+        ],
+        "screenshots": [],
         "tags": ["Java", "OOP", "Spieleentwicklung", "Graph-Datenstrukturen"],
         "github": "https://github.com/kaanoguzkan/CS102-ImmuneWars",
         "linkText": "Auf GitHub ansehen",
@@ -94,6 +116,15 @@
         "name": "NutriApp",
         "label": "Amazon University Engagement Program",
         "description": "Backend-Services für eine Mahlzeitenplanungs-App entwickelt. 16 serverlose REST-API-Endpunkte auf AWS Lambda mit p95-Latenz von 450 ms. People's Choice Award gewonnen — Platz 1 von 7 Teams.",
+        "detailedDescription": "NutriApp ist eine Mahlzeitenplanungs-Anwendung, entwickelt im Rahmen des Amazon University Engagement Program. Ich war für die gesamte Backend-Architektur verantwortlich und implementierte 16 serverlose REST-API-Endpunkte auf AWS Lambda mit DynamoDB als Datenspeicher. Die APIs behandeln Benutzerauthentifizierung, Mahlzeitenplan-Generierung, Nährwertanalyse und Diätpräferenz-Verwaltung. Das System erreichte eine p95-Latenz von 450 ms über alle Endpunkte. Unser Team gewann den People's Choice Award und belegte Platz 1 unter 7 Teams.",
+        "highlights": [
+          "16 serverlose REST-API-Endpunkte auf AWS Lambda",
+          "p95-Latenz von 450 ms über alle Endpunkte",
+          "People's Choice Award — Platz 1 von 7 Teams",
+          "DynamoDB-gestützte Datenpersistenz",
+          "Serverlose Architektur für wartungsfreie Skalierung"
+        ],
+        "screenshots": [],
         "tags": ["Node.js", "AWS Lambda", "DynamoDB", "REST"],
         "github": "https://github.com/arcmrt/NutriTech",
         "linkText": "Auf GitHub ansehen",
@@ -178,6 +209,14 @@
   "github": {
     "title": "GitHub-Aktivität",
     "contributions": "Beitragsgrafik"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Gedanken über Softwareentwicklung, Backend-Systeme und das Bauen von Dingen.",
+    "backHome": "Zurück zur Startseite",
+    "backToBlog": "Zurück zum Blog",
+    "noPosts": "Noch keine Blogbeiträge in dieser Sprache.",
+    "notFound": "Beitrag nicht gefunden."
   },
   "footer": {
     "copyright": "© 2026 S. Kaan Oğuzkan. Alle Rechte vorbehalten.",

@@ -3,7 +3,7 @@ import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 
 function Volunteering() {
   const { t } = useTranslation();
-  const ref = useScrollFadeIn();
+  const ref = useScrollFadeIn('left');
   const items = t('volunteering.items', { returnObjects: true });
 
   return (

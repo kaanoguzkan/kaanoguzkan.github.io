@@ -21,7 +21,7 @@ const categoryIcons = {
 
 function Skills() {
   const { t } = useTranslation();
-  const ref = useScrollFadeIn();
+  const ref = useScrollFadeIn('right');
   const categories = t('skills.categories', { returnObjects: true });
 
   return (

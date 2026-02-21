@@ -12,7 +12,11 @@ function About() {
         <h2 className="section-title">{t('about.title')}</h2>
         <div className="about-content">
           <div className="about-photo">
-            <img src="/assets/profile.jpg" alt="S. Kaan Oguzkan" />
+            <picture>
+              <source srcSet="/assets/profile.avif" type="image/avif" />
+              <source srcSet="/assets/profile.webp" type="image/webp" />
+              <img src="/assets/profile.jpg" alt="S. Kaan Oguzkan" width="200" height="200" loading="lazy" />
+            </picture>
           </div>
           <div className="about-text">
             <p><Trans i18nKey="about.paragraph1" components={{ strong: <strong /> }} /></p>

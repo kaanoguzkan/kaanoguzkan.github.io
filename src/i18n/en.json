@@ -7,7 +7,9 @@
     "volunteering": "Volunteering",
     "contact": "Contact",
     "github": "GitHub",
-    "resume": "Resume"
+    "resume": "Resume",
+    "blog": "Blog",
+    "home": "Home"
   },
   "hero": {
     "name": "S. Kaan Oguzkan",
@@ -69,11 +71,22 @@
     "filterAll": "All",
     "noResults": "No projects match this technology.",
     "demoText": "Live Demo",
+    "viewDetails": "View Details",
+    "highlightsTitle": "Key Highlights",
     "items": [
       {
         "name": "Artifactum",
         "label": "CS319 — Software Engineering Project",
         "description": "Owned artifact ingestion and LLM features for a MERN application. Integrated Gemini for artifact generation/analysis with 6 prompt workflows and 1% LLM-call failure rate. Built S3 multi-file and ZIP bulk uploads processing up to 50 MB / 200 files. Designed MongoDB collections with 8 indexes, improving p95 query latency from 420 ms to 90 ms.",
+        "detailedDescription": "Led the design and implementation of the artifact ingestion pipeline and all LLM-powered features for Artifactum, a full-stack MERN application built as part of CS319 Software Engineering. The platform allows users to upload, manage, and analyze artifacts using AI. I integrated Google Gemini for artifact generation and analysis across 6 distinct prompt workflows, achieving a 1% LLM-call failure rate. Built a robust S3-based file upload system supporting multi-file and ZIP bulk uploads of up to 50 MB / 200 files per batch. Designed and optimized MongoDB collections with 8 indexes, reducing p95 query latency from 420 ms to 90 ms.",
+        "highlights": [
+          "6 prompt workflows with Gemini API integration",
+          "1% LLM-call failure rate in production",
+          "S3 multi-file and ZIP bulk uploads (50 MB / 200 files)",
+          "p95 query latency reduced from 420 ms to 90 ms",
+          "8 MongoDB indexes designed for optimal performance"
+        ],
+        "screenshots": [],
         "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "AWS S3", "Gemini API"],
         "github": "",
         "linkText": "It is private due to university policies, but feel free to reach out if you'd like to see it!",
@@ -84,6 +97,15 @@
         "name": "Immune Wars",
         "label": "CS102 — Intro to Programming II (Feb – May 2024)",
         "description": "Educational game about the immune system built as a semester project. Features a graph-based body model where players defend against pathogens using immune cells. Designed game mechanics, pathogen AI, and visual feedback systems.",
+        "detailedDescription": "Immune Wars is an educational game about the human immune system, built as a semester-long group project for CS102. The game features a graph-based body model where players strategically deploy immune cells to defend against various pathogens. I designed the core game mechanics including pathogen AI behavior, immune cell interactions, and visual feedback systems. The graph data structure models the body's connected systems, allowing pathogens to spread realistically through adjacent nodes.",
+        "highlights": [
+          "Graph-based body model with realistic pathogen spread",
+          "Pathogen AI with adaptive difficulty",
+          "Multiple immune cell types with unique abilities",
+          "Visual feedback systems for player actions",
+          "Educational content integrated into gameplay"
+        ],
+        "screenshots": [],
         "tags": ["Java", "OOP", "Game Development", "Graph Data Structures"],
         "github": "https://github.com/kaanoguzkan/CS102-ImmuneWars",
         "linkText": "View on GitHub",
@@ -94,6 +116,15 @@
         "name": "NutriApp",
         "label": "Amazon University Engagement Program",
         "description": "Built backend services for a meal-planning app. Implemented 16 serverless REST API endpoints on AWS Lambda with p95 latency of 450 ms. Won the People's Choice Award — top 1 of 7 teams.",
+        "detailedDescription": "NutriApp is a meal-planning application built during the Amazon University Engagement Program. I was responsible for the entire backend architecture, implementing 16 serverless REST API endpoints on AWS Lambda with DynamoDB as the data store. The APIs handle user authentication, meal plan generation, nutritional analysis, and dietary preference management. The system achieved a p95 latency of 450 ms across all endpoints. Our team won the People's Choice Award, ranking first among 7 competing teams.",
+        "highlights": [
+          "16 serverless REST API endpoints on AWS Lambda",
+          "p95 latency of 450 ms across all endpoints",
+          "People's Choice Award — 1st of 7 teams",
+          "DynamoDB-backed data persistence",
+          "Serverless architecture for zero-maintenance scaling"
+        ],
+        "screenshots": [],
         "tags": ["Node.js", "AWS Lambda", "DynamoDB", "REST"],
         "github": "https://github.com/arcmrt/NutriTech",
         "linkText": "View on GitHub",
@@ -178,6 +209,14 @@
   "github": {
     "title": "GitHub Activity",
     "contributions": "Contribution Graph"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Thoughts on software engineering, backend systems, and building things.",
+    "backHome": "Back to Home",
+    "backToBlog": "Back to Blog",
+    "noPosts": "No blog posts yet in this language.",
+    "notFound": "Post not found."
   },
   "footer": {
     "copyright": "© 2026 S. Kaan Oguzkan. All rights reserved.",

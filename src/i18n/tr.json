@@ -7,7 +7,9 @@
     "volunteering": "Gönüllülük",
     "contact": "İletişim",
     "github": "GitHub",
-    "resume": "Özgeçmiş"
+    "resume": "Özgeçmiş",
+    "blog": "Blog",
+    "home": "Ana Sayfa"
   },
   "hero": {
     "name": "S. Kaan Oğuzkan",
@@ -69,11 +71,22 @@
     "filterAll": "Tümü",
     "noResults": "Bu teknoloji ile eşleşen proje bulunamadı.",
     "demoText": "Canlı Demo",
+    "viewDetails": "Detayları Gör",
+    "highlightsTitle": "Öne Çıkanlar",
     "items": [
       {
         "name": "Artifactum",
         "label": "CS319 — Yazılım Mühendisliği Projesi",
         "description": "MERN uygulaması için artifakt alma ve LLM özelliklerini geliştirdim. 6 prompt iş akışı ve %1 LLM çağrı hata oranıyla Gemini entegrasyonu yaptım. 50 MB / 200 dosyaya kadar S3 çoklu dosya ve ZIP toplu yükleme sistemi kurdum. 8 indeks ile MongoDB koleksiyonları tasarladım; p95 sorgu gecikmesini 420 ms'den 90 ms'ye düşürdüm.",
+        "detailedDescription": "Artifactum için artifakt alma pipeline'ı ve tüm LLM destekli özelliklerin tasarım ve uygulamasını yönettim. Platform, kullanıcıların yapay zeka kullanarak artifaktları yüklemesine, yönetmesine ve analiz etmesine olanak tanır. 6 farklı prompt iş akışında Google Gemini entegrasyonu yaparak %1 LLM çağrı hata oranı elde ettim. Toplu iş başına 50 MB / 200 dosyaya kadar çoklu dosya ve ZIP yüklemelerini destekleyen S3 tabanlı dosya yükleme sistemi geliştirdim. 8 indeksle MongoDB koleksiyonları tasarlayarak p95 sorgu gecikmesini 420 ms'den 90 ms'ye düşürdüm.",
+        "highlights": [
+          "Gemini API ile 6 prompt iş akışı entegrasyonu",
+          "Üretimde %1 LLM çağrı hata oranı",
+          "S3 çoklu dosya ve ZIP toplu yükleme (50 MB / 200 dosya)",
+          "p95 sorgu gecikmesi 420 ms'den 90 ms'ye düşürüldü",
+          "Optimal performans için 8 MongoDB indeksi tasarlandı"
+        ],
+        "screenshots": [],
         "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "AWS S3", "Gemini API"],
         "github": "https://github.com/kaanoguzkan/artifactum",
         "linkText": "GitHub'da Gör",
@@ -84,6 +97,15 @@
         "name": "Immune Wars",
         "label": "CS102 — Programlamaya Giriş II (Şub – May 2024)",
         "description": "Bağışıklık sistemi hakkında eğitici bir oyun. Graf tabanlı vücut modeli ile oyuncular bağışıklık hücrelerini kullanarak patojenlere karşı savunma yapıyor. Oyun mekaniği, patojen yapay zekası ve görsel geri bildirim sistemleri tasarladım.",
+        "detailedDescription": "Immune Wars, CS102 dönem projesi olarak geliştirilen insan bağışıklık sistemi hakkında eğitici bir oyundur. Oyun, oyuncuların çeşitli patojenlere karşı savunma yapmak için stratejik olarak bağışıklık hücreleri yerleştirdiği graf tabanlı bir vücut modeli içerir. Patojen yapay zeka davranışları, bağışıklık hücresi etkileşimleri ve görsel geri bildirim sistemleri dahil temel oyun mekaniklerini tasarladım. Graf veri yapısı, vücudun bağlantılı sistemlerini modelleyerek patojenlerin komşu düğümler arasında gerçekçi şekilde yayılmasını sağlar.",
+        "highlights": [
+          "Gerçekçi patojen yayılımıyla graf tabanlı vücut modeli",
+          "Adaptif zorluklu patojen yapay zekası",
+          "Benzersiz yeteneklere sahip çoklu bağışıklık hücresi türleri",
+          "Oyuncu aksiyonları için görsel geri bildirim sistemleri",
+          "Oyun mekaniğine entegre eğitim içeriği"
+        ],
+        "screenshots": [],
         "tags": ["Java", "OOP", "Oyun Geliştirme", "Graf Veri Yapıları"],
         "github": "https://github.com/kaanoguzkan/CS102-ImmuneWars",
         "linkText": "GitHub'da Gör",
@@ -94,6 +116,15 @@
         "name": "NutriApp",
         "label": "Amazon Üniversite Katılım Programı",
         "description": "Yemek planlama uygulaması için backend servisleri geliştirdim. AWS Lambda üzerinde 450 ms p95 gecikme ile 16 sunucusuz REST API endpoint'i oluşturdum. Halkın Tercihi Ödülü'nü kazandım — 7 takım arasında birinci.",
+        "detailedDescription": "NutriApp, Amazon Üniversite Katılım Programı kapsamında geliştirilen bir yemek planlama uygulamasıdır. Tüm backend mimarisinden sorumlu olarak DynamoDB veri deposuyla AWS Lambda üzerinde 16 sunucusuz REST API endpoint'i geliştirdim. API'ler kullanıcı kimlik doğrulama, yemek planı oluşturma, besin analizi ve diyet tercihi yönetimini kapsar. Sistem tüm endpoint'lerde 450 ms p95 gecikme elde etti. Takımımız 7 rakip takım arasında birinci olarak Halkın Tercihi Ödülü'nü kazandı.",
+        "highlights": [
+          "AWS Lambda üzerinde 16 sunucusuz REST API endpoint'i",
+          "Tüm endpoint'lerde 450 ms p95 gecikme",
+          "Halkın Tercihi Ödülü — 7 takım arasında 1.",
+          "DynamoDB destekli veri kalıcılığı",
+          "Bakım gerektirmeyen ölçekleme için sunucusuz mimari"
+        ],
+        "screenshots": [],
         "tags": ["Node.js", "AWS Lambda", "DynamoDB", "REST"],
         "github": "https://github.com/arcmrt/NutriTech",
         "linkText": "GitHub'da Gör",
@@ -178,6 +209,14 @@
   "github": {
     "title": "GitHub Aktivitesi",
     "contributions": "Katkı Grafiği"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Yazılım mühendisliği, backend sistemler ve inşa etme üzerine düşünceler.",
+    "backHome": "Ana Sayfaya Dön",
+    "backToBlog": "Bloga Dön",
+    "noPosts": "Bu dilde henüz blog yazısı yok.",
+    "notFound": "Yazı bulunamadı."
   },
   "footer": {
     "copyright": "© 2026 S. Kaan Oğuzkan. Tüm hakları saklıdır.",
