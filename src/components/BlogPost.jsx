@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Markdown from 'react-markdown';
+import rehypeSanitize from 'rehype-sanitize';
 import { fetchBlogPosts } from '../utils/blogUtils';
 
 function BlogPost() {
@@ -51,7 +52,7 @@ function BlogPost() {
         <div className="container">
           <div className="blog-header">
             <Link to="/blog" className="blog-back-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
               {t('blog.backToBlog')}
             </Link>
             <h1>{t('blog.notFound')}</h1>
@@ -67,7 +68,7 @@ function BlogPost() {
         <article className="blog-post">
           <div className="blog-post-header">
             <Link to="/blog" className="blog-back-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
               {t('blog.backToBlog')}
             </Link>
             <span className="blog-post-date">{post.date}</span>
@@ -80,7 +81,7 @@ function BlogPost() {
           </div>
 
           <div className="blog-post-content">
-            <Markdown>{post.content}</Markdown>
+            <Markdown rehypePlugins={[rehypeSanitize]}>{post.content}</Markdown>
           </div>
         </article>
       </div>

@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
 
 const About = lazy(() => import('./components/About'));
 const Experience = lazy(() => import('./components/Experience'));
@@ -41,7 +42,7 @@ function HomePage() {
 
 function App() {
   return (
-    <>
+    <ErrorBoundary>
       <a href="#main-content" className="skip-to-content">
         Skip to content
       </a>
@@ -58,7 +59,7 @@ function App() {
         <ProjectModal />
         <BackToTop />
       </Suspense>
-    </>
+    </ErrorBoundary>
   );
 }
 
