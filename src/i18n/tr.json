@@ -208,7 +208,8 @@
   },
   "github": {
     "title": "GitHub Aktivitesi",
-    "contributions": "Katkı Grafiği"
+    "contributions": "Katkı Grafiği",
+    "chartError": "Katkı grafiği yüklenemedi."
   },
   "blog": {
     "title": "Blog",
@@ -222,5 +223,13 @@
     "copyright": "© 2026 S. Kaan Oğuzkan. Tüm hakları saklıdır.",
     "quickLinks": "Hızlı Bağlantılar",
     "connect": "Bağlantılar"
+  },
+  "modal": {
+    "escHint": "Kapatmak için Esc'ye basın"
+  },
+  "errorBoundary": {
+    "title": "Bir şeyler ters gitti.",
+    "message": "Lütfen sayfayı yenilemeyi deneyin.",
+    "refresh": "Yenile"
   }
 }

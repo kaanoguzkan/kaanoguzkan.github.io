@@ -87,9 +87,12 @@ function ProjectModal() {
             <h3 id="project-modal-title">{project.name}</h3>
             <p className="project-modal-label">{project.label}</p>
           </div>
-          <button className="project-modal-close" onClick={closeProject} aria-label="Close">
-            &times;
-          </button>
+          <div className="project-modal-close-group">
+            <span className="modal-esc-hint">{t('modal.escHint')}</span>
+            <button className="project-modal-close" onClick={closeProject} aria-label="Close">
+              &times;
+            </button>
+          </div>
         </div>
 
         <div className="project-modal-body">

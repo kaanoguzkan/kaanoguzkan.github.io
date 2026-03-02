@@ -1,4 +1,24 @@
 import { Component } from 'react';
+import { useTranslation } from 'react-i18next';
+
+function ErrorFallback() {
+  const { t } = useTranslation();
+  return (
+    <div style={{ textAlign: 'center', padding: '4rem 1rem' }}>
+      <h2>{t('errorBoundary.title')}</h2>
+      <p style={{ marginTop: '1rem', color: 'var(--muted)' }}>
+        {t('errorBoundary.message')}
+      </p>
+      <button
+        className="btn"
+        style={{ marginTop: '1.5rem' }}
+        onClick={() => window.location.reload()}
+      >
+        {t('errorBoundary.refresh')}
+      </button>
+    </div>
+  );
+}
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -12,21 +32,7 @@ class ErrorBoundary extends Component {
 
   render() {
     if (this.state.hasError) {
-      return (
-        <div style={{ textAlign: 'center', padding: '4rem 1rem' }}>
-          <h2>Something went wrong.</h2>
-          <p style={{ marginTop: '1rem', color: 'var(--muted)' }}>
-            Please try refreshing the page.
-          </p>
-          <button
-            className="btn"
-            style={{ marginTop: '1.5rem' }}
-            onClick={() => window.location.reload()}
-          >
-            Refresh
-          </button>
-        </div>
-      );
+      return <ErrorFallback />;
     }
 
     return this.props.children;

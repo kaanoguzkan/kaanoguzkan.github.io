@@ -70,9 +70,12 @@ function ResumeModal() {
       >
         <div className="resume-modal-header">
           <h3 id="resume-modal-title">{t('resume.title')}</h3>
-          <button className="resume-close" onClick={close} aria-label="Close">
-            &times;
-          </button>
+          <div className="resume-close-group">
+            <span className="modal-esc-hint">{t('modal.escHint')}</span>
+            <button className="resume-close" onClick={close} aria-label="Close">
+              &times;
+            </button>
+          </div>
         </div>
         <iframe src={pdfUrl} title="Resume" className="resume-iframe" sandbox="allow-same-origin" />
         <div className="resume-modal-footer">

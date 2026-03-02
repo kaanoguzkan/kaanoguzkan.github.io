@@ -104,6 +104,21 @@
 }
 
 /* ===========================
+   1b. Utility Classes
+   =========================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ===========================
    2. Reset & Base Styles
    =========================== */
 *,
@@ -1322,6 +1337,20 @@ footer {
     color: var(--heading);
 }
 
+.resume-close-group,
+.project-modal-close-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.modal-esc-hint {
+    font-size: 0.75rem;
+    color: var(--muted);
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
 .resume-iframe {
     width: 100%;
     flex-grow: 1;
@@ -1940,7 +1969,31 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     transition: all var(--transition);
+}
+
+.theme-toggle::after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card-bg);
+    color: var(--text);
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    border: 1px solid var(--glass-border);
+}
+
+.theme-toggle:hover::after,
+.theme-toggle:focus-visible::after {
+    opacity: 1;
 }
 
 .theme-toggle:hover {
@@ -2048,5 +2101,63 @@ footer {
 
     .typing-cursor {
         animation: none;
+    }
+}
+
+/* ===========================
+   Print Styles
+   =========================== */
+@media print {
+    #navbar,
+    .scroll-progress,
+    .particle-bg,
+    .back-to-top,
+    .theme-toggle,
+    .language-switcher,
+    .hamburger,
+    .contact-form,
+    .resume-overlay,
+    .project-modal-overlay {
+        display: none !important;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    body::after {
+        display: none;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+
+    .glass-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+
+    .fade-in,
+    .stagger-item {
+        opacity: 1 !important;
+        transform: none !important;
     }
 }

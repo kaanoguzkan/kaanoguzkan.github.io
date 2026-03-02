@@ -208,7 +208,8 @@
   },
   "github": {
     "title": "GitHub Activity",
-    "contributions": "Contribution Graph"
+    "contributions": "Contribution Graph",
+    "chartError": "Could not load the contribution graph."
   },
   "blog": {
     "title": "Blog",
@@ -222,5 +223,13 @@
     "copyright": "© 2026 S. Kaan Oguzkan. All rights reserved.",
     "quickLinks": "Quick Links",
     "connect": "Connect"
+  },
+  "modal": {
+    "escHint": "Press Esc to close"
+  },
+  "errorBoundary": {
+    "title": "Something went wrong.",
+    "message": "Please try refreshing the page.",
+    "refresh": "Refresh"
   }
 }

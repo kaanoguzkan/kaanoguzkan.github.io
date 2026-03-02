@@ -1,0 +1,16 @@
+{
+  "name": "S. Kaan Oguzkan — Portfolio",
+  "short_name": "Kaan Oguzkan",
+  "description": "Portfolio of S. Kaan Oguzkan — Software Engineer & CS Student",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#38bdf8",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

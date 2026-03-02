@@ -208,7 +208,8 @@
   },
   "github": {
     "title": "GitHub-Aktivität",
-    "contributions": "Beitragsgrafik"
+    "contributions": "Beitragsgrafik",
+    "chartError": "Die Beitragsgrafik konnte nicht geladen werden."
   },
   "blog": {
     "title": "Blog",
@@ -222,5 +223,13 @@
     "copyright": "© 2026 S. Kaan Oğuzkan. Alle Rechte vorbehalten.",
     "quickLinks": "Schnellzugriff",
     "connect": "Verbinden"
+  },
+  "modal": {
+    "escHint": "Esc zum Schließen"
+  },
+  "errorBoundary": {
+    "title": "Etwas ist schiefgelaufen.",
+    "message": "Bitte versuchen Sie, die Seite neu zu laden.",
+    "refresh": "Aktualisieren"
   }
 }

@@ -117,7 +117,9 @@ function Contact() {
               aria-hidden="true"
             />
             <div className="form-field">
+              <label htmlFor="contact-name" className="sr-only">{t('contact.form.name')}</label>
               <input
+                id="contact-name"
                 type="text"
                 name="name"
                 value={fields.name}
@@ -133,7 +135,9 @@ function Contact() {
               )}
             </div>
             <div className="form-field">
+              <label htmlFor="contact-email" className="sr-only">{t('contact.form.email')}</label>
               <input
+                id="contact-email"
                 type="email"
                 name="email"
                 value={fields.email}
@@ -149,7 +153,9 @@ function Contact() {
               )}
             </div>
             <div className="form-field">
+              <label htmlFor="contact-message" className="sr-only">{t('contact.form.message')}</label>
               <textarea
+                id="contact-message"
                 name="message"
                 value={fields.message}
                 onChange={handleChange}
