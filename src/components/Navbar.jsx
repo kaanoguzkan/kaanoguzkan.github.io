@@ -48,7 +48,7 @@ function Navbar() {
     return () => observer.disconnect();
   }, [isHome]);
 
-  const navItems = ['about', 'experience', 'projects', 'github', 'skills', 'volunteering', 'contact'];
+  const navItems = ['about', 'experience', 'academics', 'projects', 'github', 'skills', 'volunteering', 'contact'];
 
   const handleLinkClick = () => setMenuOpen(false);
 

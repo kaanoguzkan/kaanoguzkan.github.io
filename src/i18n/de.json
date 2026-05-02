@@ -2,6 +2,7 @@
   "nav": {
     "about": "Über mich",
     "experience": "Erfahrung",
+    "academics": "Akademisches",
     "projects": "Projekte",
     "skills": "Fähigkeiten",
     "volunteering": "Ehrenamt",
@@ -65,6 +66,25 @@
         "tags": ["React", "TypeScript", "Node.js", "Express", "MongoDB", "AWS", "React Native"]
       }
     ]
+  },
+  "academics": {
+    "title": "Akademisches",
+    "subtitle": "Forschung und wissenschaftliche Profile.",
+    "publicationsTitle": "Publikationen",
+    "publicationsLoading": "Publikationen werden geladen…",
+    "publicationsError": "Publikationen konnten nicht geladen werden. Auf ORCID ansehen.",
+    "publicationsEmpty": "Publikationen folgen — für Updates ORCID folgen.",
+    "profiles": {
+      "orcid": {
+        "id": "0009-0000-3272-7333",
+        "label": "Verifizierter Forscher"
+      },
+      "scholar": {
+        "url": "https://scholar.google.com.tr/citations?user=923Fx2MAAAAJ&hl=tr",
+        "name": "S. Kaan Oğuzkan",
+        "metrics": ""
+      }
+    }
   },
   "projects": {
     "title": "Projekte",

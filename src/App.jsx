@@ -6,6 +6,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 
 const About = lazy(() => import('./components/About'));
 const Experience = lazy(() => import('./components/Experience'));
+const Academics = lazy(() => import('./components/Academics'));
 const Projects = lazy(() => import('./components/Projects'));
 const GitHubActivity = lazy(() => import('./components/GitHubActivity'));
 const Skills = lazy(() => import('./components/Skills'));
@@ -26,6 +27,7 @@ function HomePage() {
         <Suspense fallback={null}>
           <About />
           <Experience />
+          <Academics />
           <Projects />
           <GitHubActivity />
           <Skills />
