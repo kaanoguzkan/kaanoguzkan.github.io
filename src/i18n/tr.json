@@ -75,6 +75,7 @@
     "highlightsTitle": "Öne Çıkanlar",
     "items": [
       {
+        "online": true,
         "name": "Artifactum",
         "label": "CS319 — Yazılım Mühendisliği Projesi",
         "description": "MERN uygulaması için artifakt alma ve LLM özelliklerini geliştirdim. 6 prompt iş akışı ve %1 LLM çağrı hata oranıyla Gemini entegrasyonu yaptım. 50 MB / 200 dosyaya kadar S3 çoklu dosya ve ZIP toplu yükleme sistemi kurdum. 8 indeks ile MongoDB koleksiyonları tasarladım; p95 sorgu gecikmesini 420 ms'den 90 ms'ye düşürdüm.",
@@ -94,6 +95,7 @@
         "image": ""
       },
       {
+        "online": false,
         "name": "Immune Wars",
         "label": "CS102 — Programlamaya Giriş II (Şub – May 2024)",
         "description": "Bağışıklık sistemi hakkında eğitici bir oyun. Graf tabanlı vücut modeli ile oyuncular bağışıklık hücrelerini kullanarak patojenlere karşı savunma yapıyor. Oyun mekaniği, patojen yapay zekası ve görsel geri bildirim sistemleri tasarladım.",
@@ -113,6 +115,7 @@
         "image": ""
       },
       {
+        "online": true,
         "name": "NutriApp",
         "label": "Amazon Üniversite Katılım Programı",
         "description": "Yemek planlama uygulaması için backend servisleri geliştirdim. AWS Lambda üzerinde 450 ms p95 gecikme ile 16 sunucusuz REST API endpoint'i oluşturdum. Halkın Tercihi Ödülü'nü kazandım — 7 takım arasında birinci.",

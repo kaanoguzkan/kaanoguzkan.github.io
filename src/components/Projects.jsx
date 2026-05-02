@@ -25,7 +25,11 @@ function Projects() {
   const { t, i18n } = useTranslation();
   const ref = useScrollFadeIn();
   const { openProject } = useProjectModal();
-  const items = t('projects.items', { returnObjects: true });
+  const allItems = t('projects.items', { returnObjects: true });
+  const items = useMemo(
+    () => allItems.filter(p => p.online !== false),
+    [allItems]
+  );
   const [activeTag, setActiveTag] = useState(null);
 
   useEffect(() => {

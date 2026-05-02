@@ -75,6 +75,7 @@
     "highlightsTitle": "Wichtige Highlights",
     "items": [
       {
+        "online": true,
         "name": "Artifactum",
         "label": "CS319 — Software-Engineering-Projekt",
         "description": "Verantwortlich für Artefaktaufnahme und LLM-Funktionen einer MERN-Anwendung. Gemini-Integration für Artefaktgenerierung/-analyse mit 6 Prompt-Workflows und 1 % LLM-Aufruf-Fehlerrate. S3-Multi-Datei- und ZIP-Massenupload für bis zu 50 MB / 200 Dateien. MongoDB-Sammlungen mit 8 Indizes; p95-Abfragelatenz von 420 ms auf 90 ms verbessert.",
@@ -94,6 +95,7 @@
         "image": ""
       },
       {
+        "online": false,
         "name": "Immune Wars",
         "label": "CS102 — Einführung in die Programmierung II (Feb – Mai 2024)",
         "description": "Lernspiel über das Immunsystem als Semesterprojekt. Grafbasiertes Körpermodell, in dem Spieler mit Immunzellen gegen Krankheitserreger verteidigen. Spielmechanik, Pathogen-KI und visuelle Feedbacksysteme entworfen.",
@@ -113,6 +115,7 @@
         "image": ""
       },
       {
+        "online": true,
         "name": "NutriApp",
         "label": "Amazon University Engagement Program",
         "description": "Backend-Services für eine Mahlzeitenplanungs-App entwickelt. 16 serverlose REST-API-Endpunkte auf AWS Lambda mit p95-Latenz von 450 ms. People's Choice Award gewonnen — Platz 1 von 7 Teams.",

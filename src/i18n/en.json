@@ -75,6 +75,7 @@
     "highlightsTitle": "Key Highlights",
     "items": [
       {
+        "online": true,
         "name": "Artifactum",
         "label": "CS319 — Software Engineering Project",
         "description": "Owned artifact ingestion and LLM features for a MERN application. Integrated Gemini for artifact generation/analysis with 6 prompt workflows and 1% LLM-call failure rate. Built S3 multi-file and ZIP bulk uploads processing up to 50 MB / 200 files. Designed MongoDB collections with 8 indexes, improving p95 query latency from 420 ms to 90 ms.",
@@ -94,6 +95,7 @@
         "image": ""
       },
       {
+        "online": false,
         "name": "Immune Wars",
         "label": "CS102 — Intro to Programming II (Feb – May 2024)",
         "description": "Educational game about the immune system built as a semester project. Features a graph-based body model where players defend against pathogens using immune cells. Designed game mechanics, pathogen AI, and visual feedback systems.",
@@ -113,6 +115,7 @@
         "image": ""
       },
       {
+        "online": true,
         "name": "NutriApp",
         "label": "Amazon University Engagement Program",
         "description": "Built backend services for a meal-planning app. Implemented 16 serverless REST API endpoints on AWS Lambda with p95 latency of 450 ms. Won the People's Choice Award — top 1 of 7 teams.",
