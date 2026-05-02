@@ -209,7 +209,11 @@
   "github": {
     "title": "GitHub-Aktivität",
     "contributions": "Beitragsgrafik",
-    "chartError": "Die Beitragsgrafik konnte nicht geladen werden."
+    "chartError": "Die Beitragsgrafik konnte nicht geladen werden.",
+    "pinnedTitle": "Angeheftete Repositories",
+    "pinnedLoading": "Angeheftete Repositories werden geladen…",
+    "pinnedError": "Angeheftete Repositories konnten nicht geladen werden.",
+    "pinnedEmpty": "Noch keine angehefteten Repositories."
   },
   "blog": {
     "title": "Blog",

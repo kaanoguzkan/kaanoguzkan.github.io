@@ -1955,6 +1955,85 @@ footer {
     border-radius: var(--radius);
 }
 
+.pinned-repos {
+    margin-top: 2rem;
+}
+
+.pinned-repos-title {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.pinned-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.pinned-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1.25rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform var(--transition), border-color var(--transition);
+}
+
+.pinned-card:hover,
+.pinned-card:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--primary);
+}
+
+.pinned-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+}
+
+.pinned-card-name {
+    font-weight: 600;
+    color: var(--heading);
+}
+
+.pinned-card-desc {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.pinned-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.pinned-card-lang {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.pinned-lang-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.pinned-card-stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
 /* ===========================
    18. Theme Toggle & Light Overrides
    =========================== */

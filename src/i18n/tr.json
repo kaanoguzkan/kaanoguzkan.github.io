@@ -209,7 +209,11 @@
   "github": {
     "title": "GitHub Aktivitesi",
     "contributions": "Katkı Grafiği",
-    "chartError": "Katkı grafiği yüklenemedi."
+    "chartError": "Katkı grafiği yüklenemedi.",
+    "pinnedTitle": "Sabitlenmiş Depolar",
+    "pinnedLoading": "Sabitlenmiş depolar yükleniyor…",
+    "pinnedError": "Sabitlenmiş depolar yüklenemedi.",
+    "pinnedEmpty": "Henüz sabitlenmiş depo yok."
   },
   "blog": {
     "title": "Blog",

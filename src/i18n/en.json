@@ -209,7 +209,11 @@
   "github": {
     "title": "GitHub Activity",
     "contributions": "Contribution Graph",
-    "chartError": "Could not load the contribution graph."
+    "chartError": "Could not load the contribution graph.",
+    "pinnedTitle": "Pinned Repositories",
+    "pinnedLoading": "Loading pinned repositories…",
+    "pinnedError": "Could not load pinned repositories.",
+    "pinnedEmpty": "No pinned repositories yet."
   },
   "blog": {
     "title": "Blog",
