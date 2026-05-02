@@ -2784,16 +2784,9 @@ body ::selection { background: var(--accent); color: var(--bg); }
    Editorial — Footer
    =========================== */
 .site-footer {
-    padding: 56px 0 40px;
+    padding: 40px 0 32px;
     border-top: 1px solid var(--rule);
     margin-top: 40px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 24px;
-    align-items: end;
-}
-@media (max-width: 720px) {
-    .site-footer { grid-template-columns: 1fr; }
 }
 .footer-colophon {
     font-family: var(--mono);
@@ -3181,7 +3174,7 @@ nav#navbar { display: none; }
     border-top: 1px solid var(--rule);
 }
 .skill-cat {
-    padding: 28px 24px 28px 0;
+    padding: 32px 28px;
     border-bottom: 1px solid var(--rule);
     border-right: 1px solid var(--rule);
 }
@@ -3414,6 +3407,87 @@ nav#navbar { display: none; }
 .gh-cta:hover {
     background: var(--ink);
     color: var(--bg);
+}
+
+.gh-pinned {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+}
+.gh-pinned-empty {
+    margin: 0;
+    color: var(--ink-3);
+    font-size: 14px;
+}
+.gh-pinned-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+}
+@media (max-width: 720px) {
+    .gh-pinned-grid { grid-template-columns: 1fr; }
+}
+.gh-pinned-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px 28px;
+    border-bottom: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+    color: inherit;
+    background: transparent;
+    transition: background 0.2s, padding 0.2s;
+}
+.gh-pinned-grid .gh-pinned-card:nth-child(2n) { border-right: none; }
+@media (max-width: 720px) {
+    .gh-pinned-card { border-right: none !important; }
+}
+.gh-pinned-card:hover,
+.gh-pinned-card:focus-visible {
+    background: var(--bg-2);
+    outline: none;
+}
+.gh-pinned-name {
+    font-family: var(--display);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+}
+.gh-pinned-desc {
+    font-size: 13.5px;
+    color: var(--ink-2);
+    line-height: 1.55;
+    margin: 0;
+    flex-grow: 1;
+}
+.gh-pinned-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+}
+.gh-pinned-lang {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.gh-pinned-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.gh-pinned-stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 }
 
 /* ===========================

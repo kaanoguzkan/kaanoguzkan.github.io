@@ -8,7 +8,6 @@ function getInitialTheme() {
   // Migrate legacy values
   if (stored === 'light') return 'bone';
   if (stored === 'dark') return 'ink';
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'ink';
   return 'bone';
 }
 

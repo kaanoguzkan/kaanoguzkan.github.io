@@ -13,12 +13,7 @@ function Footer() {
       <div className="footer-colophon">
         <strong>{t('footer.copyright')}</strong>
         <br />
-        {t('footer.setIn')}
-        <br />
         {t('footer.lastUpdated')} · {lastUpdated}
-      </div>
-      <div className="footer-sig" aria-hidden="true">
-        SKO<span className="footer-sig-period">.</span>
       </div>
     </footer>
   );

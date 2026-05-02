@@ -9,7 +9,7 @@
     } else if (stored === 'dark') {
         theme = 'ink';
     } else {
-        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ink' : 'bone';
+        theme = 'bone';
     }
     document.documentElement.setAttribute('data-theme', theme);
 })();
