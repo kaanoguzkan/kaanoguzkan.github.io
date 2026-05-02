@@ -7,41 +7,56 @@ function About() {
   const educationItems = t('about.educationItems', { returnObjects: true });
 
   return (
-    <section id="about" className="fade-in" ref={ref}>
-      <div className="container">
-        <h2 className="section-title">{t('about.title')}</h2>
-        <div className="about-content">
-          <div className="about-photo">
-            <picture>
-              <source srcSet="/assets/profile.avif" type="image/avif" />
-              <source srcSet="/assets/profile.webp" type="image/webp" />
-              <img src="/assets/profile.jpg" alt="S. Kaan Oguzkan" width="200" height="200" loading="lazy" />
-            </picture>
+    <section id="about" className="block reveal" ref={ref}>
+      <div className="shell">
+        <div className="block-head">
+          <div className="block-num">
+            <span className="n">02</span> &nbsp;/ {t('nav.about')}
           </div>
-          <div className="about-text">
-            <p><Trans i18nKey="about.paragraph1" components={{ strong: <strong /> }} /></p>
-            <p><Trans i18nKey="about.paragraph2" components={{ strong: <strong /> }} /></p>
-            <div className="about-education">
+          <h2 className="block-title">{t('about.title')}</h2>
+        </div>
+
+        <div className="about-grid">
+          <aside className="about-side">
+            <div className="meta-row">
+              <span className="k">{t('about.sidebar.basedLabel')}</span>
+              <span className="v">{t('about.location')}</span>
+            </div>
+            <div className="meta-row">
+              <span className="k">{t('about.sidebar.languagesLabel')}</span>
+              <span className="v">{t('about.languages')}</span>
+            </div>
+            <div className="meta-row">
+              <span className="k">{t('about.sidebar.statusLabel')}</span>
+              <span className="v">{t('about.sidebar.statusValue')}</span>
+            </div>
+            <div className="meta-row">
+              <span className="k">{t('about.sidebar.focusLabel')}</span>
+              <span className="v">{t('about.sidebar.focusValue')}</span>
+            </div>
+          </aside>
+
+          <div className="about-body">
+            <p>
+              <Trans i18nKey="about.paragraph1" components={{ strong: <strong /> }} />
+            </p>
+            <p>
+              <Trans i18nKey="about.paragraph2" components={{ strong: <strong /> }} />
+            </p>
+
+            <div className="edu-list">
               {Array.isArray(educationItems) && educationItems.map((edu, i) => (
-                <div className="glass-card education-card" key={i}>
-                  <div className="education-header">
-                    <h4>{edu.school}</h4>
-                    <span className="date-badge">{edu.period}</span>
+                <div key={i} className="edu-row">
+                  <div>
+                    <div className="edu-school">{edu.school}</div>
+                    <div className="edu-deg">{edu.degree}</div>
                   </div>
-                  <p className="education-degree">{edu.degree}</p>
-                  {edu.detail && <p className="education-detail">{edu.detail}</p>}
+                  <div className="edu-right">
+                    <div className="edu-period">{edu.period}</div>
+                    {edu.detail && <div className="edu-detail">{edu.detail}</div>}
+                  </div>
                 </div>
               ))}
-            </div>
-            <div className="about-info">
-              <div className="info-item">
-                <span className="info-label">{t('about.labels.location')}</span>
-                <span>{t('about.location')}</span>
-              </div>
-              <div className="info-item">
-                <span className="info-label">{t('about.labels.languages')}</span>
-                <span>{t('about.languages')}</span>
-              </div>
             </div>
           </div>
         </div>

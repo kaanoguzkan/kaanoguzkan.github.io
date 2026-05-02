@@ -4,9 +4,12 @@ const ThemeContext = createContext();
 
 function getInitialTheme() {
   const stored = localStorage.getItem('theme');
-  if (stored === 'light' || stored === 'dark') return stored;
-  if (window.matchMedia('(prefers-color-scheme: light)').matches) return 'light';
-  return 'dark';
+  if (stored === 'bone' || stored === 'ink') return stored;
+  // Migrate legacy values
+  if (stored === 'light') return 'bone';
+  if (stored === 'dark') return 'ink';
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'ink';
+  return 'bone';
 }
 
 export function ThemeProvider({ children }) {
@@ -17,7 +20,7 @@ export function ThemeProvider({ children }) {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  const toggle = () => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  const toggle = () => setTheme((prev) => (prev === 'ink' ? 'bone' : 'ink'));
 
   return (
     <ThemeContext.Provider value={{ theme, toggle }}>

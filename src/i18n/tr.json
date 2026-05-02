@@ -2,8 +2,12 @@
   "nav": {
     "about": "Hakkımda",
     "experience": "Deneyim",
+    "work": "Kariyer",
     "academics": "Akademik",
+    "research": "Araştırma",
     "projects": "Projeler",
+    "community": "Topluluk",
+    "getInTouch": "İletişime geç",
     "skills": "Yetenekler",
     "volunteering": "Gönüllülük",
     "contact": "İletişim",
@@ -14,6 +18,13 @@
   },
   "hero": {
     "name": "S. Kaan Oğuzkan",
+    "indexLabel": "⌘ Dizin — 01 / Kişisel site · v.2026",
+    "headline": {
+      "line1": "Temiz, ölçeklenebilir",
+      "line2": "yazılım",
+      "line3": "geliştiriyorum"
+    },
+    "metaText": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği öğrencisi, <strong>Look & Cash</strong>'te Yazılım Mühendisi. Güvenilir, performanslı ve bakımı kolay backend sistemler tasarlıyorum.",
     "subtitle": "CS @ Bilkent | SWE @ Look & Cash",
     "tagline": "Temiz ve ölçeklenebilir yazılımlar geliştiriyorum.",
     "cta": "Projelerimi Gör",
@@ -27,6 +38,14 @@
   },
   "about": {
     "title": "Hakkımda",
+    "sidebar": {
+      "basedLabel": "Konum",
+      "languagesLabel": "Diller",
+      "statusLabel": "Durum",
+      "statusValue": "İşbirliği ve stajlara açık",
+      "focusLabel": "Odak",
+      "focusValue": "Backend sistemler · DevOps · LLM iş akışları"
+    },
     "paragraph1": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Bilimi öğrencisiyim. Full-stack web uygulamaları geliştirme konusunda uygulamalı deneyime sahibim. Güvenilir, performanslı ve bakımı kolay backend sistemleri tasarlamaktan keyif alıyorum.",
     "paragraph2": "Şu anda <strong>Look & Cash</strong>'te Yazılım Mühendisi olarak React, TypeScript, JavaScript, MongoDB ve AWS kullanarak full-stack ve devops çözümleri geliştiriyorum.",
     "labels": {
@@ -58,10 +77,26 @@
         "company": "Look & Cash — Ankara, Türkiye",
         "date": "Şub 2025 – Devam Ediyor",
         "bullets": [
-          "<strong>Destek Talep Sistemi:</strong> Web/mobil için öncelik, yorum, ek dosya ve durum bilgisi içeren bir destek talebi iş akışı oluşturdum. 13 REST endpoint, 4 talep durumu ve 5 yönetici aksiyonu geliştirdim; ortalama yönetici işlem süresini %25 azalttım.",
-          "<strong>Gerçek Zamanlı Mobil Destek Sohbeti:</strong> Mobilde backend kalıcılığı ve durum senkronizasyonu ile gerçek zamanlı destek sohbeti uyguladım. 300 ms p95 mesaj iletimi ve 150 eşzamanlı oturum altında %99,5 iletim başarısı elde ettim.",
-          "<strong>Raporlama ve Grafik Oluşturma:</strong> MongoDB üzerinde tarih aralığı ve kampanya filtreli KPI raporlama API'leri geliştirdim. 4 grafik türünü besleyen 14 panel veri seti oluşturdum; rapor oluşturma süresini 6,2 saniyeden 1,9 saniyeye düşürdüm.",
-          "<strong>Yönetici Ana Sayfa Panosu:</strong> 12 KPI gösteren ve 9 yönetici sayfasına bağlanan bir yönetici panosu oluşturdum; sık yapılan görevler için navigasyonu 5 tıklamadan 2 tıklamaya indirdim."
+          {
+            "head": "Destek Talep Sistemi",
+            "desc": "Web ve mobil için öncelik, yorum, ek dosya ve durum bilgisi içeren bir destek talebi iş akışı kurdum.",
+            "metrics": ["13 REST endpoint", "4 talep durumu", "5 yönetici aksiyonu", "−%25 yönetici işlem süresi"]
+          },
+          {
+            "head": "Gerçek Zamanlı Mobil Destek Sohbeti",
+            "desc": "Mobilde backend kalıcılığı ve durum senkronizasyonu ile gerçek zamanlı destek sohbeti uyguladım.",
+            "metrics": ["300 ms p95 iletim", "%99,5 iletim başarısı", "150 eşzamanlı oturum"]
+          },
+          {
+            "head": "Raporlama ve Grafik Oluşturma",
+            "desc": "MongoDB üzerinde tarih aralığı ve kampanya filtreli KPI raporlama API'leri geliştirdim.",
+            "metrics": ["14 panel veri seti", "4 grafik türü", "6,2 sn → 1,9 sn rapor süresi"]
+          },
+          {
+            "head": "Yönetici Ana Sayfa Panosu",
+            "desc": "12 KPI gösteren ve 9 yönetici sayfasına bağlanan bir yönetici panosu kurdum.",
+            "metrics": ["12 KPI", "9 yönetici sayfası", "5 → 2 tıklama"]
+          }
         ],
         "tags": ["React", "TypeScript", "Node.js", "Express", "MongoDB", "AWS", "React Native"]
       }
@@ -96,6 +131,7 @@
     "items": [
       {
         "online": true,
+        "year": "2025",
         "name": "Artifactum",
         "label": "CS319 — Yazılım Mühendisliği Projesi",
         "description": "MERN uygulaması için artifakt alma ve LLM özelliklerini geliştirdim. 6 prompt iş akışı ve %1 LLM çağrı hata oranıyla Gemini entegrasyonu yaptım. 50 MB / 200 dosyaya kadar S3 çoklu dosya ve ZIP toplu yükleme sistemi kurdum. 8 indeks ile MongoDB koleksiyonları tasarladım; p95 sorgu gecikmesini 420 ms'den 90 ms'ye düşürdüm.",
@@ -116,6 +152,7 @@
       },
       {
         "online": false,
+        "year": "2024",
         "name": "Immune Wars",
         "label": "CS102 — Programlamaya Giriş II (Şub – May 2024)",
         "description": "Bağışıklık sistemi hakkında eğitici bir oyun. Graf tabanlı vücut modeli ile oyuncular bağışıklık hücrelerini kullanarak patojenlere karşı savunma yapıyor. Oyun mekaniği, patojen yapay zekası ve görsel geri bildirim sistemleri tasarladım.",
@@ -136,6 +173,7 @@
       },
       {
         "online": true,
+        "year": "2024",
         "name": "NutriApp",
         "label": "Amazon Üniversite Katılım Programı",
         "description": "Yemek planlama uygulaması için backend servisleri geliştirdim. AWS Lambda üzerinde 450 ms p95 gecikme ile 16 sunucusuz REST API endpoint'i oluşturdum. Halkın Tercihi Ödülü'nü kazandım — 7 takım arasında birinci.",
@@ -168,7 +206,7 @@
     ]
   },
   "volunteering": {
-    "title": "Gönüllülük",
+    "title": "Topluluk",
     "items": [
       {
         "role": "Danışma Kurulu Başkanı",
@@ -204,9 +242,16 @@
   },
   "contact": {
     "title": "İletişime Geçin",
-    "text": "Bağlantı kurmak veya iş birliği yapmak isterseniz yazabilirsiniz.",
+    "headline": "İletişime geç.",
+    "text": "Stajlara, full-stack iş birliklerine ve backend sistemleri, LLM entegrasyonları ve DevOps üzerine konuşmalara açığım. Genellikle 24 saat içinde yanıt veriyorum.",
     "infoTitle": "İletişim Bilgileri",
     "location": "Ankara, Türkiye",
+    "labels": {
+      "email": "E-posta",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "orcid": "ORCID"
+    },
     "form": {
       "name": "İsim",
       "email": "E-posta",
@@ -248,6 +293,8 @@
   },
   "footer": {
     "copyright": "© 2026 S. Kaan Oğuzkan. Tüm hakları saklıdır.",
+    "setIn": "Space Grotesk, Inter & JetBrains Mono ile dizilmiştir.",
+    "lastUpdated": "Son güncelleme",
     "quickLinks": "Hızlı Bağlantılar",
     "connect": "Bağlantılar"
   },

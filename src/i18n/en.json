@@ -2,8 +2,12 @@
   "nav": {
     "about": "About",
     "experience": "Experience",
+    "work": "Work",
     "academics": "Academics",
+    "research": "Research",
     "projects": "Projects",
+    "community": "Community",
+    "getInTouch": "Get in touch",
     "skills": "Skills",
     "volunteering": "Volunteering",
     "contact": "Contact",
@@ -14,6 +18,13 @@
   },
   "hero": {
     "name": "S. Kaan Oguzkan",
+    "indexLabel": "⌘ Index — 01 / Personal site · v.2026",
+    "headline": {
+      "line1": "Building",
+      "line2": "clean, scalable",
+      "line3": "software"
+    },
+    "metaText": "CS student at <strong>Bilkent University</strong>, Software Engineer at <strong>Look & Cash</strong>. I design backend systems that are reliable, performant, and easy to maintain.",
     "subtitle": "CS @ Bilkent | SWE @ Look & Cash",
     "tagline": "Building clean, scalable software.",
     "cta": "View My Work",
@@ -26,9 +37,17 @@
     ]
   },
   "about": {
-    "title": "About Me",
+    "title": "About",
     "paragraph1": "I'm a Computer Science student at <strong>Bilkent University</strong> with hands-on experience building full-stack web applications. I enjoy designing backend systems that are reliable, performant, and easy to maintain.",
     "paragraph2": "Currently working as a Software Engineer at <strong>Look & Cash</strong>, building full-stack & devops solutions using React, TypeScript, JavaScript, MongoDB and AWS.",
+    "sidebar": {
+      "basedLabel": "Based",
+      "languagesLabel": "Languages",
+      "statusLabel": "Status",
+      "statusValue": "Available for collaborations & internships",
+      "focusLabel": "Focus",
+      "focusValue": "Backend systems · DevOps · LLM workflows"
+    },
     "labels": {
       "location": "Location",
       "languages": "Languages"
@@ -58,10 +77,26 @@
         "company": "Look & Cash — Ankara, Turkey",
         "date": "Feb 2025 – Present",
         "bullets": [
-          "<strong>Ticket-Based Support System:</strong> Built a ticket workflow for web/mobile with priority, comments, attachments, and statuses. Shipped 13 REST endpoints, 4 ticket states, and 5 admin actions; reduced average admin handling time by 25%.",
-          "<strong>Real-Time Mobile Support Chat:</strong> Implemented real-time ticket chat on mobile with backend persistence and state sync. Achieved 300 ms p95 message delivery and 99.5% delivery success under 150 concurrent sessions.",
-          "<strong>Reporting & Graph Generation:</strong> Built KPI reporting APIs over MongoDB with date-range and campaign filters. Generated 14 dashboard datasets powering 4 chart types; cut report generation time from 6.2s to 1.9s.",
-          "<strong>Admin Landing Page Dashboard:</strong> Built an admin dashboard showing 12 KPIs with a sidebar linking to 9 admin pages; reduced navigation from 5 clicks to 2 clicks for common tasks."
+          {
+            "head": "Ticket-Based Support System",
+            "desc": "Built a ticket workflow for web and mobile with priority, comments, attachments, and statuses.",
+            "metrics": ["13 REST endpoints", "4 ticket states", "5 admin actions", "−25% admin handling time"]
+          },
+          {
+            "head": "Real-Time Mobile Support Chat",
+            "desc": "Implemented real-time ticket chat on mobile with backend persistence and state sync.",
+            "metrics": ["300 ms p95 delivery", "99.5% delivery success", "150 concurrent sessions"]
+          },
+          {
+            "head": "Reporting & Graph Generation",
+            "desc": "Built KPI reporting APIs over MongoDB with date-range and campaign filters.",
+            "metrics": ["14 dashboard datasets", "4 chart types", "6.2s → 1.9s report time"]
+          },
+          {
+            "head": "Admin Landing Page Dashboard",
+            "desc": "Built an admin dashboard showing 12 KPIs with a sidebar linking to 9 admin pages.",
+            "metrics": ["12 KPIs surfaced", "9 admin pages", "5 → 2 clicks for common tasks"]
+          }
         ],
         "tags": ["React", "TypeScript", "Node.js", "Express", "MongoDB", "AWS", "React Native"]
       }
@@ -96,6 +131,7 @@
     "items": [
       {
         "online": true,
+        "year": "2025",
         "name": "Artifactum",
         "label": "CS319 — Software Engineering Project",
         "description": "Owned artifact ingestion and LLM features for a MERN application. Integrated Gemini for artifact generation/analysis with 6 prompt workflows and 1% LLM-call failure rate. Built S3 multi-file and ZIP bulk uploads processing up to 50 MB / 200 files. Designed MongoDB collections with 8 indexes, improving p95 query latency from 420 ms to 90 ms.",
@@ -116,6 +152,7 @@
       },
       {
         "online": false,
+        "year": "2024",
         "name": "Immune Wars",
         "label": "CS102 — Intro to Programming II (Feb – May 2024)",
         "description": "Educational game about the immune system built as a semester project. Features a graph-based body model where players defend against pathogens using immune cells. Designed game mechanics, pathogen AI, and visual feedback systems.",
@@ -136,6 +173,7 @@
       },
       {
         "online": true,
+        "year": "2024",
         "name": "NutriApp",
         "label": "Amazon University Engagement Program",
         "description": "Built backend services for a meal-planning app. Implemented 16 serverless REST API endpoints on AWS Lambda with p95 latency of 450 ms. Won the People's Choice Award — top 1 of 7 teams.",
@@ -168,7 +206,7 @@
     ]
   },
   "volunteering": {
-    "title": "Volunteering",
+    "title": "Community",
     "items": [
       {
         "role": "Advisory Board President",
@@ -204,9 +242,16 @@
   },
   "contact": {
     "title": "Get in Touch",
-    "text": "Feel free to reach out if you'd like to connect or collaborate.",
+    "headline": "Get in touch.",
+    "text": "Open to internships, full-stack collaborations, and conversations about backend systems, LLM integrations, and DevOps. I usually reply within 24 hours.",
     "infoTitle": "Contact Info",
     "location": "Ankara, Turkey",
+    "labels": {
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "orcid": "ORCID"
+    },
     "form": {
       "name": "Name",
       "email": "Email",
@@ -248,6 +293,8 @@
   },
   "footer": {
     "copyright": "© 2026 S. Kaan Oguzkan. All rights reserved.",
+    "setIn": "Set in Space Grotesk, Inter & JetBrains Mono.",
+    "lastUpdated": "Last updated",
     "quickLinks": "Quick Links",
     "connect": "Connect"
   },

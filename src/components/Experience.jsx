@@ -1,4 +1,4 @@
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 
 function Experience() {
@@ -7,35 +7,48 @@ function Experience() {
   const jobs = t('experience.jobs', { returnObjects: true });
 
   return (
-    <section id="experience" className="fade-in" ref={ref}>
-      <div className="container">
-        <h2 className="section-title">{t('experience.title')}</h2>
-        <div className="timeline">
-          {jobs.map((job, i) => (
-            <div className="timeline-entry" key={i}>
-              <div className="timeline-dot"></div>
-              <div className="glass-card timeline-card">
-                <div className="experience-header">
-                  <div>
-                    <h3>{job.role}</h3>
-                    <p className="company">{job.company}</p>
-                  </div>
-                  <span className="date-badge">{job.date}</span>
-                </div>
-                <ul className="experience-list">
-                  {job.bullets.map((_, j) => (
-                    <li key={j}><Trans i18nKey={`experience.jobs.${i}.bullets.${j}`} components={{ strong: <strong /> }} /></li>
-                  ))}
-                </ul>
-                <div className="tech-tags">
-                  {job.tags.map((tag) => (
-                    <span className="tag" key={tag}>{tag}</span>
-                  ))}
-                </div>
+    <section id="experience" className="block reveal" ref={ref}>
+      <div className="shell">
+        <div className="block-head">
+          <div className="block-num">
+            <span className="n">03</span> &nbsp;/ {t('nav.work')}
+          </div>
+          <h2 className="block-title">{t('experience.title')}</h2>
+        </div>
+
+        {jobs.map((job, i) => (
+          <div key={i} className="exp">
+            <div className="exp-side">
+              <div className="exp-when">{job.date}</div>
+              <div className="exp-org">{job.company}</div>
+              <div className="exp-role">{job.role}</div>
+              <div className="exp-tags">
+                {job.tags.map((tag) => (
+                  <span key={tag} className="mono-tag">{tag}</span>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
+
+            <div className="exp-list">
+              {job.bullets.map((bullet, j) => (
+                <div key={j} className="exp-item">
+                  <div className="exp-idx">{String(j + 1).padStart(2, '0')}</div>
+                  <div className="exp-body">
+                    <div className="exp-head">{bullet.head}</div>
+                    <div className="exp-desc">{bullet.desc}</div>
+                    {bullet.metrics && bullet.metrics.length > 0 && (
+                      <div className="metric-row">
+                        {bullet.metrics.map((m, k) => (
+                          <span key={k} className="metric">{m}</span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
