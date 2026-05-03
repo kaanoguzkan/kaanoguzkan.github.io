@@ -24,7 +24,7 @@
       "line2": "clean, scalable",
       "line3": "software"
     },
-    "metaText": "CS student at <strong>Bilkent University</strong>, Software Engineer at <strong>Look & Cash</strong>. I design backend systems that are reliable, performant, and easy to maintain.",
+    "metaText": "Computer Engineering student at <strong>Bilkent University</strong>, undergraduate research volunteer at <strong>Alkan Lab</strong>. I design backend systems that are reliable, performant, and easy to maintain.",
     "subtitle": "CS @ Bilkent | SWE @ Look & Cash",
     "tagline": "Building clean, scalable software.",
     "cta": "View My Work",
@@ -38,15 +38,15 @@
   },
   "about": {
     "title": "About",
-    "paragraph1": "I'm a Computer Science student at <strong>Bilkent University</strong> with hands-on experience building full-stack web applications. I enjoy designing backend systems that are reliable, performant, and easy to maintain.",
-    "paragraph2": "Currently working as a Software Engineer at <strong>Look & Cash</strong>, building full-stack & devops solutions using React, TypeScript, JavaScript, MongoDB and AWS.",
+    "paragraph1": "I'm a Computer Engineering student at <strong>Bilkent University</strong> with hands-on experience across full-stack web applications and GPU-accelerated systems. I enjoy designing backend systems that are reliable, performant, and easy to maintain.",
+    "paragraph2": "Currently an undergraduate research volunteer at <strong>Alkan Lab for Bioinformatics & Computational Genomics</strong>, modernizing CUDA codebases and metagenomic pipelines. Previously built full-stack and DevOps solutions at <strong>Look & Cash</strong> with React, TypeScript, MongoDB, and AWS.",
     "sidebar": {
       "basedLabel": "Based",
       "languagesLabel": "Languages",
       "statusLabel": "Status",
       "statusValue": "Available for collaborations & internships",
       "focusLabel": "Focus",
-      "focusValue": "Backend systems · DevOps · LLM workflows"
+      "focusValue": "Backend systems · DevOps · GPU & bioinformatics"
     },
     "labels": {
       "location": "Location",
@@ -57,7 +57,7 @@
     "educationItems": [
       {
         "school": "Bilkent University",
-        "degree": "B.S. Computer Science",
+        "degree": "B.Sc. Computer Engineering",
         "period": "Sep 2023 – Jun 2027",
         "detail": "Activity: Formula Bilkent"
       },
@@ -73,9 +73,32 @@
     "title": "Experience",
     "jobs": [
       {
-        "role": "Software Engineer",
+        "role": "Undergraduate Volunteer",
+        "company": "Alkan Lab for Bioinformatics & Computational Genomics — Ankara, Turkey",
+        "date": "Feb 2026 – Present",
+        "bullets": [
+          {
+            "head": "CuCLARK GPU & CUDA Modernization",
+            "desc": "Forked and modernized CuCLARK (GPU metagenomic classifier, originally CUDA 7.5 / single-arch); upgraded to CUDA 11.8 with multi-arch support spanning Kepler sm_35 through Hopper sm_90.",
+            "metrics": ["CUDA 7.5 → 11.8", "10 GPU generations", "K80 → H100"]
+          },
+          {
+            "head": "Build System & Containerization",
+            "desc": "Replaced the legacy install.sh with a CMake 3.20 build (C++17, CUDA 14, optional OpenMP) and authored a multi-arch Dockerfile published as alkanlab/cuclark.",
+            "metrics": ["CMake 3.20", "C++17 / CUDA 14", "6-subcommand CLI"]
+          },
+          {
+            "head": "Batch Classification Pipeline",
+            "desc": "Diagnosed a byte-offset batching bug that caused duplicate read assignments and built a list-mode pipeline with resume, crash-recovery blacklist, and progress monitoring.",
+            "metrics": ["3000+ FASTA files", "single DB load", "resume + crash-recovery"]
+          }
+        ],
+        "tags": ["C++", "CUDA", "CMake", "Docker", "Linux", "Bioinformatics"]
+      },
+      {
+        "role": "Part Time Software Engineer",
         "company": "Look & Cash — Ankara, Turkey",
-        "date": "Feb 2025 – Present",
+        "date": "Feb 2025 – Oct 2025",
         "bullets": [
           {
             "head": "Ticket-Based Support System",

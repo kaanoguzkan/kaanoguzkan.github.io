@@ -24,7 +24,7 @@
       "line2": "Software",
       "line3": "bauen"
     },
-    "metaText": "Informatikstudent an der <strong>Bilkent-Universität</strong>, Softwareingenieur bei <strong>Look & Cash</strong>. Ich entwerfe Backend-Systeme, die zuverlässig, performant und wartbar sind.",
+    "metaText": "Informatikstudent an der <strong>Bilkent-Universität</strong>, ehrenamtliche studentische Hilfskraft am <strong>Alkan Lab</strong>. Ich entwerfe Backend-Systeme, die zuverlässig, performant und wartbar sind.",
     "subtitle": "CS @ Bilkent | SWE @ Look & Cash",
     "tagline": "Ich entwickle saubere, skalierbare Software.",
     "cta": "Meine Projekte",
@@ -44,10 +44,10 @@
       "statusLabel": "Status",
       "statusValue": "Offen für Kollaborationen und Praktika",
       "focusLabel": "Fokus",
-      "focusValue": "Backend-Systeme · DevOps · LLM-Workflows"
+      "focusValue": "Backend-Systeme · DevOps · GPU & Bioinformatik"
     },
-    "paragraph1": "Ich bin Informatikstudent an der <strong>Bilkent-Universität</strong> mit praktischer Erfahrung in der Entwicklung von Full-Stack-Webanwendungen. Ich entwerfe gerne Backend-Systeme, die zuverlässig, performant und wartungsfreundlich sind.",
-    "paragraph2": "Derzeit arbeite ich als Softwareingenieur bei <strong>Look & Cash</strong> und entwickle Full-Stack- und DevOps-Lösungen mit React, TypeScript, JavaScript, MongoDB und AWS.",
+    "paragraph1": "Ich studiere Informatik (Computer Engineering) an der <strong>Bilkent-Universität</strong> und bringe praktische Erfahrung mit Full-Stack-Web-Anwendungen und GPU-beschleunigten Systemen mit. Ich entwerfe gerne Backend-Systeme, die zuverlässig, performant und wartungsfreundlich sind.",
+    "paragraph2": "Derzeit ehrenamtliche studentische Hilfskraft am <strong>Alkan Lab für Bioinformatik und Computational Genomics</strong>, wo ich CUDA-Codebasen und Metagenom-Pipelines modernisiere. Zuvor bei <strong>Look & Cash</strong> Full-Stack- und DevOps-Lösungen mit React, TypeScript, MongoDB und AWS entwickelt.",
     "labels": {
       "location": "Standort",
       "languages": "Sprachen"
@@ -57,7 +57,7 @@
     "educationItems": [
       {
         "school": "Bilkent-Universität",
-        "degree": "B.S. Informatik",
+        "degree": "B.Sc. Informatik (Computer Engineering)",
         "period": "Sep 2023 – Jun 2027",
         "detail": "Aktivität: Formula Bilkent"
       },
@@ -73,9 +73,32 @@
     "title": "Erfahrung",
     "jobs": [
       {
-        "role": "Softwareingenieur",
+        "role": "Studentische Hilfskraft (ehrenamtlich)",
+        "company": "Alkan Lab für Bioinformatik und Computational Genomics — Ankara, Türkei",
+        "date": "Feb. 2026 – heute",
+        "bullets": [
+          {
+            "head": "CuCLARK GPU- & CUDA-Modernisierung",
+            "desc": "CuCLARK (GPU-Metagenom-Klassifikator, urspr. CUDA 7.5 / Single-Arch) geforkt und auf CUDA 11.8 aktualisiert; Multi-Arch-Support von Kepler sm_35 bis Hopper sm_90.",
+            "metrics": ["CUDA 7.5 → 11.8", "10 GPU-Generationen", "K80 → H100"]
+          },
+          {
+            "head": "Build-System & Containerisierung",
+            "desc": "Legacy-install.sh durch CMake-3.20-Build (C++17, CUDA 14, optional OpenMP) ersetzt und Multi-Arch-Dockerfile (alkanlab/cuclark) verfasst.",
+            "metrics": ["CMake 3.20", "C++17 / CUDA 14", "CLI mit 6 Unterbefehlen"]
+          },
+          {
+            "head": "Batch-Klassifikations-Pipeline",
+            "desc": "Byte-Offset-Batching-Bug diagnostiziert, der doppelte Read-Zuordnungen verursachte; List-Mode-Pipeline mit Resume und Crash-Recovery gebaut.",
+            "metrics": ["3000+ FASTA-Dateien", "ein DB-Ladevorgang", "Resume + Recovery"]
+          }
+        ],
+        "tags": ["C++", "CUDA", "CMake", "Docker", "Linux", "Bioinformatik"]
+      },
+      {
+        "role": "Werkstudent Software-Entwicklung",
         "company": "Look & Cash — Ankara, Türkei",
-        "date": "Feb 2025 – Heute",
+        "date": "Feb. 2025 – Okt. 2025",
         "bullets": [
           {
             "head": "Ticket-basiertes Supportsystem",

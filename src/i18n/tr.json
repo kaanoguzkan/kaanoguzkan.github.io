@@ -24,7 +24,7 @@
       "line2": "yazılım",
       "line3": "geliştiriyorum"
     },
-    "metaText": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği öğrencisi, <strong>Look & Cash</strong>'te Yazılım Mühendisi. Güvenilir, performanslı ve bakımı kolay backend sistemler tasarlıyorum.",
+    "metaText": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği öğrencisi, <strong>Alkan Lab</strong>'ta lisans gönüllü araştırmacı. Güvenilir, performanslı ve bakımı kolay backend sistemler tasarlıyorum.",
     "subtitle": "CS @ Bilkent | SWE @ Look & Cash",
     "tagline": "Temiz ve ölçeklenebilir yazılımlar geliştiriyorum.",
     "cta": "Projelerimi Gör",
@@ -44,10 +44,10 @@
       "statusLabel": "Durum",
       "statusValue": "İşbirliği ve stajlara açık",
       "focusLabel": "Odak",
-      "focusValue": "Backend sistemler · DevOps · LLM iş akışları"
+      "focusValue": "Backend sistemler · DevOps · GPU ve biyoenformatik"
     },
-    "paragraph1": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Bilimi öğrencisiyim. Full-stack web uygulamaları geliştirme konusunda uygulamalı deneyime sahibim. Güvenilir, performanslı ve bakımı kolay backend sistemleri tasarlamaktan keyif alıyorum.",
-    "paragraph2": "Şu anda <strong>Look & Cash</strong>'te Yazılım Mühendisi olarak React, TypeScript, JavaScript, MongoDB ve AWS kullanarak full-stack ve devops çözümleri geliştiriyorum.",
+    "paragraph1": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği öğrencisiyim; full-stack web uygulamaları ve GPU hızlandırmalı sistemler üzerinde uygulamalı deneyime sahibim. Güvenilir, performanslı ve bakımı kolay backend sistemleri tasarlamaktan keyif alıyorum.",
+    "paragraph2": "Şu anda <strong>Alkan Biyoenformatik ve Hesaplamalı Genomik Laboratuvarı</strong>'nda lisans gönüllü araştırmacı olarak CUDA kod tabanlarını ve metagenomik işlem hatlarını modernleştiriyorum. Daha önce <strong>Look & Cash</strong>'te React, TypeScript, MongoDB ve AWS ile full-stack ve DevOps çözümleri geliştirdim.",
     "labels": {
       "location": "Konum",
       "languages": "Diller"
@@ -57,7 +57,7 @@
     "educationItems": [
       {
         "school": "Bilkent Üniversitesi",
-        "degree": "Bilgisayar Bilimi Lisans",
+        "degree": "Bilgisayar Mühendisliği Lisans",
         "period": "Eyl 2023 – Haz 2027",
         "detail": "Aktivite: Formula Bilkent"
       },
@@ -73,9 +73,32 @@
     "title": "Deneyim",
     "jobs": [
       {
-        "role": "Yazılım Mühendisi",
+        "role": "Lisans Gönüllü Araştırmacı",
+        "company": "Alkan Biyoenformatik ve Hesaplamalı Genomik Laboratuvarı — Ankara, Türkiye",
+        "date": "Şub 2026 – Devam Ediyor",
+        "bullets": [
+          {
+            "head": "CuCLARK GPU ve CUDA Modernizasyonu",
+            "desc": "CuCLARK'ı (GPU tabanlı metagenomik sınıflandırıcı, orijinali CUDA 7.5 / tek mimari) forkladım ve CUDA 11.8'e yükselttim; Kepler sm_35'ten Hopper sm_90'a kadar çoklu mimari desteği ekledim.",
+            "metrics": ["CUDA 7.5 → 11.8", "10 GPU nesli", "K80 → H100"]
+          },
+          {
+            "head": "Build Sistemi ve Konteynerleştirme",
+            "desc": "Eski install.sh betiğini CMake 3.20 tabanlı bir build (C++17, CUDA 14, isteğe bağlı OpenMP) ile değiştirdim ve alkanlab/cuclark olarak yayımlanan çok mimarili bir Dockerfile yazdım.",
+            "metrics": ["CMake 3.20", "C++17 / CUDA 14", "6 alt komutlu CLI"]
+          },
+          {
+            "head": "Toplu Sınıflandırma İşlem Hattı",
+            "desc": "Tekrarlanan okuma atamalarına yol açan bir bayt-ofset batch hatasını teşhis ettim; devam ettirme, çökme sonrası kara liste ve ilerleme takibi içeren liste modu işlem hattı kurdum.",
+            "metrics": ["3000+ FASTA dosyası", "tek DB yüklemesi", "devam + kurtarma"]
+          }
+        ],
+        "tags": ["C++", "CUDA", "CMake", "Docker", "Linux", "Biyoenformatik"]
+      },
+      {
+        "role": "Yarı Zamanlı Yazılım Mühendisi",
         "company": "Look & Cash — Ankara, Türkiye",
-        "date": "Şub 2025 – Devam Ediyor",
+        "date": "Şub 2025 – Eki 2025",
         "bullets": [
           {
             "head": "Destek Talep Sistemi",
