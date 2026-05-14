@@ -13,6 +13,7 @@ const Skills = lazy(() => import('./components/Skills'));
 const Volunteering = lazy(() => import('./components/Volunteering'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
+const NemikMorse = lazy(() => import('./components/NemikMorse'));
 const ResumeModal = lazy(() => import('./components/ResumeModal'));
 const ProjectModal = lazy(() => import('./components/ProjectModal'));
 const BackToTop = lazy(() => import('./components/BackToTop'));
@@ -36,6 +37,7 @@ function HomePage() {
         </Suspense>
       </main>
       <Suspense fallback={null}>
+        <NemikMorse />
         <Footer />
       </Suspense>
     </>

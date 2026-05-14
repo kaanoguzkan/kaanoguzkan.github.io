@@ -3589,3 +3589,176 @@ nav#navbar { display: none; }
 .pinned-repos-title,
 .pinned-grid,
 .pinned-card { display: none !important; }
+.nemik-morse {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 1.6rem;
+  overflow: hidden;
+  background: var(--bg-2);
+  border: 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  cursor: pointer;
+  text-align: left;
+  transition: height 320ms ease, color 240ms ease;
+}
+
+.nemik-morse--morse    { height: 2.6rem; color: var(--text); }
+.nemik-morse--decoded  { height: 4rem;   color: var(--text); letter-spacing: 0.04em; font-family: inherit; font-size: 0.85rem; }
+
+.nemik-morse:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* Beacon (signal light + label) */
+.nemik-morse__beacon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.nemik-morse__dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.18;
+  transition: opacity 40ms linear, box-shadow 40ms linear;
+}
+
+.nemik-morse__tx {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: var(--muted);
+  text-transform: uppercase;
+  opacity: 0.55;
+  transition: opacity 80ms linear;
+}
+
+/* Spotlight */
+.nemik-morse__spotlight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 12rem;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent-soft) 20%,
+    var(--accent-soft) 80%,
+    transparent
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Layers */
+.nemik-morse__layer {
+  position: absolute;
+  inset: 0;
+  padding-left: 4.5rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 320ms ease;
+  pointer-events: none;
+  z-index: 2;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+
+.nemik-morse--morse   .nemik-morse__layer--morse { opacity: 1; }
+.nemik-morse--decoded .nemik-morse__layer--plain { opacity: 1; }
+
+.nemik-morse__track {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 4rem;
+  animation: nemik-morse-scroll 320s linear infinite;
+  will-change: transform;
+}
+
+.nemik-morse--decoded .nemik-morse__layer--plain .nemik-morse__track {
+  animation-duration: 200s;
+}
+
+.nemik-morse:hover .nemik-morse__track {
+  animation-play-state: paused;
+}
+
+.nemik-morse__chunk {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nemik-morse__sym {
+  display: inline-block;
+  pointer-events: auto;
+  line-height: 1;
+}
+
+.nemik-morse__sym--dot  { font-size: 0.9rem; padding: 0 0.18em; color: var(--text); }
+.nemik-morse__sym--dash { font-size: 0.85rem; padding: 0 0.18em; color: var(--text); text-shadow: 0 0 6px var(--accent-soft); }
+
+.nemik-morse__gap--sym  { display: inline-block; width: 0.35em; }
+.nemik-morse__gap--char { display: inline-block; width: 1em; }
+.nemik-morse__gap--word {
+  display: inline-block;
+  padding: 0 0.9em;
+  color: var(--accent);
+  opacity: 0.55;
+  font-weight: 300;
+}
+
+.nemik-morse__pairs {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.nemik-morse__pair {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.1;
+}
+
+.nemik-morse__pair-plain { letter-spacing: 0.04em; }
+
+.nemik-morse__pair-morse {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+
+@keyframes nemik-morse-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nemik-morse__track { animation: none; transform: none; }
+  .nemik-morse__dot   { transition: none; }
+}
