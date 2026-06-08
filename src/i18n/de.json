@@ -154,6 +154,34 @@
     "items": [
       {
         "online": true,
+        "year": "2026",
+        "name": "OSGuide",
+        "label": "Interaktive Lernplattform für Betriebssysteme",
+        "description": "Eine kostenlose, interaktive Webplattform zum Erlernen von Betriebssystemkonzepten mit 21 Kapiteln – von Prozessen, Threads und CPU-Scheduling bis hin zu virtuellem Speicher, Dateisystemen und Sicherheit. Die Lektionen sind in MDX verfasst und werden über eine animierte, vorgerenderte Oberfläche für schnelle Ladezeiten und SEO präsentiert.",
+        "detailedDescription": "OSGuide (osguide.org) ist eine selbst entwickelte Lernplattform, die den klassischen Betriebssystem-Lehrplan in ein zugängliches, interaktives Web-Erlebnis verwandelt. Sie umfasst 21 Kapitel – von Betriebssystemstrukturen, Prozessen, Threads und CPU-Scheduling über Synchronisation, Deadlocks, Haupt- und virtuellen Speicher, Massenspeicher, E/A, Dateisysteme, Schutz und Sicherheit bis hin zu Fallstudien über virtuelle Maschinen, Netzwerke, Linux und Windows. Da die Inhalte in MDX verfasst sind, verbindet jede Lektion Fließtext mit interaktiven React-Komponenten und Framer-Motion-Animationen. Die Website ist mit React 19 und TypeScript gebaut, mit Tailwind CSS v4 gestaltet, für schnelles erstes Rendering und Auffindbarkeit als statisches HTML vorgerendert und mit einer Vitest-Testsuite abgedeckt.",
+        "highlights": [
+          "21 Kapitel, die den gesamten Betriebssystem-Lehrplan abdecken",
+          "In MDX verfasste Lektionen, die Text mit interaktiven React-Komponenten verbinden",
+          "Animierte, bewegungsbasierte Oberfläche mit Framer Motion",
+          "Als statisches HTML vorgerendert für schnelles erstes Rendering und SEO",
+          "Vollständig typisiert mit TypeScript und durch Vitest-Tests abgedeckt"
+        ],
+        "screenshots": [],
+        "tags": [
+          "React",
+          "TypeScript",
+          "Vite",
+          "Tailwind CSS",
+          "Framer Motion",
+          "MDX"
+        ],
+        "github": "",
+        "linkText": "Der Quellcode ist privat, aber melden Sie sich gern, wenn Sie einen näheren Blick werfen möchten!",
+        "demo": "https://osguide.org",
+        "image": ""
+      },
+      {
+        "online": true,
         "year": "2025",
         "name": "Artifactum",
         "label": "CS319 — Software-Engineering-Projekt",

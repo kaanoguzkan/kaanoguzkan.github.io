@@ -154,6 +154,34 @@
     "items": [
       {
         "online": true,
+        "year": "2026",
+        "name": "OSGuide",
+        "label": "Interactive Operating Systems Learning Platform",
+        "description": "A free, interactive web platform for learning operating system concepts, spanning 21 chapters from processes, threads, and CPU scheduling to virtual memory, file systems, and security. Lessons are authored in MDX and presented through an animated, prerendered interface for fast loads and SEO.",
+        "detailedDescription": "OSGuide (osguide.org) is a self-built educational platform that turns the classic operating systems curriculum into an approachable, interactive web experience. It covers 21 chapters — from OS structures, processes, threads, and CPU scheduling through synchronization, deadlocks, main and virtual memory, mass storage, I/O, file systems, protection, and security, ending with case studies on virtual machines, networks, Linux, and Windows. The content is authored in MDX so each lesson mixes rich prose with interactive React components and Framer Motion animations. The site is built with React 19 and TypeScript, styled with Tailwind CSS v4, prerendered to static HTML for fast first paint and search visibility, and covered by a Vitest test suite.",
+        "highlights": [
+          "21 chapters covering the full operating systems curriculum",
+          "Lessons authored in MDX, mixing prose with interactive React components",
+          "Animated, motion-driven UI built with Framer Motion",
+          "Prerendered to static HTML for fast first paint and SEO",
+          "Fully typed with TypeScript and covered by Vitest tests"
+        ],
+        "screenshots": [],
+        "tags": [
+          "React",
+          "TypeScript",
+          "Vite",
+          "Tailwind CSS",
+          "Framer Motion",
+          "MDX"
+        ],
+        "github": "",
+        "linkText": "Source is private, but feel free to reach out if you'd like a closer look!",
+        "demo": "https://osguide.org",
+        "image": ""
+      },
+      {
+        "online": true,
         "year": "2025",
         "name": "Artifactum",
         "label": "CS319 — Software Engineering Project",

@@ -154,6 +154,34 @@
     "items": [
       {
         "online": true,
+        "year": "2026",
+        "name": "OSGuide",
+        "label": "Etkileşimli İşletim Sistemleri Öğrenme Platformu",
+        "description": "İşletim sistemi kavramlarını öğrenmek için ücretsiz, etkileşimli bir web platformu. Süreçler, iş parçacıkları ve CPU zamanlamasından sanal belleğe, dosya sistemlerine ve güvenliğe kadar 21 bölümü kapsar. Dersler MDX ile yazıldı; sayfalar hızlı yükleme ve SEO için animasyonlu ve önceden render ediliyor.",
+        "detailedDescription": "OSGuide (osguide.org), klasik işletim sistemleri müfredatını anlaşılır ve etkileşimli bir web deneyimine dönüştüren, sıfırdan geliştirdiğim eğitsel bir platformdur. İşletim sistemi yapıları, süreçler, iş parçacıkları ve CPU zamanlamasından senkronizasyon, kilitlenmeler, ana ve sanal bellek, yığın depolama, G/Ç, dosya sistemleri, koruma ve güvenliğe kadar 21 bölümü kapsar; sanal makineler, ağlar, Linux ve Windows örnek incelemeleriyle son bulur. İçerik MDX ile yazıldığından her ders zengin metni etkileşimli React bileşenleri ve Framer Motion animasyonlarıyla birleştirir. Site React 19 ve TypeScript ile geliştirildi, Tailwind CSS v4 ile tasarlandı, hızlı ilk render ve arama görünürlüğü için statik HTML olarak önceden render edildi ve Vitest test paketiyle test edildi.",
+        "highlights": [
+          "İşletim sistemleri müfredatının tamamını kapsayan 21 bölüm",
+          "MDX ile yazılmış, metni etkileşimli React bileşenleriyle birleştiren dersler",
+          "Framer Motion ile geliştirilen animasyonlu, hareket odaklı arayüz",
+          "Hızlı ilk render ve SEO için statik HTML olarak önceden render",
+          "TypeScript ile tam tipli ve Vitest testleriyle kapsanmış"
+        ],
+        "screenshots": [],
+        "tags": [
+          "React",
+          "TypeScript",
+          "Vite",
+          "Tailwind CSS",
+          "Framer Motion",
+          "MDX"
+        ],
+        "github": "",
+        "linkText": "Kaynak kod özeldir, ancak daha yakından görmek isterseniz bana ulaşabilirsiniz!",
+        "demo": "https://osguide.org",
+        "image": ""
+      },
+      {
+        "online": true,
         "year": "2025",
         "name": "Artifactum",
         "label": "CS319 — Yazılım Mühendisliği Projesi",
