@@ -1,0 +1,5 @@
+# Security policy for kaanoguzkan.com (RFC 9116)
+Contact: mailto:kaanoguzkan@gmail.com
+Expires: 2027-06-08T00:00:00.000Z
+Preferred-Languages: en, tr
+Canonical: https://kaanoguzkan.com/.well-known/security.txt
