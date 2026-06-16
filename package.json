@@ -10,7 +10,7 @@
     "deploy": "vite build && gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
-    "i18next": "^25.8.13",
+    "i18next": "^26.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-i18next": "^16.5.4",
