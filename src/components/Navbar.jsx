@@ -5,6 +5,7 @@ import { useScrollProgress } from '../hooks/useScrollProgress';
 import { useResume } from '../context/ResumeContext';
 import { useTheme } from '../context/ThemeContext';
 import LanguageSwitcher from './LanguageSwitcher';
+import { requestOpenPalette } from '../utils/palette';
 
 const SunIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -15,6 +16,12 @@ const SunIcon = () => (
 const MoonIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+  </svg>
+);
+
+const SearchIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
   </svg>
 );
 
@@ -100,6 +107,14 @@ function Navbar() {
             )}
             <div className="topnav-tools">
               <LanguageSwitcher />
+              <button
+                className="topnav-icon-btn"
+                onClick={() => { requestOpenPalette(); handleLinkClick(); }}
+                aria-label={t('palette.open')}
+                title={t('palette.open')}
+              >
+                <SearchIcon />
+              </button>
               <button
                 className="topnav-icon-btn"
                 onClick={toggle}

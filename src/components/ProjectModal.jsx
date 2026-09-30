@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { useProjectModal } from '../context/ProjectModalContext';
 
 const GitHubIcon = () => (
@@ -132,6 +133,11 @@ function ProjectModal() {
           </div>
 
           <div className="project-modal-links">
+            {project.slug && (
+              <Link to={`/projects/${project.slug}`} className="btn" onClick={closeProject}>
+                {t('caseStudy.readCaseStudy')} →
+              </Link>
+            )}
             {project.github ? (
               <a
                 href={project.github}

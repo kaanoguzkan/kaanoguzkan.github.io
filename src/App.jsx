@@ -3,7 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ErrorBoundary from './components/ErrorBoundary';
+import ScrollManager from './components/ScrollManager';
 
+const Now = lazy(() => import('./components/Now'));
 const About = lazy(() => import('./components/About'));
 const Experience = lazy(() => import('./components/Experience'));
 const Academics = lazy(() => import('./components/Academics'));
@@ -13,12 +15,12 @@ const Skills = lazy(() => import('./components/Skills'));
 const Volunteering = lazy(() => import('./components/Volunteering'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
-const NemikMorse = lazy(() => import('./components/NemikMorse'));
 const ResumeModal = lazy(() => import('./components/ResumeModal'));
 const ProjectModal = lazy(() => import('./components/ProjectModal'));
 const BackToTop = lazy(() => import('./components/BackToTop'));
-const BlogList = lazy(() => import('./components/BlogList'));
-const BlogPost = lazy(() => import('./components/BlogPost'));
+const CaseStudy = lazy(() => import('./components/CaseStudy'));
+const ResumePage = lazy(() => import('./components/ResumePage'));
+const CommandPalette = lazy(() => import('./components/CommandPalette'));
 
 function HomePage() {
   return (
@@ -26,6 +28,7 @@ function HomePage() {
       <main id="main-content">
         <Hero />
         <Suspense fallback={null}>
+          <Now />
           <About />
           <Experience />
           <Academics />
@@ -37,7 +40,7 @@ function HomePage() {
         </Suspense>
       </main>
       <Suspense fallback={null}>
-        <NemikMorse />
+        {/* Morse ticker disabled. To re-enable: lazy-import ./components/NemikMorse and render <NemikMorse /> here */}
         <Footer />
       </Suspense>
     </>
@@ -50,18 +53,21 @@ function App() {
       <a href="#main-content" className="skip-to-content">
         Skip to content
       </a>
+      <ScrollManager />
       <Navbar />
       <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/blog" element={<BlogList />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/projects/:slug" element={<CaseStudy />} />
+          <Route path="/resume" element={<ResumePage />} />
+          {/* Blog disabled. To re-enable: lazy-import ./components/BlogList and BlogPost and add /blog and /blog/:slug routes */}
         </Routes>
       </Suspense>
       <Suspense fallback={null}>
         <ResumeModal />
         <ProjectModal />
         <BackToTop />
+        <CommandPalette />
       </Suspense>
     </ErrorBoundary>
   );

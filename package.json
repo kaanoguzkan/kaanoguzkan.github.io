@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist -b gh-pages"
+    "deploy": "vite build && gh-pages -d dist -b gh-pages",
+    "test": "playwright test"
   },
   "dependencies": {
     "i18next": "^26.4.2",
@@ -19,6 +20,7 @@
     "rehype-sanitize": "^6.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^6.1.1",

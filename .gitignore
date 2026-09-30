@@ -4,3 +4,5 @@ dist
 *.local
 *SecurityInsights*.csv
 resume/build/
+test-results/
+playwright-report/

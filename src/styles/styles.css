@@ -466,11 +466,16 @@ section {
     justify-content: center;
 }
 
-.lang-btn:hover,
+.lang-btn:hover {
+    color: var(--ink);
+    border-color: var(--ink-3);
+}
+
+/* Ink fill (same pattern as .proj-filter.is-active); light text on the accent fails WCAG contrast. */
 .lang-btn.active {
-    background: var(--primary);
+    background: var(--ink);
     color: var(--bg);
-    border-color: var(--primary);
+    border-color: var(--ink);
 }
 
 /* ===========================
@@ -3761,4 +3766,307 @@ nav#navbar { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .nemik-morse__track { animation: none; transform: none; }
   .nemik-morse__dot   { transition: none; }
+}
+
+/* ===========================
+   Editorial — "Now" strip
+   =========================== */
+.now {
+    border-top: 1px solid var(--rule);
+    padding: 28px 0;
+}
+.now-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+.now-label { margin: 0; font-weight: 400; }
+.now-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+.now-date { margin-left: auto; }
+.now-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    margin: 0;
+}
+.now-item dt { margin-bottom: 6px; }
+.now-item dd {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink-2);
+}
+@media (max-width: 900px) {
+    .now-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+    .now-grid { grid-template-columns: 1fr; gap: 20px; }
+    .now-date { display: none; }
+}
+
+/* ===========================
+   Editorial — Case study page
+   =========================== */
+.cs-page { padding-top: 56px; padding-bottom: 96px; }
+.cs-back {
+    display: inline-block;
+    margin-bottom: 40px;
+    transition: color 0.2s;
+}
+.cs-back:hover, .cs-back:focus-visible { color: var(--accent); }
+.cs-head { margin-bottom: 56px; }
+.cs-eyebrow { margin-bottom: 16px; }
+.cs-title {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(44px, 8vw, 104px);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin: 0 0 20px;
+    color: var(--ink);
+}
+.cs-label {
+    font-size: 18px;
+    color: var(--ink-2);
+    margin: 0;
+    max-width: 640px;
+}
+.cs-grid { padding-top: 40px; border-top: 1px solid var(--rule); }
+.cs-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.cs-links { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.cs-body { max-width: 720px; display: flex; flex-direction: column; gap: 56px; }
+.cs-h { margin: 0 0 18px; font-weight: 400; }
+.cs-lead {
+    font-size: 20px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    margin: 0;
+}
+.cs-steps { list-style: none; margin: 0; padding: 0; }
+.cs-step {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 16px;
+    padding: 22px 0;
+    border-top: 1px solid var(--rule);
+}
+.cs-step:last-child { border-bottom: 1px solid var(--rule); }
+.cs-step-idx {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    padding-top: 4px;
+}
+.cs-step-head {
+    font-family: var(--display);
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0 0 6px;
+    color: var(--ink);
+}
+.cs-step-body {
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    margin: 0;
+}
+.cs-notfound { font-size: 18px; color: var(--ink-2); margin: 0 0 16px; }
+.cs-more { margin-top: 96px; display: flex; flex-direction: column; }
+.cs-more > .mono { margin-bottom: 12px; }
+.cs-more-link {
+    display: grid;
+    grid-template-columns: 200px 1fr auto;
+    gap: 24px;
+    align-items: baseline;
+    padding: 18px 0;
+    border-top: 1px solid var(--rule);
+    font-family: var(--display);
+    font-size: 20px;
+    color: var(--ink);
+    transition: color 0.2s, padding 0.25s;
+}
+.cs-more-link:last-child { border-bottom: 1px solid var(--rule); }
+.cs-more-link:hover, .cs-more-link:focus-visible { color: var(--accent); padding-left: 8px; }
+.cs-more-label { font-family: var(--body); font-size: 14px; color: var(--ink-3); }
+@media (max-width: 720px) {
+    .cs-page { padding-top: 32px; }
+    .cs-more-link { grid-template-columns: 1fr auto; }
+    .cs-more-label { display: none; }
+    .cs-step { grid-template-columns: 40px 1fr; }
+}
+
+/* ===========================
+   Editorial — Command palette
+   =========================== */
+.palette-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 14vh 16px 16px;
+    background: rgba(10, 10, 8, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+.palette {
+    width: min(640px, 100%);
+    background: var(--bg);
+    border: 1px solid var(--ink-3);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+}
+.palette-input {
+    width: 100%;
+    padding: 18px 20px;
+    border: 0;
+    border-bottom: 1px solid var(--rule);
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--display);
+    font-size: 18px;
+}
+.palette-input::placeholder { color: var(--ink-3); }
+.palette-input:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.palette-list {
+    list-style: none;
+    margin: 0;
+    padding: 6px 0 8px;
+    overflow-y: auto;
+    flex: 1;
+}
+.palette-group { padding: 12px 20px 6px; }
+.palette-item {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: var(--ink-2);
+    cursor: pointer;
+    border-left: 2px solid transparent;
+}
+.palette-item.is-active {
+    background: var(--accent-soft);
+    color: var(--ink);
+    border-left-color: var(--accent);
+}
+.palette-empty { padding: 20px; color: var(--ink-3); font-size: 14px; }
+.palette-hint {
+    padding: 10px 20px;
+    border-top: 1px solid var(--rule);
+}
+
+/* ===========================
+   Editorial — Resume page
+   =========================== */
+.rp { padding-top: 56px; padding-bottom: 96px; max-width: 920px; }
+.rp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+.rp-eyebrow { margin-bottom: 12px; }
+.rp-name {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(36px, 6vw, 64px);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin: 0 0 10px;
+    color: var(--ink);
+}
+.rp-sub { margin: 0; color: var(--ink-3); font-size: 14px; max-width: 420px; }
+.rp-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.rp-contact {
+    list-style: none;
+    margin: 0 0 8px;
+    padding: 16px 0;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    font-size: 14px;
+}
+.rp-section { margin-top: 40px; }
+.rp-h {
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+    font-weight: 400;
+}
+.rp-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    padding: 8px 0;
+}
+.rp-job { padding: 6px 0 14px; }
+.rp-strong { font-family: var(--display); font-size: 18px; font-weight: 500; color: var(--ink); }
+.rp-muted { font-size: 14px; color: var(--ink-3); margin-top: 2px; }
+.rp-when {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    white-space: nowrap;
+}
+.rp-text { margin: 4px 0 6px; font-size: 14.5px; color: var(--ink-2); line-height: 1.6; }
+.rp-bullets { list-style: none; margin: 0; padding: 0; }
+.rp-bullets li {
+    position: relative;
+    padding: 4px 0 4px 18px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-2);
+}
+.rp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--ink-3); }
+.rp-bullets strong { color: var(--ink); font-weight: 600; }
+.rp-metrics { font-family: var(--mono); font-size: 11.5px; color: var(--accent); }
+.rp-skills { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
+.rp-skill { display: flex; flex-direction: column; gap: 2px; padding: 6px 0; }
+.rp-skill dt { font-weight: 600; font-size: 14px; color: var(--ink); }
+.rp-skill dd { margin: 0; font-size: 14px; color: var(--ink-2); }
+@media (max-width: 720px) {
+    .rp { padding-top: 32px; }
+    .rp-row { grid-template-columns: 1fr; gap: 4px; }
+    .rp-skills { grid-template-columns: 1fr; }
+}
+@media print {
+    .topbar, .no-print, .skip-to-content, .palette-overlay, .now { display: none !important; }
+    body, .rp { background: #fff; color: #000; }
+    .rp { padding: 0; max-width: none; }
+    .rp-name, .rp-strong, .rp-bullets strong, .rp-skill dt { color: #000; }
+    .rp-muted, .rp-text, .rp-bullets li, .rp-skill dd, .rp-when, .rp-sub { color: #222; }
+    .rp-metrics { color: #000; }
+    .rp-section, .rp-job { break-inside: avoid; }
+    .rp a { color: #000; }
+}
+
+/* The legacy global `section` rule adds vertical padding; new page sections manage their own spacing. */
+.cs-body > section,
+.rp-section { padding: 0; }
+
+/* Keyboard focus: one visible accent ring everywhere, including the cards that
+   otherwise only shift their background on focus. */
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+.proj:focus-visible,
+.ac-card:focus-visible,
+.gh-pinned-card:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }

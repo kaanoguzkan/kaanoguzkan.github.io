@@ -174,6 +174,7 @@
         "online": true,
         "year": "2026",
         "name": "OSGuide",
+        "slug": "osguide",
         "label": "Etkileşimli İşletim Sistemleri Öğrenme Platformu",
         "description": "İşletim sistemi kavramlarını öğrenmek için ücretsiz, etkileşimli bir web platformu. Süreçler, iş parçacıkları ve CPU zamanlamasından sanal belleğe, dosya sistemlerine ve güvenliğe kadar 21 bölümü kapsar. Dersler MDX ile yazıldı; sayfalar hızlı yükleme ve SEO için animasyonlu ve önceden render ediliyor.",
         "detailedDescription": "OSGuide (osguide.org), klasik işletim sistemleri müfredatını anlaşılır ve etkileşimli bir web deneyimine dönüştüren, sıfırdan geliştirdiğim eğitsel bir platformdur. İşletim sistemi yapıları, süreçler, iş parçacıkları ve CPU zamanlamasından senkronizasyon, kilitlenmeler, ana ve sanal bellek, yığın depolama, G/Ç, dosya sistemleri, koruma ve güvenliğe kadar 21 bölümü kapsar; sanal makineler, ağlar, Linux ve Windows örnek incelemeleriyle son bulur. İçerik MDX ile yazıldığından her ders zengin metni etkileşimli React bileşenleri ve Framer Motion animasyonlarıyla birleştirir. Site React 19 ve TypeScript ile geliştirildi, Tailwind CSS v4 ile tasarlandı, hızlı ilk render ve arama görünürlüğü için statik HTML olarak önceden render edildi ve Vitest test paketiyle test edildi.",
@@ -202,6 +203,7 @@
         "online": true,
         "year": "2025",
         "name": "Artifactum",
+        "slug": "artifactum",
         "label": "CS319 — Yazılım Mühendisliği Projesi",
         "description": "MERN uygulaması için artifakt alma ve LLM özelliklerini geliştirdim. 6 prompt iş akışı ve %1 LLM çağrı hata oranıyla Gemini entegrasyonu yaptım. 50 MB / 200 dosyaya kadar S3 çoklu dosya ve ZIP toplu yükleme sistemi kurdum. 8 indeks ile MongoDB koleksiyonları tasarladım; p95 sorgu gecikmesini 420 ms'den 90 ms'ye düşürdüm.",
         "detailedDescription": "Artifactum için artifakt alma pipeline'ı ve tüm LLM destekli özelliklerin tasarım ve uygulamasını yönettim. Platform, kullanıcıların yapay zeka kullanarak artifaktları yüklemesine, yönetmesine ve analiz etmesine olanak tanır. 6 farklı prompt iş akışında Google Gemini entegrasyonu yaparak %1 LLM çağrı hata oranı elde ettim. Toplu iş başına 50 MB / 200 dosyaya kadar çoklu dosya ve ZIP yüklemelerini destekleyen S3 tabanlı dosya yükleme sistemi geliştirdim. 8 indeksle MongoDB koleksiyonları tasarlayarak p95 sorgu gecikmesini 420 ms'den 90 ms'ye düşürdüm.",
@@ -244,6 +246,7 @@
         "online": true,
         "year": "2024",
         "name": "NutriApp",
+        "slug": "nutriapp",
         "label": "Amazon Üniversite Katılım Programı",
         "description": "Yemek planlama uygulaması için backend servisleri geliştirdim. AWS Lambda üzerinde 450 ms p95 gecikme ile 16 sunucusuz REST API endpoint'i oluşturdum. Halkın Tercihi Ödülü'nü kazandım — 7 takım arasında birinci.",
         "detailedDescription": "NutriApp, Amazon Üniversite Katılım Programı kapsamında geliştirilen bir yemek planlama uygulamasıdır. Tüm backend mimarisinden sorumlu olarak DynamoDB veri deposuyla AWS Lambda üzerinde 16 sunucusuz REST API endpoint'i geliştirdim. API'ler kullanıcı kimlik doğrulama, yemek planı oluşturma, besin analizi ve diyet tercihi yönetimini kapsar. Sistem tüm endpoint'lerde 450 ms p95 gecikme elde etti. Takımımız 7 rakip takım arasında birinci olarak Halkın Tercihi Ödülü'nü kazandı.",
@@ -351,6 +354,162 @@
     "pinnedLoading": "Sabitlenmiş depolar yükleniyor…",
     "pinnedError": "Sabitlenmiş depolar yüklenemedi.",
     "pinnedEmpty": "Henüz sabitlenmiş depo yok."
+  },
+  "caseStudy": {
+    "back": "Tüm projeler",
+    "eyebrow": "Vaka çalışması",
+    "role": "Rol",
+    "year": "Yıl",
+    "context": "Bağlam",
+    "approach": "Yaklaşım",
+    "outcome": "Sonuç",
+    "stack": "Teknolojiler",
+    "links": "Bağlantılar",
+    "more": "Diğer vaka çalışmaları",
+    "readCaseStudy": "Vaka çalışmasını oku",
+    "notFound": "Bu vaka çalışması bulunamadı.",
+    "notFoundLink": "Projelere dön"
+  },
+  "caseStudies": {
+    "osguide": {
+      "role": "Tek kişilik proje: tasarım, içerik ve geliştirme",
+      "context": "Bilkent'in CS342 müfredatı etrafında yapılandırılmış klasik işletim sistemleri dersini, her fikrin okunabildiği, izlenebildiği ve denenebildiği bir web deneyimine dönüştürmek.",
+      "approach": [
+        {
+          "head": "Üç katmanlı öğrenme akışı",
+          "body": "Her konu kavram anlatımından animasyona, oradan etkileşimli bir simülatöre ilerler; zamanlama, bellek yönetimi ve senkronizasyon gibi temel konuları kapsar."
+        },
+        {
+          "head": "MDX ile yazılan dersler",
+          "body": "Dersler MDX ile yazıldığı için metin ve etkileşimli React bileşenleri aynı dosyada yer alır."
+        },
+        {
+          "head": "Hareket odaklı arayüz",
+          "body": "Animasyonlar Framer Motion ile hazırlandı."
+        },
+        {
+          "head": "Önce statik yayın",
+          "body": "Hızlı ilk boyama ve arama görünürlüğü için site statik HTML olarak önceden oluşturulur."
+        },
+        {
+          "head": "Tipli ve test edilmiş",
+          "body": "TypeScript ile yazıldı ve Vitest testleriyle kapsandı."
+        }
+      ],
+      "outcome": [
+        "İşletim sistemleri müfredatının tamamını kapsayan 21 bölüm",
+        "osguide.org adresinde ücretsiz ve yayında"
+      ]
+    },
+    "artifactum": {
+      "role": "Artifact alımı ve LLM özellikleri (CS319 takım projesi)",
+      "context": "Artifactum, CS319 Yazılım Mühendisliği dersi için geliştirilen, kullanıcıların yapay zekâ ile artifact yüklediği, yönettiği ve analiz ettiği bir MERN uygulamasıdır. Artifact'ların sisteme alınma yolundan ve bunların üzerine kurulu LLM özelliklerinden ben sorumluydum.",
+      "approach": [
+        {
+          "head": "Servis katmanı arkasında Gemini",
+          "body": "Artifact üretimi ve analizi, 6 prompt iş akışı boyunca ayrı bir servis katmanı üzerinden Google Gemini'ye gider. Zaman aşımları, yeniden denemeler ve yapılandırılmış parsing LLM çağrı hata oranını %1'e indirdi."
+        },
+        {
+          "head": "S3'e toplu yükleme",
+          "body": "Doğrulama ve güvenli kısmi hata yönetimi ile çoklu dosya ve ZIP toplu yükleme; grup başına 50 MB / 200 dosyaya kadar. Streaming ve eşzamanlılık (6 worker) alım süresini 40 sn'den 15 sn'ye düşürdü."
+        },
+        {
+          "head": "MongoDB indeksleme",
+          "body": "Koleksiyonlar 8 indeksle tasarlandı ve p95 sorgu gecikmesi 420 ms'den 90 ms'ye düştü."
+        }
+      ],
+      "outcome": [
+        "%1 LLM çağrı hata oranı",
+        "Alım süresi 40 sn → 15 sn",
+        "p95 sorgu gecikmesi 420 ms → 90 ms"
+      ]
+    },
+    "nutriapp": {
+      "role": "Backend: tüm sunucu tarafı mimarisi",
+      "context": "NutriApp, Amazon University Engagement Program kapsamında geliştirilen bir yemek planlama uygulamasıdır. Backend'in kullanıcı kimlik doğrulamasını, yemek planı üretimini, besin analizini ve beslenme tercihlerini kapsaması gerekiyordu.",
+      "approach": [
+        {
+          "head": "Sunucusuz REST API'leri",
+          "body": "AWS Lambda üzerinde 16 REST uç noktası; veri deposu olarak DynamoDB."
+        },
+        {
+          "head": "Gecikme",
+          "body": "Tüm uç noktalarda 450 ms p95 gecikme."
+        },
+        {
+          "head": "Sunucu yönetmeden ölçekleme",
+          "body": "Sunucusuz mimari, bakımı yapılacak sunucu olmadığı ve ölçeklemeyi platformun üstlendiği anlamına gelir."
+        }
+      ],
+      "outcome": [
+        "People's Choice Award: 7 takım arasında 1.",
+        "450 ms p95 ile 16 uç nokta"
+      ]
+    }
+  },
+  "now": {
+    "label": "Şimdi",
+    "updated": "Güncelleme",
+    "items": [
+      {
+        "k": "Laboratuvar",
+        "v": "Alkan Lab'da GPU tabanlı metagenomik sınıflandırıcı CuCLARK'ı modernize ediyorum: CUDA 11.8, CMake, Docker."
+      },
+      {
+        "k": "Geliştiriyorum",
+        "v": "OSGuide: işletim sistemleri için etkileşimli dersler."
+      },
+      {
+        "k": "Okuyorum",
+        "v": "Bilkent Üniversitesi Bilgisayar Mühendisliği, 2027 mezunu."
+      },
+      {
+        "k": "Açığım",
+        "v": "Stajlara ve iş birliklerine."
+      }
+    ]
+  },
+  "resumePage": {
+    "title": "Özgeçmiş",
+    "subtitle": "Özgeçmişimin web sürümü. Tek sayfalık bir PDF de mevcut.",
+    "print": "Yazdır",
+    "download": "PDF indir",
+    "education": "Eğitim",
+    "experience": "Deneyim",
+    "projects": "Projeler",
+    "skills": "Yetkinlikler",
+    "community": "Topluluk",
+    "contact": "İletişim",
+    "present": "Devam ediyor"
+  },
+  "palette": {
+    "open": "Komut paletini aç",
+    "placeholder": "Bir komut yazın veya arayın…",
+    "hint": "↑↓ gezin · Enter çalıştır · Esc kapat",
+    "empty": "Sonuç yok",
+    "searchLabel": "Ara",
+    "groups": {
+      "navigate": "Git",
+      "projects": "Vaka çalışmaları",
+      "actions": "Eylemler",
+      "links": "Bağlantılar"
+    },
+    "actions": {
+      "theme": "Açık / koyu temayı değiştir",
+      "resumePdf": "Özgeçmişi aç (PDF)",
+      "resumePage": "Özgeçmiş sayfasını aç",
+      "home": "Ana sayfaya git",
+      "lang": {
+        "en": "Dili İngilizce yap",
+        "tr": "Dili Türkçe yap",
+        "de": "Dili Almanca yap"
+      }
+    },
+    "links": {
+      "github": "GitHub'ı aç",
+      "linkedin": "LinkedIn'i aç",
+      "email": "E-posta gönder"
+    }
   },
   "blog": {
     "title": "Blog",

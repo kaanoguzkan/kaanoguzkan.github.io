@@ -174,6 +174,7 @@
         "online": true,
         "year": "2026",
         "name": "OSGuide",
+        "slug": "osguide",
         "label": "Interactive Operating Systems Learning Platform",
         "description": "A free, interactive web platform for learning operating system concepts, spanning 21 chapters from processes, threads, and CPU scheduling to virtual memory, file systems, and security. Lessons are authored in MDX and presented through an animated, prerendered interface for fast loads and SEO.",
         "detailedDescription": "OSGuide (osguide.org) is a self-built educational platform that turns the classic operating systems curriculum into an approachable, interactive web experience. It covers 21 chapters — from OS structures, processes, threads, and CPU scheduling through synchronization, deadlocks, main and virtual memory, mass storage, I/O, file systems, protection, and security, ending with case studies on virtual machines, networks, Linux, and Windows. The content is authored in MDX so each lesson mixes rich prose with interactive React components and Framer Motion animations. The site is built with React 19 and TypeScript, styled with Tailwind CSS v4, prerendered to static HTML for fast first paint and search visibility, and covered by a Vitest test suite.",
@@ -202,6 +203,7 @@
         "online": true,
         "year": "2025",
         "name": "Artifactum",
+        "slug": "artifactum",
         "label": "CS319 — Software Engineering Project",
         "description": "Owned artifact ingestion and LLM features for a MERN application. Integrated Gemini for artifact generation/analysis with 6 prompt workflows and 1% LLM-call failure rate. Built S3 multi-file and ZIP bulk uploads processing up to 50 MB / 200 files. Designed MongoDB collections with 8 indexes, improving p95 query latency from 420 ms to 90 ms.",
         "detailedDescription": "Led the design and implementation of the artifact ingestion pipeline and all LLM-powered features for Artifactum, a full-stack MERN application built as part of CS319 Software Engineering. The platform allows users to upload, manage, and analyze artifacts using AI. I integrated Google Gemini for artifact generation and analysis across 6 distinct prompt workflows, achieving a 1% LLM-call failure rate. Built a robust S3-based file upload system supporting multi-file and ZIP bulk uploads of up to 50 MB / 200 files per batch. Designed and optimized MongoDB collections with 8 indexes, reducing p95 query latency from 420 ms to 90 ms.",
@@ -244,6 +246,7 @@
         "online": true,
         "year": "2024",
         "name": "NutriApp",
+        "slug": "nutriapp",
         "label": "Amazon University Engagement Program",
         "description": "Built backend services for a meal-planning app. Implemented 16 serverless REST API endpoints on AWS Lambda with p95 latency of 450 ms. Won the People's Choice Award — top 1 of 7 teams.",
         "detailedDescription": "NutriApp is a meal-planning application built during the Amazon University Engagement Program. I was responsible for the entire backend architecture, implementing 16 serverless REST API endpoints on AWS Lambda with DynamoDB as the data store. The APIs handle user authentication, meal plan generation, nutritional analysis, and dietary preference management. The system achieved a p95 latency of 450 ms across all endpoints. Our team won the People's Choice Award, ranking first among 7 competing teams.",
@@ -351,6 +354,162 @@
     "pinnedLoading": "Loading pinned repositories…",
     "pinnedError": "Could not load pinned repositories.",
     "pinnedEmpty": "No pinned repositories yet."
+  },
+  "caseStudy": {
+    "back": "All projects",
+    "eyebrow": "Case study",
+    "role": "Role",
+    "year": "Year",
+    "context": "Context",
+    "approach": "Approach",
+    "outcome": "Outcome",
+    "stack": "Stack",
+    "links": "Links",
+    "more": "More case studies",
+    "readCaseStudy": "Read case study",
+    "notFound": "This case study doesn't exist.",
+    "notFoundLink": "Back to projects"
+  },
+  "caseStudies": {
+    "osguide": {
+      "role": "Solo project: design, content and engineering",
+      "context": "Turn the classic operating systems curriculum, structured around Bilkent's CS342, into a web experience where each idea can be read, watched and tried.",
+      "approach": [
+        {
+          "head": "Three-layer learning flow",
+          "body": "Every topic moves from a concept explanation to an animation to an interactive simulator, covering core topics such as scheduling, memory management and synchronization."
+        },
+        {
+          "head": "Lessons as MDX",
+          "body": "Lessons are authored in MDX, so prose and interactive React components live in the same file."
+        },
+        {
+          "head": "Motion-driven UI",
+          "body": "Animations are built with Framer Motion."
+        },
+        {
+          "head": "Static-first delivery",
+          "body": "The site is prerendered to static HTML for a fast first paint and search visibility."
+        },
+        {
+          "head": "Typed and tested",
+          "body": "Written in TypeScript and covered by Vitest tests."
+        }
+      ],
+      "outcome": [
+        "21 chapters covering the full operating systems curriculum",
+        "Free and live at osguide.org"
+      ]
+    },
+    "artifactum": {
+      "role": "Artifact ingestion and LLM features (CS319 team project)",
+      "context": "Artifactum is a full-stack MERN application built for CS319 Software Engineering, where users upload, manage and analyze artifacts with AI. I owned the path that gets artifacts into the system and the LLM features built on top of them.",
+      "approach": [
+        {
+          "head": "Gemini behind a service layer",
+          "body": "Artifact generation and analysis go through Google Gemini via a dedicated service layer, across 6 prompt workflows. Timeouts, retries and structured parsing brought the LLM-call failure rate down to 1%."
+        },
+        {
+          "head": "Bulk uploads to S3",
+          "body": "Multi-file and ZIP bulk uploads with validation and safe partial failure, handling up to 50 MB / 200 files per batch. Streaming and concurrency (6 workers) cut ingestion time from 40 s to 15 s."
+        },
+        {
+          "head": "MongoDB indexing",
+          "body": "The collections were designed with 8 indexes, reducing p95 query latency from 420 ms to 90 ms."
+        }
+      ],
+      "outcome": [
+        "1% LLM-call failure rate",
+        "Ingestion time 40 s → 15 s",
+        "p95 query latency 420 ms → 90 ms"
+      ]
+    },
+    "nutriapp": {
+      "role": "Backend: all server-side architecture",
+      "context": "NutriApp is a meal-planning app built in the Amazon University Engagement Program. The backend had to cover user authentication, meal plan generation, nutritional analysis and dietary preferences.",
+      "approach": [
+        {
+          "head": "Serverless REST APIs",
+          "body": "16 REST endpoints on AWS Lambda, with DynamoDB as the data store."
+        },
+        {
+          "head": "Latency",
+          "body": "A p95 latency of 450 ms across all endpoints."
+        },
+        {
+          "head": "Scaling without servers",
+          "body": "A serverless architecture means no servers to maintain, with scaling handled by the platform."
+        }
+      ],
+      "outcome": [
+        "People's Choice Award: 1st of 7 teams",
+        "16 endpoints at 450 ms p95"
+      ]
+    }
+  },
+  "now": {
+    "label": "Now",
+    "updated": "Updated",
+    "items": [
+      {
+        "k": "Lab",
+        "v": "Modernizing CuCLARK, a GPU metagenomic classifier, at Alkan Lab: CUDA 11.8, CMake, Docker."
+      },
+      {
+        "k": "Building",
+        "v": "OSGuide: interactive lessons for operating systems."
+      },
+      {
+        "k": "Studying",
+        "v": "Computer Engineering at Bilkent University, class of 2027."
+      },
+      {
+        "k": "Open to",
+        "v": "Internships and collaborations."
+      }
+    ]
+  },
+  "resumePage": {
+    "title": "Resume",
+    "subtitle": "Web version of my CV. A one-page PDF is available too.",
+    "print": "Print",
+    "download": "Download PDF",
+    "education": "Education",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "community": "Community",
+    "contact": "Contact",
+    "present": "Present"
+  },
+  "palette": {
+    "open": "Open command palette",
+    "placeholder": "Type a command or search…",
+    "hint": "↑↓ to move · Enter to run · Esc to close",
+    "empty": "No results",
+    "searchLabel": "Search",
+    "groups": {
+      "navigate": "Go to",
+      "projects": "Case studies",
+      "actions": "Actions",
+      "links": "Links"
+    },
+    "actions": {
+      "theme": "Toggle light / dark theme",
+      "resumePdf": "Open resume (PDF)",
+      "resumePage": "Open resume page",
+      "home": "Go to home",
+      "lang": {
+        "en": "Switch language to English",
+        "tr": "Switch language to Turkish",
+        "de": "Switch language to German"
+      }
+    },
+    "links": {
+      "github": "Open GitHub",
+      "linkedin": "Open LinkedIn",
+      "email": "Send an email"
+    }
   },
   "blog": {
     "title": "Blog",

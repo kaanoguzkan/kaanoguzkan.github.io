@@ -174,6 +174,7 @@
         "online": true,
         "year": "2026",
         "name": "OSGuide",
+        "slug": "osguide",
         "label": "Interaktive Lernplattform für Betriebssysteme",
         "description": "Eine kostenlose, interaktive Webplattform zum Erlernen von Betriebssystemkonzepten mit 21 Kapiteln – von Prozessen, Threads und CPU-Scheduling bis hin zu virtuellem Speicher, Dateisystemen und Sicherheit. Die Lektionen sind in MDX verfasst und werden über eine animierte, vorgerenderte Oberfläche für schnelle Ladezeiten und SEO präsentiert.",
         "detailedDescription": "OSGuide (osguide.org) ist eine selbst entwickelte Lernplattform, die den klassischen Betriebssystem-Lehrplan in ein zugängliches, interaktives Web-Erlebnis verwandelt. Sie umfasst 21 Kapitel – von Betriebssystemstrukturen, Prozessen, Threads und CPU-Scheduling über Synchronisation, Deadlocks, Haupt- und virtuellen Speicher, Massenspeicher, E/A, Dateisysteme, Schutz und Sicherheit bis hin zu Fallstudien über virtuelle Maschinen, Netzwerke, Linux und Windows. Da die Inhalte in MDX verfasst sind, verbindet jede Lektion Fließtext mit interaktiven React-Komponenten und Framer-Motion-Animationen. Die Website ist mit React 19 und TypeScript gebaut, mit Tailwind CSS v4 gestaltet, für schnelles erstes Rendering und Auffindbarkeit als statisches HTML vorgerendert und mit einer Vitest-Testsuite abgedeckt.",
@@ -202,6 +203,7 @@
         "online": true,
         "year": "2025",
         "name": "Artifactum",
+        "slug": "artifactum",
         "label": "CS319 — Software-Engineering-Projekt",
         "description": "Verantwortlich für Artefaktaufnahme und LLM-Funktionen einer MERN-Anwendung. Gemini-Integration für Artefaktgenerierung/-analyse mit 6 Prompt-Workflows und 1 % LLM-Aufruf-Fehlerrate. S3-Multi-Datei- und ZIP-Massenupload für bis zu 50 MB / 200 Dateien. MongoDB-Sammlungen mit 8 Indizes; p95-Abfragelatenz von 420 ms auf 90 ms verbessert.",
         "detailedDescription": "Leitung von Design und Implementierung der Artefakt-Aufnahme-Pipeline und aller LLM-gestützten Funktionen für Artifactum, eine Full-Stack-MERN-Anwendung im Rahmen von CS319 Software Engineering. Die Plattform ermöglicht es Benutzern, Artefakte mittels KI hochzuladen, zu verwalten und zu analysieren. Google Gemini wurde für Artefaktgenerierung und -analyse über 6 verschiedene Prompt-Workflows integriert, mit einer LLM-Aufruf-Fehlerrate von 1 %. Ein robustes S3-basiertes Datei-Upload-System für Multi-Datei- und ZIP-Massenupload von bis zu 50 MB / 200 Dateien pro Batch wurde entwickelt. MongoDB-Sammlungen mit 8 Indizes wurden entworfen, wodurch die p95-Abfragelatenz von 420 ms auf 90 ms reduziert wurde.",
@@ -244,6 +246,7 @@
         "online": true,
         "year": "2024",
         "name": "NutriApp",
+        "slug": "nutriapp",
         "label": "Amazon University Engagement Program",
         "description": "Backend-Services für eine Mahlzeitenplanungs-App entwickelt. 16 serverlose REST-API-Endpunkte auf AWS Lambda mit p95-Latenz von 450 ms. People's Choice Award gewonnen — Platz 1 von 7 Teams.",
         "detailedDescription": "NutriApp ist eine Mahlzeitenplanungs-Anwendung, entwickelt im Rahmen des Amazon University Engagement Program. Ich war für die gesamte Backend-Architektur verantwortlich und implementierte 16 serverlose REST-API-Endpunkte auf AWS Lambda mit DynamoDB als Datenspeicher. Die APIs behandeln Benutzerauthentifizierung, Mahlzeitenplan-Generierung, Nährwertanalyse und Diätpräferenz-Verwaltung. Das System erreichte eine p95-Latenz von 450 ms über alle Endpunkte. Unser Team gewann den People's Choice Award und belegte Platz 1 unter 7 Teams.",
@@ -351,6 +354,162 @@
     "pinnedLoading": "Angeheftete Repositories werden geladen…",
     "pinnedError": "Angeheftete Repositories konnten nicht geladen werden.",
     "pinnedEmpty": "Noch keine angehefteten Repositories."
+  },
+  "caseStudy": {
+    "back": "Alle Projekte",
+    "eyebrow": "Fallstudie",
+    "role": "Rolle",
+    "year": "Jahr",
+    "context": "Kontext",
+    "approach": "Vorgehen",
+    "outcome": "Ergebnis",
+    "stack": "Technologien",
+    "links": "Links",
+    "more": "Weitere Fallstudien",
+    "readCaseStudy": "Fallstudie lesen",
+    "notFound": "Diese Fallstudie existiert nicht.",
+    "notFoundLink": "Zurück zu den Projekten"
+  },
+  "caseStudies": {
+    "osguide": {
+      "role": "Einzelprojekt: Konzept, Inhalt und Entwicklung",
+      "context": "Den klassischen Betriebssystem-Lehrplan, angelehnt an Bilkents CS342, in ein Web-Erlebnis verwandeln, in dem sich jede Idee lesen, ansehen und ausprobieren lässt.",
+      "approach": [
+        {
+          "head": "Dreistufiger Lernfluss",
+          "body": "Jedes Thema führt von der Konzepterklärung über eine Animation zu einem interaktiven Simulator und deckt Kernthemen wie Scheduling, Speicherverwaltung und Synchronisation ab."
+        },
+        {
+          "head": "Lektionen als MDX",
+          "body": "Die Lektionen sind in MDX geschrieben, sodass Text und interaktive React-Komponenten in derselben Datei stehen."
+        },
+        {
+          "head": "Bewegungsorientierte Oberfläche",
+          "body": "Die Animationen sind mit Framer Motion umgesetzt."
+        },
+        {
+          "head": "Statisch zuerst",
+          "body": "Die Seite wird als statisches HTML vorgerendert, für schnelles erstes Rendering und Auffindbarkeit in Suchmaschinen."
+        },
+        {
+          "head": "Typisiert und getestet",
+          "body": "In TypeScript geschrieben und durch Vitest-Tests abgedeckt."
+        }
+      ],
+      "outcome": [
+        "21 Kapitel decken den gesamten Betriebssystem-Lehrplan ab",
+        "Kostenlos und live auf osguide.org"
+      ]
+    },
+    "artifactum": {
+      "role": "Artefakt-Ingestion und LLM-Funktionen (CS319-Teamprojekt)",
+      "context": "Artifactum ist eine Full-Stack-MERN-Anwendung für CS319 Software Engineering, in der Nutzer Artefakte mit KI hochladen, verwalten und analysieren. Ich war für den Weg der Artefakte ins System und die darauf aufbauenden LLM-Funktionen verantwortlich.",
+      "approach": [
+        {
+          "head": "Gemini hinter einem Service-Layer",
+          "body": "Artefakt-Generierung und -Analyse laufen über einen eigenen Service-Layer mit Google Gemini, verteilt auf 6 Prompt-Workflows. Timeouts, Retries und strukturiertes Parsing senkten die LLM-Call-Fehlerquote auf 1 %."
+        },
+        {
+          "head": "Bulk-Uploads nach S3",
+          "body": "Multi-File- und ZIP-Bulk-Uploads mit Validierung und sicheren Teilausfällen, bis zu 50 MB / 200 Dateien pro Batch. Streaming und Nebenläufigkeit (6 Worker) verkürzten die Ingestion-Zeit von 40 s auf 15 s."
+        },
+        {
+          "head": "MongoDB-Indizierung",
+          "body": "Die Collections wurden mit 8 Indizes entworfen und senkten die p95-Abfragelatenz von 420 ms auf 90 ms."
+        }
+      ],
+      "outcome": [
+        "1 % LLM-Call-Fehlerquote",
+        "Ingestion-Zeit 40 s → 15 s",
+        "p95-Abfragelatenz 420 ms → 90 ms"
+      ]
+    },
+    "nutriapp": {
+      "role": "Backend: gesamte serverseitige Architektur",
+      "context": "NutriApp ist eine Meal-Planning-App, die im Amazon University Engagement Program entstand. Das Backend musste Benutzerauthentifizierung, Mahlzeitenplan-Erstellung, Nährwertanalyse und Ernährungspräferenzen abdecken.",
+      "approach": [
+        {
+          "head": "Serverless-REST-APIs",
+          "body": "16 REST-Endpunkte auf AWS Lambda, mit DynamoDB als Datenspeicher."
+        },
+        {
+          "head": "Latenz",
+          "body": "Eine p95-Latenz von 450 ms über alle Endpunkte."
+        },
+        {
+          "head": "Skalieren ohne Server",
+          "body": "Eine Serverless-Architektur bedeutet: keine Server zu warten, die Skalierung übernimmt die Plattform."
+        }
+      ],
+      "outcome": [
+        "People's Choice Award: Platz 1 von 7 Teams",
+        "16 Endpunkte bei 450 ms p95"
+      ]
+    }
+  },
+  "now": {
+    "label": "Aktuell",
+    "updated": "Aktualisiert",
+    "items": [
+      {
+        "k": "Labor",
+        "v": "Modernisierung von CuCLARK, einem GPU-Metagenom-Klassifikator, am Alkan Lab: CUDA 11.8, CMake, Docker."
+      },
+      {
+        "k": "Baue",
+        "v": "OSGuide: interaktive Lektionen zu Betriebssystemen."
+      },
+      {
+        "k": "Studium",
+        "v": "Informatik an der Bilkent-Universität, Abschluss 2027."
+      },
+      {
+        "k": "Offen für",
+        "v": "Praktika und Kooperationen."
+      }
+    ]
+  },
+  "resumePage": {
+    "title": "Lebenslauf",
+    "subtitle": "Webversion meines Lebenslaufs. Ein einseitiges PDF gibt es ebenfalls.",
+    "print": "Drucken",
+    "download": "PDF herunterladen",
+    "education": "Ausbildung",
+    "experience": "Berufserfahrung",
+    "projects": "Projekte",
+    "skills": "Kenntnisse",
+    "community": "Engagement",
+    "contact": "Kontakt",
+    "present": "heute"
+  },
+  "palette": {
+    "open": "Befehlspalette öffnen",
+    "placeholder": "Befehl eingeben oder suchen…",
+    "hint": "↑↓ bewegen · Enter ausführen · Esc schließen",
+    "empty": "Keine Ergebnisse",
+    "searchLabel": "Suchen",
+    "groups": {
+      "navigate": "Gehe zu",
+      "projects": "Fallstudien",
+      "actions": "Aktionen",
+      "links": "Links"
+    },
+    "actions": {
+      "theme": "Hell-/Dunkelmodus umschalten",
+      "resumePdf": "Lebenslauf öffnen (PDF)",
+      "resumePage": "Lebenslauf-Seite öffnen",
+      "home": "Zur Startseite",
+      "lang": {
+        "en": "Sprache auf Englisch stellen",
+        "tr": "Sprache auf Türkisch stellen",
+        "de": "Sprache auf Deutsch stellen"
+      }
+    },
+    "links": {
+      "github": "GitHub öffnen",
+      "linkedin": "LinkedIn öffnen",
+      "email": "E-Mail senden"
+    }
   },
   "blog": {
     "title": "Blog",
