@@ -2,7 +2,7 @@
   "nav": {
     "about": "Hakkımda",
     "experience": "Deneyim",
-    "work": "Kariyer",
+    "work": "Deneyim",
     "academics": "Akademik",
     "research": "Araştırma",
     "projects": "Projeler",
@@ -20,20 +20,20 @@
     "name": "S. Kaan Oğuzkan",
     "indexLabel": "⌘ Dizin — 01 / Kişisel site · v.2026",
     "headline": {
-      "line1": "Temiz, ölçeklenebilir",
-      "line2": "yazılım",
-      "line3": "geliştiriyorum"
+      "line1": "Genomik ve",
+      "line2": "öğrenme için",
+      "line3": "hesaplama"
     },
-    "metaText": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği öğrencisi, <strong>Alkan Lab</strong>'ta lisans gönüllü araştırmacı. Güvenilir, performanslı ve bakımı kolay backend sistemler tasarlıyorum.",
+    "metaText": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği lisans öğrencisi ve <strong>Alkan Lab</strong>'da gönüllü araştırmacı. DNA dizileme verilerini analiz eden GPU yazılımları ve bilgisayar bilimini öğrenmeyi kolaylaştıran araçlar üzerinde çalışıyorum.",
     "subtitle": "CS @ Bilkent | Lisans Gönüllü Araştırmacı @ Alkan Lab",
-    "tagline": "Temiz ve ölçeklenebilir yazılımlar geliştiriyorum.",
+    "tagline": "Genomik ve öğrenme için hesaplama.",
     "cta": "Projelerimi Gör",
     "downloadResume": "Özgeçmişi İndir",
     "typingPhrases": [
-      "Full-Stack Geliştirici",
-      "DevOps Meraklısı",
-      "Problem Çözücü",
-      "Yazılım Mühendisi"
+      "Lisans Araştırmacısı",
+      "GPU ile Hesaplama",
+      "Biyoenformatik",
+      "Bilgisayar Bilimi Eğitimi"
     ]
   },
   "about": {
@@ -42,12 +42,12 @@
       "basedLabel": "Konum",
       "languagesLabel": "Diller",
       "statusLabel": "Durum",
-      "statusValue": "İşbirliği ve stajlara açık",
+      "statusValue": "Araştırma fırsatlarına ve iş birliklerine açık",
       "focusLabel": "Odak",
-      "focusValue": "Backend sistemler · DevOps · GPU ve biyoenformatik"
+      "focusValue": "GPU ile hesaplama · Biyoenformatik · Bilgisayar bilimi eğitimi"
     },
-    "paragraph1": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği öğrencisiyim; full-stack web uygulamaları ve GPU hızlandırmalı sistemler üzerinde uygulamalı deneyime sahibim. Güvenilir, performanslı ve bakımı kolay backend sistemleri tasarlamaktan keyif alıyorum.",
-    "paragraph2": "Şu anda <strong>Alkan Biyoenformatik ve Hesaplamalı Genomik Laboratuvarı</strong>'nda lisans gönüllü araştırmacı olarak CUDA kod tabanlarını ve metagenomik işlem hatlarını modernleştiriyorum. Daha önce <strong>JotForm</strong>'da yazılım mühendisliği stajyeri olarak e-posta oluşturucu mimarisi ve toplu gönderim hattı üzerinde çalıştım; <strong>Look & Cash</strong>'te React, TypeScript, MongoDB ve AWS ile full-stack ve DevOps çözümleri geliştirdim.",
+    "paragraph1": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği lisans öğrencisiyim (2027 mezunu); yaşam bilimleri için yüksek başarımlı hesaplama ve bilgisayar bilimi eğitimi ilgi alanlarım. Dikkatli mühendisliğin bir analizi daha hızlı, daha tekrarlanabilir veya daha anlaşılır kıldığı işleri seviyorum.",
+    "paragraph2": "<strong>Alkan Biyoenformatik ve Hesaplamalı Genomik Laboratuvarı</strong>'nda lisans gönüllü araştırmacıyım; bir DNA örneğinde hangi organizmaların bulunduğunu belirleyen GPU tabanlı CuCLARK aracını modernize ediyor ve onu binlerce dizileme dosyası üzerinde çalıştıran işlem hatları kuruyorum. Ayrıca işletim sistemlerini öğrenmek için ücretsiz, etkileşimli bir platform olan <strong>OSGuide</strong>'ı geliştirdim. Daha önce <strong>JotForm</strong>'da (staj) ve <strong>Look & Cash</strong>'te (yarı zamanlı) yazılım mühendisliği yaptım.",
     "labels": {
       "location": "Konum",
       "languages": "Diller"
@@ -73,45 +73,47 @@
     "title": "Deneyim",
     "jobs": [
       {
-        "role": "Yazılım Mühendisliği Stajyeri",
-        "company": "JotForm — Ankara, Türkiye",
-        "date": "Haz 2026 – Ağu 2026",
-        "bullets": [
-          {
-            "head": "Element Registry Mimarisi",
-            "desc": "Sürükle-bırak bir e-posta oluşturucu için eklenti-sözleşmesi (plugin-contract) mimarisi tasarladım; her içerik bloğu türü canvas, panel, önizleme ve dışa aktarıcı boyunca tek bir tipli arayüzü paylaşıyor, böylece yeni bloklar mevcut tüketicilerin hiçbirine dokunmayı gerektirmedi.",
-            "metrics": ["20 içerik bloğu türü", "1 tipli arayüz", "0 tüketiciye dokunuldu"]
-          },
-          {
-            "head": "Toplu Gönderim Hattı",
-            "desc": "Parçalı SMTP oturumlarıyla teslimat yapan bir cron worker ve takılı kalan gruplar için zaman aşımına dayalı geri alma mekanizması içeren asenkron bir toplu e-posta hattı geliştirdim.",
-            "metrics": ["25 alıcı/grup", "900 sn geri alma süresi", "PHP · MySQL · Redis"]
-          }
-        ],
-        "tags": ["React 18", "TypeScript", "Redux", "PHP", "MySQL", "Redis"]
-      },
-      {
         "role": "Lisans Gönüllü Araştırmacı",
         "company": "Alkan Biyoenformatik ve Hesaplamalı Genomik Laboratuvarı — Ankara, Türkiye",
         "date": "Şub 2026 – Devam Ediyor",
+        "summary": "Hesaplamalı genomik araştırma grubu. Üzerinde çalıştığım CuCLARK aracı, DNA dizileme okumalarını en olası geldikleri organizmaya göre sınıflandırır.",
         "bullets": [
           {
             "head": "CuCLARK GPU ve CUDA Modernizasyonu",
-            "desc": "CuCLARK'ı (GPU tabanlı metagenomik sınıflandırıcı, orijinali CUDA 7.5 / tek mimari) forkladım ve CUDA 11.8'e yükselttim; Kepler sm_35'ten Hopper sm_90'a kadar çoklu mimari desteği ekledim.",
+            "desc": "CuCLARK, DNA dizileme okumalarını GPU'lar ile en olası geldikleri organizmaya göre sınıflandırır. Onu CUDA 7.5'ten 11.8'e yükselttim; böylece Kepler (K80) ile Hopper (H100) arasındaki on NVIDIA GPU neslinde derlenip çalışıyor.",
             "metrics": ["CUDA 7.5 → 11.8", "10 GPU nesli", "K80 → H100"]
           },
           {
             "head": "Build Sistemi ve Konteynerleştirme",
-            "desc": "Eski install.sh betiğini CMake 3.20 tabanlı bir build (C++17, CUDA 14, isteğe bağlı OpenMP) ile değiştirdim ve alkanlab/cuclark olarak yayımlanan çok mimarili bir Dockerfile yazdım.",
+            "desc": "Eski kurulum betiğini CMake tabanlı bir build ile değiştirdim ve çok mimarili bir Docker imajı (alkanlab/cuclark) yayımladım; böylece araç elle kurulum gerektirmeden tekrarlanabilir biçimde derlenip çalıştırılabiliyor.",
             "metrics": ["CMake 3.20", "C++17 / CUDA 14", "6 alt komutlu CLI"]
           },
           {
             "head": "Toplu Sınıflandırma İşlem Hattı",
-            "desc": "Tekrarlanan okuma atamalarına yol açan bir bayt-ofset batch hatasını teşhis ettim; devam ettirme, çökme sonrası kara liste ve ilerleme takibi içeren liste modu işlem hattı kurdum.",
+            "desc": "Küçük girdilerde bazı okumaları iki kez atayan bir batch hatasını teşhis ettim; ardından çökme sonrası devam eden ve ilerlemeyi raporlayan bir işlem hattı kurdum. Böylece binlerce FASTA dizi dosyası tek bir veritabanı yüklemesinde sınıflandırılabiliyor.",
             "metrics": ["3000+ FASTA dosyası", "tek DB yüklemesi", "devam + kurtarma"]
           }
         ],
         "tags": ["C++", "CUDA", "CMake", "Docker", "Linux", "Biyoenformatik"]
+      },
+      {
+        "role": "Yazılım Mühendisliği Stajyeri",
+        "company": "JotForm — Ankara, Türkiye",
+        "date": "Haz 2026 – Ağu 2026",
+        "summary": "JotForm'da, çevrimiçi form oluşturma platformunun e-posta oluşturucusu üzerine mühendislik stajı.",
+        "bullets": [
+          {
+            "head": "Element Registry Mimarisi",
+            "desc": "Sürükle-bırak bir e-posta oluşturucunun mimarisini, 20 içerik bloğu türünün tek bir tipli arayüzü paylaşacağı şekilde tasarladım; yeni blok türleri mevcut kodda hiçbir değişiklik gerektirmedi.",
+            "metrics": ["20 içerik bloğu türü", "1 tipli arayüz", "0 tüketiciye dokunuldu"]
+          },
+          {
+            "head": "Toplu Gönderim Hattı",
+            "desc": "Toplu e-postayı 25 alıcılık gruplar halinde gönderen asenkron bir hat kurdum; takılı kalan grupları geri alan 900 sn'lik bir zaman aşımı mekanizması içeriyor.",
+            "metrics": ["25 alıcı/grup", "900 sn geri alma süresi", "PHP · MySQL · Redis"]
+          }
+        ],
+        "tags": ["React 18", "TypeScript", "Redux", "PHP", "MySQL", "Redis"]
       },
       {
         "role": "Yarı Zamanlı Yazılım Mühendisi",
@@ -269,12 +271,12 @@
   "skills": {
     "title": "Yetenekler",
     "categories": [
-      { "name": "Programlama Dilleri", "icon": "code", "items": ["C++", "Java", "JavaScript", "TypeScript"] },
-      { "name": "Frontend", "icon": "code", "items": ["React.js", "React Native", "HTML/CSS"] },
-      { "name": "Backend", "icon": "server", "items": ["Node.js", "Express", "AWS Lambda", "AWS"] },
-      { "name": "Veritabanları", "icon": "database", "items": ["MongoDB", "DynamoDB"] },
-      { "name": "Araçlar ve Pratikler", "icon": "wrench", "items": ["Git", "GitHub", "OOP", "Yazılım Tasarımı", "Proje Yönetimi"] },
-      { "name": "Diğer", "icon": "brain", "items": ["Oyun Geliştirme", "DevOps"] }
+      { "name": "Programlama Dilleri", "icon": "code", "items": ["C++", "Java", "TypeScript", "JavaScript"] },
+      { "name": "Yüksek Başarımlı Hesaplama", "icon": "server", "items": ["CUDA", "OpenMP", "CMake", "Linux", "Docker"] },
+      { "name": "Veritabanları", "icon": "database", "items": ["MongoDB", "DynamoDB", "MySQL", "Redis"] },
+      { "name": "Web Geliştirme", "icon": "code", "items": ["React", "Node.js", "AWS Lambda", "REST API'leri"] },
+      { "name": "Pratikler", "icon": "wrench", "items": ["Git", "GitHub", "OOP", "Yazılım Tasarımı", "Tekrarlanabilir Build'ler", "Proje Yönetimi"] },
+      { "name": "Diğer", "icon": "brain", "items": ["Eğitim Yazılımları", "Oyun Geliştirme"] }
     ]
   },
   "volunteering": {
@@ -315,7 +317,7 @@
   "contact": {
     "title": "İletişime Geçin",
     "headline": "İletişime geç.",
-    "text": "Stajlara, full-stack iş birliklerine ve backend sistemleri, LLM entegrasyonları ve DevOps üzerine konuşmalara açığım. Genellikle 24 saat içinde yanıt veriyorum.",
+    "text": "Araştırma fırsatlarına, iş birliklerine ve GPU ile hesaplama, biyoenformatik ve bilgisayar bilimi eğitimi üzerine konuşmalara açığım. Genellikle 24 saat içinde yanıt veriyorum.",
     "infoTitle": "İletişim Bilgileri",
     "location": "Ankara, Türkiye",
     "labels": {
@@ -453,11 +455,11 @@
     "items": [
       {
         "k": "Laboratuvar",
-        "v": "Alkan Lab'da GPU tabanlı metagenomik sınıflandırıcı CuCLARK'ı modernize ediyorum: CUDA 11.8, CMake, Docker."
+        "v": "Alkan Lab'da, DNA örneklerindeki organizmaları belirleyen GPU tabanlı CuCLARK aracını modernize ediyorum."
       },
       {
         "k": "Geliştiriyorum",
-        "v": "OSGuide: işletim sistemleri için etkileşimli dersler."
+        "v": "OSGuide: işletim sistemlerini öğrenmek için ücretsiz, etkileşimli bir platform."
       },
       {
         "k": "Okuyorum",
@@ -465,7 +467,7 @@
       },
       {
         "k": "Açığım",
-        "v": "Stajlara ve iş birliklerine."
+        "v": "Araştırma fırsatlarına ve iş birliklerine."
       }
     ]
   },

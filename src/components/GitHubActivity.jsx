@@ -66,7 +66,7 @@ function GitHubActivity() {
       <div className="shell">
         <div className="block-head">
           <div className="block-num">
-            <span className="n">09</span> &nbsp;/ {t('nav.github')}
+            <span className="n">06</span> &nbsp;/ {t('nav.github')}
           </div>
           <h2 className="block-title">{t('github.title')}</h2>
         </div>

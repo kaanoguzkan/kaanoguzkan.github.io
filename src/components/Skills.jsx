@@ -11,7 +11,7 @@ function Skills() {
       <div className="shell">
         <div className="block-head">
           <div className="block-num">
-            <span className="n">05</span> &nbsp;/ {t('nav.skills')}
+            <span className="n">07</span> &nbsp;/ {t('nav.skills')}
           </div>
           <h2 className="block-title">{t('skills.title')}</h2>
         </div>

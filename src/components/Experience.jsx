@@ -11,7 +11,7 @@ function Experience() {
       <div className="shell">
         <div className="block-head">
           <div className="block-num">
-            <span className="n">03</span> &nbsp;/ {t('nav.work')}
+            <span className="n">04</span> &nbsp;/ {t('nav.work')}
           </div>
           <h2 className="block-title">{t('experience.title')}</h2>
         </div>
@@ -22,6 +22,7 @@ function Experience() {
               <div className="exp-when">{job.date}</div>
               <div className="exp-org">{job.company}</div>
               <div className="exp-role">{job.role}</div>
+              {job.summary && <p className="exp-summary">{job.summary}</p>}
               <div className="exp-tags">
                 {job.tags.map((tag) => (
                   <span key={tag} className="mono-tag">{tag}</span>

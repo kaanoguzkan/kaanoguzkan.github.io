@@ -30,8 +30,8 @@ function HomePage() {
         <Suspense fallback={null}>
           <Now />
           <About />
-          <Experience />
           <Academics />
+          <Experience />
           <Projects />
           <GitHubActivity />
           <Skills />

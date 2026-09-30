@@ -11,7 +11,7 @@ function Volunteering() {
       <div className="shell">
         <div className="block-head">
           <div className="block-num">
-            <span className="n">07</span> &nbsp;/ {t('nav.community')}
+            <span className="n">08</span> &nbsp;/ {t('nav.community')}
           </div>
           <h2 className="block-title">{t('volunteering.title')}</h2>
         </div>

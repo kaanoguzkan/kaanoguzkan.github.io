@@ -37,10 +37,12 @@ async function setLang(page, lang) {
 test('home renders every section and the Now strip', async ({ page }) => {
   const errors = watchErrors(page);
   await page.goto('/');
-  await expect(page.locator('h1').first()).toContainText('clean, scalable');
+  await expect(page.locator('h1').first()).toContainText('for genomics');
   await expect(page.locator('.now-item')).toHaveCount(4);
   for (const id of SECTIONS) await expect(page.locator(`section#${id}`)).toBeAttached();
-  await expect(page.locator('.exp-org').first()).toContainText('JotForm');
+  // Research experience leads; industry roles follow.
+  await expect(page.locator('.exp-org')).toHaveText([/Alkan Lab/, /JotForm/, /Look & Cash/]);
+  await expect(page.locator('.exp-summary').first()).toContainText('DNA sequencing');
   expect(errors).toEqual([]);
 });
 

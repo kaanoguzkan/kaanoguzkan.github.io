@@ -2,7 +2,7 @@
   "nav": {
     "about": "About",
     "experience": "Experience",
-    "work": "Work",
+    "work": "Experience",
     "academics": "Academics",
     "research": "Research",
     "projects": "Projects",
@@ -20,33 +20,33 @@
     "name": "S. Kaan Oguzkan",
     "indexLabel": "⌘ Index — 01 / Personal site · v.2026",
     "headline": {
-      "line1": "Building",
-      "line2": "clean, scalable",
-      "line3": "software"
+      "line1": "Computing",
+      "line2": "for genomics",
+      "line3": "and learning"
     },
-    "metaText": "Computer Engineering student at <strong>Bilkent University</strong>, undergraduate research volunteer at <strong>Alkan Lab</strong>. I design backend systems that are reliable, performant, and easy to maintain.",
+    "metaText": "Computer Engineering undergraduate at <strong>Bilkent University</strong> and research volunteer at <strong>Alkan Lab</strong>. I work on GPU software for analyzing DNA sequencing data, and on tools that make computer science easier to learn.",
     "subtitle": "CS @ Bilkent | Undergrad Volunteer @ Alkan Lab",
-    "tagline": "Building clean, scalable software.",
+    "tagline": "Computing for genomics and learning.",
     "cta": "View My Work",
     "downloadResume": "Download Resume",
     "typingPhrases": [
-      "Full-Stack Developer",
-      "DevOps Enthusiast",
-      "Problem Solver",
-      "Software Engineer"
+      "Undergraduate Researcher",
+      "GPU Computing",
+      "Bioinformatics",
+      "CS Education"
     ]
   },
   "about": {
     "title": "About",
-    "paragraph1": "I'm a Computer Engineering student at <strong>Bilkent University</strong> with hands-on experience across full-stack web applications and GPU-accelerated systems. I enjoy designing backend systems that are reliable, performant, and easy to maintain.",
-    "paragraph2": "Currently an undergraduate research volunteer at <strong>Alkan Lab for Bioinformatics & Computational Genomics</strong>, modernizing CUDA codebases and metagenomic pipelines. Previously a software engineering intern at <strong>JotForm</strong> (email builder architecture, bulk-send pipeline) and built full-stack and DevOps solutions at <strong>Look & Cash</strong> with React, TypeScript, MongoDB, and AWS.",
+    "paragraph1": "I'm a Computer Engineering undergraduate at <strong>Bilkent University</strong> (class of 2027) interested in high-performance computing for the life sciences and in computer science education. I like work where careful engineering makes an analysis faster, more reproducible, or easier to understand.",
+    "paragraph2": "I volunteer as an undergraduate researcher at <strong>Alkan Lab for Bioinformatics & Computational Genomics</strong>, where I modernize CuCLARK, a GPU tool that identifies which organisms are present in a DNA sample, and build pipelines that run it over thousands of sequencing files. I also built <strong>OSGuide</strong>, a free interactive platform for learning operating systems. Earlier, I did software engineering at <strong>JotForm</strong> (internship) and <strong>Look & Cash</strong> (part-time).",
     "sidebar": {
       "basedLabel": "Based",
       "languagesLabel": "Languages",
       "statusLabel": "Status",
-      "statusValue": "Available for collaborations & internships",
+      "statusValue": "Open to research opportunities & collaborations",
       "focusLabel": "Focus",
-      "focusValue": "Backend systems · DevOps · GPU & bioinformatics"
+      "focusValue": "GPU computing · Bioinformatics · CS education"
     },
     "labels": {
       "location": "Location",
@@ -73,45 +73,47 @@
     "title": "Experience",
     "jobs": [
       {
-        "role": "Software Engineering Intern",
-        "company": "JotForm — Ankara, Turkey",
-        "date": "Jun 2026 – Aug 2026",
-        "bullets": [
-          {
-            "head": "Element Registry Architecture",
-            "desc": "Designed a plugin-contract architecture for a drag-and-drop email builder where every content-block type shares one typed interface across the canvas, panel, preview, and exporter, so new blocks required touching zero existing consumers.",
-            "metrics": ["20 content-block types", "1 typed interface", "0 consumers touched"]
-          },
-          {
-            "head": "Bulk Send Pipeline",
-            "desc": "Built an asynchronous bulk-email pipeline with a cron worker delivering via chunked SMTP sessions and a timeout-based reclaim mechanism for stalled batches.",
-            "metrics": ["25 recipients/batch", "900s reclaim timeout", "PHP · MySQL · Redis"]
-          }
-        ],
-        "tags": ["React 18", "TypeScript", "Redux", "PHP", "MySQL", "Redis"]
-      },
-      {
         "role": "Undergraduate Volunteer",
         "company": "Alkan Lab for Bioinformatics & Computational Genomics — Ankara, Turkey",
         "date": "Feb 2026 – Present",
+        "summary": "A computational genomics research group. CuCLARK, the tool I work on, classifies DNA sequencing reads by the organism they most likely came from.",
         "bullets": [
           {
             "head": "CuCLARK GPU & CUDA Modernization",
-            "desc": "Forked and modernized CuCLARK (GPU metagenomic classifier, originally CUDA 7.5 / single-arch); upgraded to CUDA 11.8 with multi-arch support spanning Kepler sm_35 through Hopper sm_90.",
+            "desc": "CuCLARK classifies DNA sequencing reads by the organism they most likely come from, using GPUs. I updated it from CUDA 7.5 to 11.8 so it builds and runs across ten NVIDIA GPU generations, from Kepler (K80) to Hopper (H100).",
             "metrics": ["CUDA 7.5 → 11.8", "10 GPU generations", "K80 → H100"]
           },
           {
             "head": "Build System & Containerization",
-            "desc": "Replaced the legacy install.sh with a CMake 3.20 build (C++17, CUDA 14, optional OpenMP) and authored a multi-arch Dockerfile published as alkanlab/cuclark.",
+            "desc": "Replaced the legacy install script with a CMake build and published a multi-architecture Docker image (alkanlab/cuclark), so the tool can be built and run reproducibly without manual setup.",
             "metrics": ["CMake 3.20", "C++17 / CUDA 14", "6-subcommand CLI"]
           },
           {
             "head": "Batch Classification Pipeline",
-            "desc": "Diagnosed a byte-offset batching bug that caused duplicate read assignments and built a list-mode pipeline with resume, crash-recovery blacklist, and progress monitoring.",
+            "desc": "Diagnosed a batching bug that assigned some reads twice on small inputs, then built a pipeline that resumes after crashes and reports progress, so thousands of FASTA sequence files can be classified in a single database load.",
             "metrics": ["3000+ FASTA files", "single DB load", "resume + crash-recovery"]
           }
         ],
         "tags": ["C++", "CUDA", "CMake", "Docker", "Linux", "Bioinformatics"]
+      },
+      {
+        "role": "Software Engineering Intern",
+        "company": "JotForm — Ankara, Turkey",
+        "date": "Jun 2026 – Aug 2026",
+        "summary": "Engineering internship at JotForm, an online form-building platform, on its email builder.",
+        "bullets": [
+          {
+            "head": "Element Registry Architecture",
+            "desc": "Designed the architecture of a drag-and-drop email builder so all 20 content-block types share one typed interface; new block types required no changes to existing code.",
+            "metrics": ["20 content-block types", "1 typed interface", "0 consumers touched"]
+          },
+          {
+            "head": "Bulk Send Pipeline",
+            "desc": "Built an asynchronous bulk-email pipeline that sends in batches of 25 recipients, with a timeout mechanism (900 s) that reclaims stalled batches.",
+            "metrics": ["25 recipients/batch", "900s reclaim timeout", "PHP · MySQL · Redis"]
+          }
+        ],
+        "tags": ["React 18", "TypeScript", "Redux", "PHP", "MySQL", "Redis"]
       },
       {
         "role": "Part Time Software Engineer",
@@ -269,12 +271,12 @@
   "skills": {
     "title": "Skills",
     "categories": [
-      { "name": "Languages", "icon": "code", "items": ["C++", "Java", "JavaScript", "TypeScript"] },
-      { "name": "Frontend", "icon": "code", "items": ["React.js", "React Native", "HTML/CSS"] },
-      { "name": "Backend", "icon": "server", "items": ["Node.js", "Express", "AWS Lambda", "AWS"] },
-      { "name": "Databases", "icon": "database", "items": ["MongoDB", "DynamoDB"] },
-      { "name": "Tools & Practices", "icon": "wrench", "items": ["Git", "GitHub", "OOP", "Software Design", "Project Management"] },
-      { "name": "Other", "icon": "brain", "items": ["Game Development", "DevOps"] }
+      { "name": "Languages", "icon": "code", "items": ["C++", "Java", "TypeScript", "JavaScript"] },
+      { "name": "High-Performance Computing", "icon": "server", "items": ["CUDA", "OpenMP", "CMake", "Linux", "Docker"] },
+      { "name": "Databases", "icon": "database", "items": ["MongoDB", "DynamoDB", "MySQL", "Redis"] },
+      { "name": "Web Development", "icon": "code", "items": ["React", "Node.js", "AWS Lambda", "REST APIs"] },
+      { "name": "Practices", "icon": "wrench", "items": ["Git", "GitHub", "OOP", "Software Design", "Reproducible Builds", "Project Management"] },
+      { "name": "Other", "icon": "brain", "items": ["Educational Software", "Game Development"] }
     ]
   },
   "volunteering": {
@@ -315,7 +317,7 @@
   "contact": {
     "title": "Get in Touch",
     "headline": "Get in touch.",
-    "text": "Open to internships, full-stack collaborations, and conversations about backend systems, LLM integrations, and DevOps. I usually reply within 24 hours.",
+    "text": "Open to research opportunities, collaborations, and conversations about GPU computing, bioinformatics, and computer science education. I usually reply within 24 hours.",
     "infoTitle": "Contact Info",
     "location": "Ankara, Turkey",
     "labels": {
@@ -453,11 +455,11 @@
     "items": [
       {
         "k": "Lab",
-        "v": "Modernizing CuCLARK, a GPU metagenomic classifier, at Alkan Lab: CUDA 11.8, CMake, Docker."
+        "v": "Modernizing CuCLARK, a GPU tool that identifies organisms in DNA samples, at Alkan Lab."
       },
       {
         "k": "Building",
-        "v": "OSGuide: interactive lessons for operating systems."
+        "v": "OSGuide: a free interactive platform for learning operating systems."
       },
       {
         "k": "Studying",
@@ -465,7 +467,7 @@
       },
       {
         "k": "Open to",
-        "v": "Internships and collaborations."
+        "v": "Research opportunities and collaborations."
       }
     ]
   },

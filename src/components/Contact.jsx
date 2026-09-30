@@ -12,7 +12,7 @@ function Contact() {
       <div className="shell">
         <div className="block-head">
           <div className="block-num">
-            <span className="n">08</span> &nbsp;/ {t('nav.contact')}
+            <span className="n">09</span> &nbsp;/ {t('nav.contact')}
           </div>
           <h2 className="block-title" style={{ visibility: 'hidden' }}>—</h2>
         </div>

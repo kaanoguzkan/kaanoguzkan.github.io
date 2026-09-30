@@ -2,7 +2,7 @@
   "nav": {
     "about": "Über mich",
     "experience": "Erfahrung",
-    "work": "Beruflich",
+    "work": "Erfahrung",
     "academics": "Akademisches",
     "research": "Forschung",
     "projects": "Projekte",
@@ -20,20 +20,20 @@
     "name": "S. Kaan Oğuzkan",
     "indexLabel": "⌘ Index — 01 / Persönliche Site · v.2026",
     "headline": {
-      "line1": "Saubere, skalierbare",
-      "line2": "Software",
-      "line3": "bauen"
+      "line1": "Computing",
+      "line2": "für Genomik",
+      "line3": "und Lernen"
     },
-    "metaText": "Informatikstudent an der <strong>Bilkent-Universität</strong>, ehrenamtliche studentische Hilfskraft am <strong>Alkan Lab</strong>. Ich entwerfe Backend-Systeme, die zuverlässig, performant und wartbar sind.",
+    "metaText": "Informatikstudent (Bachelor) an der <strong>Bilkent-Universität</strong> und ehrenamtliche studentische Hilfskraft am <strong>Alkan Lab</strong>. Ich arbeite an GPU-Software zur Analyse von DNA-Sequenzierdaten und an Werkzeugen, die das Lernen der Informatik erleichtern.",
     "subtitle": "CS @ Bilkent | Studentische Hilfskraft @ Alkan Lab",
-    "tagline": "Ich entwickle saubere, skalierbare Software.",
+    "tagline": "Computing für Genomik und Lernen.",
     "cta": "Meine Projekte",
     "downloadResume": "Lebenslauf herunterladen",
     "typingPhrases": [
-      "Full-Stack-Entwickler",
-      "DevOps-Enthusiast",
-      "Problemlöser",
-      "Softwareingenieur"
+      "Studentischer Forscher",
+      "GPU-Computing",
+      "Bioinformatik",
+      "Informatikdidaktik"
     ]
   },
   "about": {
@@ -42,12 +42,12 @@
       "basedLabel": "Standort",
       "languagesLabel": "Sprachen",
       "statusLabel": "Status",
-      "statusValue": "Offen für Kollaborationen und Praktika",
+      "statusValue": "Offen für Forschungsmöglichkeiten und Kollaborationen",
       "focusLabel": "Fokus",
-      "focusValue": "Backend-Systeme · DevOps · GPU & Bioinformatik"
+      "focusValue": "GPU-Computing · Bioinformatik · Informatikdidaktik"
     },
-    "paragraph1": "Ich studiere Informatik (Computer Engineering) an der <strong>Bilkent-Universität</strong> und bringe praktische Erfahrung mit Full-Stack-Web-Anwendungen und GPU-beschleunigten Systemen mit. Ich entwerfe gerne Backend-Systeme, die zuverlässig, performant und wartungsfreundlich sind.",
-    "paragraph2": "Derzeit ehrenamtliche studentische Hilfskraft am <strong>Alkan Lab für Bioinformatik und Computational Genomics</strong>, wo ich CUDA-Codebasen und Metagenom-Pipelines modernisiere. Zuvor Praktikant in der Software-Entwicklung bei <strong>JotForm</strong> (E-Mail-Builder-Architektur, Bulk-Send-Pipeline) und Entwicklung von Full-Stack- und DevOps-Lösungen bei <strong>Look & Cash</strong> mit React, TypeScript, MongoDB und AWS.",
+    "paragraph1": "Ich studiere Informatik (Computer Engineering, Bachelor) an der <strong>Bilkent-Universität</strong> (Abschluss 2027) und interessiere mich für Hochleistungsrechnen in den Lebenswissenschaften und für die Didaktik der Informatik. Mich reizen Arbeiten, bei denen sorgfältiges Engineering eine Analyse schneller, reproduzierbarer oder verständlicher macht.",
+    "paragraph2": "Ich bin ehrenamtliche studentische Hilfskraft am <strong>Alkan Lab für Bioinformatik und Computational Genomics</strong>: Dort modernisiere ich CuCLARK, ein GPU-Werkzeug, das bestimmt, welche Organismen in einer DNA-Probe vorkommen, und baue Pipelines, die es über Tausende Sequenzdateien laufen lassen. Außerdem habe ich <strong>OSGuide</strong> gebaut, eine kostenlose interaktive Plattform zum Lernen von Betriebssystemen. Zuvor habe ich Software-Entwicklung bei <strong>JotForm</strong> (Praktikum) und <strong>Look & Cash</strong> (Werkstudent) betrieben.",
     "labels": {
       "location": "Standort",
       "languages": "Sprachen"
@@ -73,45 +73,47 @@
     "title": "Erfahrung",
     "jobs": [
       {
-        "role": "Praktikant Software-Entwicklung",
-        "company": "JotForm — Ankara, Türkei",
-        "date": "Juni 2026 – Aug. 2026",
-        "bullets": [
-          {
-            "head": "Element-Registry-Architektur",
-            "desc": "Plugin-Contract-Architektur für einen Drag-and-Drop-E-Mail-Builder entworfen, bei der jeder Content-Block-Typ über Canvas, Panel, Vorschau und Exporter hinweg eine einzige typisierte Schnittstelle teilt; neue Blöcke erforderten so keine Änderung bestehender Konsumenten.",
-            "metrics": ["20 Content-Block-Typen", "1 typisierte Schnittstelle", "0 Konsumenten angepasst"]
-          },
-          {
-            "head": "Bulk-Send-Pipeline",
-            "desc": "Asynchrone Bulk-E-Mail-Pipeline gebaut, mit einem Cron-Worker, der über gestückelte SMTP-Sitzungen versendet, und einem timeoutbasierten Reclaim-Mechanismus für hängende Batches.",
-            "metrics": ["25 Empfänger/Batch", "900 s Reclaim-Timeout", "PHP · MySQL · Redis"]
-          }
-        ],
-        "tags": ["React 18", "TypeScript", "Redux", "PHP", "MySQL", "Redis"]
-      },
-      {
         "role": "Studentische Hilfskraft (ehrenamtlich)",
         "company": "Alkan Lab für Bioinformatik und Computational Genomics — Ankara, Türkei",
         "date": "Feb. 2026 – heute",
+        "summary": "Forschungsgruppe für Computational Genomics. CuCLARK, das Werkzeug, an dem ich arbeite, ordnet DNA-Sequenzierreads dem Organismus zu, aus dem sie am wahrscheinlichsten stammen.",
         "bullets": [
           {
             "head": "CuCLARK GPU- & CUDA-Modernisierung",
-            "desc": "CuCLARK (GPU-Metagenom-Klassifikator, urspr. CUDA 7.5 / Single-Arch) geforkt und auf CUDA 11.8 aktualisiert; Multi-Arch-Support von Kepler sm_35 bis Hopper sm_90.",
+            "desc": "CuCLARK ordnet DNA-Sequenzierreads per GPU dem Organismus zu, aus dem sie am wahrscheinlichsten stammen. Ich habe es von CUDA 7.5 auf 11.8 aktualisiert, sodass es auf zehn NVIDIA-GPU-Generationen von Kepler (K80) bis Hopper (H100) gebaut und ausgeführt werden kann.",
             "metrics": ["CUDA 7.5 → 11.8", "10 GPU-Generationen", "K80 → H100"]
           },
           {
             "head": "Build-System & Containerisierung",
-            "desc": "Legacy-install.sh durch CMake-3.20-Build (C++17, CUDA 14, optional OpenMP) ersetzt und Multi-Arch-Dockerfile (alkanlab/cuclark) verfasst.",
+            "desc": "Das alte Installationsskript durch einen CMake-Build ersetzt und ein Multi-Arch-Docker-Image (alkanlab/cuclark) veröffentlicht, sodass sich das Werkzeug reproduzierbar ohne manuelles Setup bauen und ausführen lässt.",
             "metrics": ["CMake 3.20", "C++17 / CUDA 14", "CLI mit 6 Unterbefehlen"]
           },
           {
             "head": "Batch-Klassifikations-Pipeline",
-            "desc": "Byte-Offset-Batching-Bug diagnostiziert, der doppelte Read-Zuordnungen verursachte; List-Mode-Pipeline mit Resume und Crash-Recovery gebaut.",
+            "desc": "Einen Batching-Fehler diagnostiziert, der bei kleinen Eingaben manche Reads doppelt zuordnete, und eine Pipeline gebaut, die nach Abstürzen fortsetzt und den Fortschritt meldet. So lassen sich Tausende FASTA-Sequenzdateien in einem einzigen DB-Ladevorgang klassifizieren.",
             "metrics": ["3000+ FASTA-Dateien", "ein DB-Ladevorgang", "Resume + Recovery"]
           }
         ],
         "tags": ["C++", "CUDA", "CMake", "Docker", "Linux", "Bioinformatik"]
+      },
+      {
+        "role": "Praktikant Software-Entwicklung",
+        "company": "JotForm — Ankara, Türkei",
+        "date": "Juni 2026 – Aug. 2026",
+        "summary": "Software-Praktikum bei JotForm, einer Online-Plattform für Formulare, am E-Mail-Builder.",
+        "bullets": [
+          {
+            "head": "Element-Registry-Architektur",
+            "desc": "Die Architektur eines Drag-and-Drop-E-Mail-Builders so entworfen, dass alle 20 Content-Block-Typen eine einzige typisierte Schnittstelle teilen; neue Block-Typen erforderten keine Änderung am bestehenden Code.",
+            "metrics": ["20 Content-Block-Typen", "1 typisierte Schnittstelle", "0 Konsumenten angepasst"]
+          },
+          {
+            "head": "Bulk-Send-Pipeline",
+            "desc": "Eine asynchrone Bulk-E-Mail-Pipeline gebaut, die in Batches zu 25 Empfängern versendet, samt timeoutbasiertem Reclaim-Mechanismus (900 s) für hängende Batches.",
+            "metrics": ["25 Empfänger/Batch", "900 s Reclaim-Timeout", "PHP · MySQL · Redis"]
+          }
+        ],
+        "tags": ["React 18", "TypeScript", "Redux", "PHP", "MySQL", "Redis"]
       },
       {
         "role": "Werkstudent Software-Entwicklung",
@@ -269,12 +271,12 @@
   "skills": {
     "title": "Fähigkeiten",
     "categories": [
-      { "name": "Sprachen", "icon": "code", "items": ["C++", "Java", "JavaScript", "TypeScript"] },
-      { "name": "Frontend", "icon": "code", "items": ["React.js", "React Native", "HTML/CSS"] },
-      { "name": "Backend", "icon": "server", "items": ["Node.js", "Express", "AWS Lambda", "AWS"] },
-      { "name": "Datenbanken", "icon": "database", "items": ["MongoDB", "DynamoDB"] },
-      { "name": "Tools & Praktiken", "icon": "wrench", "items": ["Git", "GitHub", "OOP", "Softwaredesign", "Projektmanagement"] },
-      { "name": "Sonstiges", "icon": "brain", "items": ["Spieleentwicklung", "DevOps"] }
+      { "name": "Sprachen", "icon": "code", "items": ["C++", "Java", "TypeScript", "JavaScript"] },
+      { "name": "Hochleistungsrechnen", "icon": "server", "items": ["CUDA", "OpenMP", "CMake", "Linux", "Docker"] },
+      { "name": "Datenbanken", "icon": "database", "items": ["MongoDB", "DynamoDB", "MySQL", "Redis"] },
+      { "name": "Webentwicklung", "icon": "code", "items": ["React", "Node.js", "AWS Lambda", "REST-APIs"] },
+      { "name": "Praktiken", "icon": "wrench", "items": ["Git", "GitHub", "OOP", "Softwaredesign", "Reproduzierbare Builds", "Projektmanagement"] },
+      { "name": "Sonstiges", "icon": "brain", "items": ["Lernsoftware", "Spieleentwicklung"] }
     ]
   },
   "volunteering": {
@@ -315,7 +317,7 @@
   "contact": {
     "title": "Kontakt aufnehmen",
     "headline": "Kontakt.",
-    "text": "Offen für Praktika, Full-Stack-Kollaborationen und Gespräche über Backend-Systeme, LLM-Integrationen und DevOps. Ich antworte in der Regel innerhalb von 24 Stunden.",
+    "text": "Offen für Forschungsmöglichkeiten, Kollaborationen und Gespräche über GPU-Computing, Bioinformatik und Informatikdidaktik. Ich antworte in der Regel innerhalb von 24 Stunden.",
     "infoTitle": "Kontaktdaten",
     "location": "Ankara, Türkei",
     "labels": {
@@ -453,11 +455,11 @@
     "items": [
       {
         "k": "Labor",
-        "v": "Modernisierung von CuCLARK, einem GPU-Metagenom-Klassifikator, am Alkan Lab: CUDA 11.8, CMake, Docker."
+        "v": "Modernisierung von CuCLARK, einem GPU-Werkzeug zur Bestimmung von Organismen in DNA-Proben, am Alkan Lab."
       },
       {
         "k": "Baue",
-        "v": "OSGuide: interaktive Lektionen zu Betriebssystemen."
+        "v": "OSGuide: eine kostenlose interaktive Plattform zum Lernen von Betriebssystemen."
       },
       {
         "k": "Studium",
@@ -465,7 +467,7 @@
       },
       {
         "k": "Offen für",
-        "v": "Praktika und Kooperationen."
+        "v": "Forschungsmöglichkeiten und Kooperationen."
       }
     ]
   },

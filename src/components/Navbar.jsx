@@ -52,6 +52,7 @@ function Navbar() {
 
   const navItems = [
     { id: 'about', key: 'about' },
+    { id: 'academics', key: 'research' },
     { id: 'experience', key: 'work' },
     { id: 'projects', key: 'projects' },
     { id: 'skills', key: 'skills' },

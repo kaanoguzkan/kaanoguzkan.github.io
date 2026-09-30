@@ -7,11 +7,11 @@ import { OPEN_PALETTE_EVENT, consumePendingOpen } from '../utils/palette';
 
 const SECTIONS = [
   ['about', 'nav.about'],
+  ['academics', 'nav.research'],
   ['experience', 'nav.experience'],
-  ['academics', 'nav.academics'],
   ['projects', 'nav.projects'],
-  ['skills', 'nav.skills'],
   ['github', 'nav.github'],
+  ['skills', 'nav.skills'],
   ['volunteering', 'nav.community'],
   ['contact', 'nav.contact'],
 ];

@@ -15,7 +15,7 @@ function Academics() {
       <div className="shell">
         <div className="block-head">
           <div className="block-num">
-            <span className="n">06</span> &nbsp;/ {t('nav.research')}
+            <span className="n">03</span> &nbsp;/ {t('nav.research')}
           </div>
           <h2 className="block-title">{t('academics.title')}</h2>
         </div>

@@ -74,6 +74,7 @@ function ResumePage() {
               <div>
                 <div className="rp-strong">{job.company}</div>
                 <div className="rp-muted">{job.role}</div>
+                {job.summary && <div className="rp-muted">{job.summary}</div>}
               </div>
               <div className="rp-when">{job.date}</div>
             </div>

@@ -40,7 +40,7 @@ function Projects() {
       <div className="shell">
         <div className="block-head">
           <div className="block-num">
-            <span className="n">04</span> &nbsp;/ {t('nav.projects')}
+            <span className="n">05</span> &nbsp;/ {t('nav.projects')}
           </div>
           <h2 className="block-title">{t('projects.title')}</h2>
         </div>
