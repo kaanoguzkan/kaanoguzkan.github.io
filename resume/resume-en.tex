@@ -1,0 +1,100 @@
+\input{preamble}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Sırrı Kaan Oğuzkan} & Email : \href{mailto:kaan.oguzkan@ug.bilkent.edu.tr}{kaan.oguzkan@ug.bilkent.edu.tr}\\
+  \href{https://www.linkedin.com/in/kaan-oguzkan/}{{linkedin.com/in/kaan-oguzkan}} & \href{https://kaanoguzkan.com}{{kaanoguzkan.com}} \\
+  \href{https://github.com/kaanoguzkan}{{github.com/kaanoguzkan}} & \href{https://orcid.org/0009-0000-3272-7333}{{ORCID: 0009-0000-3272-7333}} \\
+\end{tabular*}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bilkent University}{Ankara, Turkey}
+      {B.Sc. in Computer Engineering}{Sep 2023 -- Present}
+  \resumeSubHeadingListEnd
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+  {JotForm}{Ankara, Turkey}
+  {Software Engineering Intern}{June 2026 - August 2026}
+  \resumeItemListStart
+      \resumeItem{Element Registry Architecture}
+        {Designed a plugin-contract architecture for a drag-and-drop email builder (\textbf{React 18}, \textbf{TypeScript}, \textbf{Redux}) where \textbf{20} content-block types share one typed interface across the canvas, panel, preview, and exporter, so new blocks required touching \textbf{zero} existing consumers.}
+      \resumeItem{Bulk Send Pipeline}
+        {Built an asynchronous bulk-email pipeline (PHP, MySQL, Redis) with a cron worker delivering via chunked SMTP sessions (\textbf{25} recipients/batch) and a \textbf{900s} timeout-based reclaim mechanism for stalled batches.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+  {Alkan Lab for Bioinformatics and Computational Genomics}{Ankara, Turkey}
+  {Undergraduate Volunteer}{February 2026 - Present}
+  \resumeItemListStart
+      \resumeItem{CuCLARK GPU \& CUDA Modernization}
+        {Forked and modernized CuCLARK (GPU metagenomic classifier, originally CUDA 7.5 / single-arch); upgraded to \textbf{CUDA 11.8} with multi-arch support spanning \textbf{10} GPU generations (Kepler \texttt{sm\_35} through Hopper \texttt{sm\_90}, including K80, V100, A100, RTX 30xx/40xx, H100).}
+      \resumeItem{Build System \& Containerization}
+        {Replaced legacy \texttt{install.sh} with a \textbf{CMake 3.20} build (C++17, CUDA 14, optional OpenMP) and authored a multi-arch \texttt{Dockerfile} published as \texttt{alkanlab/cuclark}; added a unified CLI with \textbf{6} subcommands wrapping the original scripts.}
+      \resumeItem{Batch Classification Pipeline}
+        {Diagnosed a byte-offset batching bug causing duplicate read assignments on small inputs and built a list-mode pipeline with resume, crash-recovery blacklist, and progress monitoring to classify \textbf{3000+} FASTA files in a single DB load.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+  {Look \& Cash}{Ankara, Turkey}
+  {Part Time Software Engineer}{February 2025 - October 2025}
+  \resumeItemListStart
+      \resumeItem{Ticket-Based Support System}
+        {Built a ticket workflow for web/mobile (priority, comments, attachments, statuses). Shipped \textbf{13} REST endpoints, \textbf{4} ticket states, and \textbf{5} admin actions; reduced average admin handling time by \textbf{25\%} via bulk actions and better filtering.}
+      \resumeItem{Real-Time Mobile Support Chat}
+        {Implemented real-time ticket chat on mobile with backend persistence and state sync; achieved \textbf{300 ms} p95 delivery and \textbf{99.5\%} success under \textbf{150} concurrent sessions.}
+      \resumeItem{Reporting \& Graph Generation}
+        {Built KPI reporting APIs over MongoDB (tickets, campaigns, scans, notifications) with date-range and campaign filters. Generated \textbf{14} dashboard datasets powering \textbf{4} chart types; cut report generation time from \textbf{6.2 s} to \textbf{1.9 s} via indexing.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+\resumeSubItem{osguide.org — Interactive OS Learning Platform}
+{Built an interactive platform (\textbf{React}, \textbf{TypeScript}, \textbf{Vite}) structured around Bilkent's CS342 curriculum.}
+\resumeItemListStart
+  \resumeItem{Concept-to-Simulator Layers}
+    {Designed a three-layer learning flow per topic — concept explanation, animation, and interactive simulator — covering core OS topics such as scheduling, memory management, and synchronization.}
+\resumeItemListEnd
+
+\resumeSubItem{NutriApp — Meal Recommendation Platform}
+{Built backend services for a meal-planning app under the Amazon University Engagement Program.}
+\resumeItemListStart
+  \resumeItem{Serverless REST APIs}
+    {Implemented \textbf{16} REST endpoints on AWS Lambda; won the \textbf{People's Choice Award}, ranking \textbf{1st of 7} teams.}
+\resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------------
+\section{Skills}
+ \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: C++, TypeScript, JavaScript, PHP, Java}
+    }
+    \item{
+      \textbf{Frameworks \& Tools}{: React, Redux, Node.js, AWS Lambda, CUDA, Docker, Git}
+    }
+    \item{
+      \textbf{Databases}{: MongoDB, DynamoDB, MySQL, Redis}
+    }
+
+ \resumeSubHeadingListEnd
+
+
+\end{document}

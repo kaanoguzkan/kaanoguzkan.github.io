@@ -25,7 +25,7 @@
       "line3": "bauen"
     },
     "metaText": "Informatikstudent an der <strong>Bilkent-Universität</strong>, ehrenamtliche studentische Hilfskraft am <strong>Alkan Lab</strong>. Ich entwerfe Backend-Systeme, die zuverlässig, performant und wartbar sind.",
-    "subtitle": "CS @ Bilkent | SWE @ Look & Cash",
+    "subtitle": "CS @ Bilkent | Studentische Hilfskraft @ Alkan Lab",
     "tagline": "Ich entwickle saubere, skalierbare Software.",
     "cta": "Meine Projekte",
     "downloadResume": "Lebenslauf herunterladen",
@@ -47,7 +47,7 @@
       "focusValue": "Backend-Systeme · DevOps · GPU & Bioinformatik"
     },
     "paragraph1": "Ich studiere Informatik (Computer Engineering) an der <strong>Bilkent-Universität</strong> und bringe praktische Erfahrung mit Full-Stack-Web-Anwendungen und GPU-beschleunigten Systemen mit. Ich entwerfe gerne Backend-Systeme, die zuverlässig, performant und wartungsfreundlich sind.",
-    "paragraph2": "Derzeit ehrenamtliche studentische Hilfskraft am <strong>Alkan Lab für Bioinformatik und Computational Genomics</strong>, wo ich CUDA-Codebasen und Metagenom-Pipelines modernisiere. Zuvor bei <strong>Look & Cash</strong> Full-Stack- und DevOps-Lösungen mit React, TypeScript, MongoDB und AWS entwickelt.",
+    "paragraph2": "Derzeit ehrenamtliche studentische Hilfskraft am <strong>Alkan Lab für Bioinformatik und Computational Genomics</strong>, wo ich CUDA-Codebasen und Metagenom-Pipelines modernisiere. Zuvor Praktikant in der Software-Entwicklung bei <strong>JotForm</strong> (E-Mail-Builder-Architektur, Bulk-Send-Pipeline) und Entwicklung von Full-Stack- und DevOps-Lösungen bei <strong>Look & Cash</strong> mit React, TypeScript, MongoDB und AWS.",
     "labels": {
       "location": "Standort",
       "languages": "Sprachen"
@@ -72,6 +72,24 @@
   "experience": {
     "title": "Erfahrung",
     "jobs": [
+      {
+        "role": "Praktikant Software-Entwicklung",
+        "company": "JotForm — Ankara, Türkei",
+        "date": "Juni 2026 – Aug. 2026",
+        "bullets": [
+          {
+            "head": "Element-Registry-Architektur",
+            "desc": "Plugin-Contract-Architektur für einen Drag-and-Drop-E-Mail-Builder entworfen, bei der jeder Content-Block-Typ über Canvas, Panel, Vorschau und Exporter hinweg eine einzige typisierte Schnittstelle teilt; neue Blöcke erforderten so keine Änderung bestehender Konsumenten.",
+            "metrics": ["20 Content-Block-Typen", "1 typisierte Schnittstelle", "0 Konsumenten angepasst"]
+          },
+          {
+            "head": "Bulk-Send-Pipeline",
+            "desc": "Asynchrone Bulk-E-Mail-Pipeline gebaut, mit einem Cron-Worker, der über gestückelte SMTP-Sitzungen versendet, und einem timeoutbasierten Reclaim-Mechanismus für hängende Batches.",
+            "metrics": ["25 Empfänger/Batch", "900 s Reclaim-Timeout", "PHP · MySQL · Redis"]
+          }
+        ],
+        "tags": ["React 18", "TypeScript", "Redux", "PHP", "MySQL", "Redis"]
+      },
       {
         "role": "Studentische Hilfskraft (ehrenamtlich)",
         "company": "Alkan Lab für Bioinformatik und Computational Genomics — Ankara, Türkei",

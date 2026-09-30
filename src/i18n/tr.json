@@ -25,7 +25,7 @@
       "line3": "geliştiriyorum"
     },
     "metaText": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği öğrencisi, <strong>Alkan Lab</strong>'ta lisans gönüllü araştırmacı. Güvenilir, performanslı ve bakımı kolay backend sistemler tasarlıyorum.",
-    "subtitle": "CS @ Bilkent | SWE @ Look & Cash",
+    "subtitle": "CS @ Bilkent | Lisans Gönüllü Araştırmacı @ Alkan Lab",
     "tagline": "Temiz ve ölçeklenebilir yazılımlar geliştiriyorum.",
     "cta": "Projelerimi Gör",
     "downloadResume": "Özgeçmişi İndir",
@@ -47,7 +47,7 @@
       "focusValue": "Backend sistemler · DevOps · GPU ve biyoenformatik"
     },
     "paragraph1": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği öğrencisiyim; full-stack web uygulamaları ve GPU hızlandırmalı sistemler üzerinde uygulamalı deneyime sahibim. Güvenilir, performanslı ve bakımı kolay backend sistemleri tasarlamaktan keyif alıyorum.",
-    "paragraph2": "Şu anda <strong>Alkan Biyoenformatik ve Hesaplamalı Genomik Laboratuvarı</strong>'nda lisans gönüllü araştırmacı olarak CUDA kod tabanlarını ve metagenomik işlem hatlarını modernleştiriyorum. Daha önce <strong>Look & Cash</strong>'te React, TypeScript, MongoDB ve AWS ile full-stack ve DevOps çözümleri geliştirdim.",
+    "paragraph2": "Şu anda <strong>Alkan Biyoenformatik ve Hesaplamalı Genomik Laboratuvarı</strong>'nda lisans gönüllü araştırmacı olarak CUDA kod tabanlarını ve metagenomik işlem hatlarını modernleştiriyorum. Daha önce <strong>JotForm</strong>'da yazılım mühendisliği stajyeri olarak e-posta oluşturucu mimarisi ve toplu gönderim hattı üzerinde çalıştım; <strong>Look & Cash</strong>'te React, TypeScript, MongoDB ve AWS ile full-stack ve DevOps çözümleri geliştirdim.",
     "labels": {
       "location": "Konum",
       "languages": "Diller"
@@ -72,6 +72,24 @@
   "experience": {
     "title": "Deneyim",
     "jobs": [
+      {
+        "role": "Yazılım Mühendisliği Stajyeri",
+        "company": "JotForm — Ankara, Türkiye",
+        "date": "Haz 2026 – Ağu 2026",
+        "bullets": [
+          {
+            "head": "Element Registry Mimarisi",
+            "desc": "Sürükle-bırak bir e-posta oluşturucu için eklenti-sözleşmesi (plugin-contract) mimarisi tasarladım; her içerik bloğu türü canvas, panel, önizleme ve dışa aktarıcı boyunca tek bir tipli arayüzü paylaşıyor, böylece yeni bloklar mevcut tüketicilerin hiçbirine dokunmayı gerektirmedi.",
+            "metrics": ["20 içerik bloğu türü", "1 tipli arayüz", "0 tüketiciye dokunuldu"]
+          },
+          {
+            "head": "Toplu Gönderim Hattı",
+            "desc": "Parçalı SMTP oturumlarıyla teslimat yapan bir cron worker ve takılı kalan gruplar için zaman aşımına dayalı geri alma mekanizması içeren asenkron bir toplu e-posta hattı geliştirdim.",
+            "metrics": ["25 alıcı/grup", "900 sn geri alma süresi", "PHP · MySQL · Redis"]
+          }
+        ],
+        "tags": ["React 18", "TypeScript", "Redux", "PHP", "MySQL", "Redis"]
+      },
       {
         "role": "Lisans Gönüllü Araştırmacı",
         "company": "Alkan Biyoenformatik ve Hesaplamalı Genomik Laboratuvarı — Ankara, Türkiye",

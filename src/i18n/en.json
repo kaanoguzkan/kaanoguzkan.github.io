@@ -25,7 +25,7 @@
       "line3": "software"
     },
     "metaText": "Computer Engineering student at <strong>Bilkent University</strong>, undergraduate research volunteer at <strong>Alkan Lab</strong>. I design backend systems that are reliable, performant, and easy to maintain.",
-    "subtitle": "CS @ Bilkent | SWE @ Look & Cash",
+    "subtitle": "CS @ Bilkent | Undergrad Volunteer @ Alkan Lab",
     "tagline": "Building clean, scalable software.",
     "cta": "View My Work",
     "downloadResume": "Download Resume",
@@ -39,7 +39,7 @@
   "about": {
     "title": "About",
     "paragraph1": "I'm a Computer Engineering student at <strong>Bilkent University</strong> with hands-on experience across full-stack web applications and GPU-accelerated systems. I enjoy designing backend systems that are reliable, performant, and easy to maintain.",
-    "paragraph2": "Currently an undergraduate research volunteer at <strong>Alkan Lab for Bioinformatics & Computational Genomics</strong>, modernizing CUDA codebases and metagenomic pipelines. Previously built full-stack and DevOps solutions at <strong>Look & Cash</strong> with React, TypeScript, MongoDB, and AWS.",
+    "paragraph2": "Currently an undergraduate research volunteer at <strong>Alkan Lab for Bioinformatics & Computational Genomics</strong>, modernizing CUDA codebases and metagenomic pipelines. Previously a software engineering intern at <strong>JotForm</strong> (email builder architecture, bulk-send pipeline) and built full-stack and DevOps solutions at <strong>Look & Cash</strong> with React, TypeScript, MongoDB, and AWS.",
     "sidebar": {
       "basedLabel": "Based",
       "languagesLabel": "Languages",
@@ -72,6 +72,24 @@
   "experience": {
     "title": "Experience",
     "jobs": [
+      {
+        "role": "Software Engineering Intern",
+        "company": "JotForm — Ankara, Turkey",
+        "date": "Jun 2026 – Aug 2026",
+        "bullets": [
+          {
+            "head": "Element Registry Architecture",
+            "desc": "Designed a plugin-contract architecture for a drag-and-drop email builder where every content-block type shares one typed interface across the canvas, panel, preview, and exporter, so new blocks required touching zero existing consumers.",
+            "metrics": ["20 content-block types", "1 typed interface", "0 consumers touched"]
+          },
+          {
+            "head": "Bulk Send Pipeline",
+            "desc": "Built an asynchronous bulk-email pipeline with a cron worker delivering via chunked SMTP sessions and a timeout-based reclaim mechanism for stalled batches.",
+            "metrics": ["25 recipients/batch", "900s reclaim timeout", "PHP · MySQL · Redis"]
+          }
+        ],
+        "tags": ["React 18", "TypeScript", "Redux", "PHP", "MySQL", "Redis"]
+      },
       {
         "role": "Undergraduate Volunteer",
         "company": "Alkan Lab for Bioinformatics & Computational Genomics — Ankara, Turkey",

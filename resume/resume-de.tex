@@ -1,0 +1,100 @@
+\input{preamble}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Sırrı Kaan Oğuzkan} & E-Mail : \href{mailto:kaan.oguzkan@ug.bilkent.edu.tr}{kaan.oguzkan@ug.bilkent.edu.tr}\\
+  \href{https://www.linkedin.com/in/kaan-oguzkan/}{{linkedin.com/in/kaan-oguzkan}} & \href{https://kaanoguzkan.com}{{kaanoguzkan.com}} \\
+  \href{https://github.com/kaanoguzkan}{{github.com/kaanoguzkan}} & \href{https://orcid.org/0009-0000-3272-7333}{{ORCID: 0009-0000-3272-7333}} \\
+\end{tabular*}
+
+\section{Ausbildung}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bilkent Universität}{Ankara, Türkei}
+      {B.Sc. Informatik (Computer Engineering)}{Sep. 2023 -- heute}
+  \resumeSubHeadingListEnd
+%-----------EXPERIENCE-----------------
+\section{Berufserfahrung}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+  {JotForm}{Ankara, Türkei}
+  {Praktikant Software-Entwicklung}{Juni 2026 - Aug. 2026}
+  \resumeItemListStart
+      \resumeItem{Element-Registry-Architektur}
+        {Plugin-Contract-Architektur für einen Drag-and-Drop-E-Mail-Builder (\textbf{React 18}, \textbf{TypeScript}, \textbf{Redux}) entworfen, bei der \textbf{20} Content-Block-Typen über Canvas, Panel, Vorschau und Exporter hinweg eine einzige typisierte Schnittstelle teilen; neue Blöcke erforderten so \textbf{keine} Änderung bestehender Konsumenten.}
+      \resumeItem{Bulk-Send-Pipeline}
+        {Asynchrone Bulk-E-Mail-Pipeline (PHP, MySQL, Redis) gebaut, mit einem Cron-Worker, der über gestückelte SMTP-Sitzungen (\textbf{25} Empfänger/Batch) versendet, und einem timeoutbasierten Reclaim-Mechanismus (\textbf{900 s}) für hängende Batches.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+  {Alkan Lab für Bioinformatik und Computational Genomics}{Ankara, Türkei}
+  {Studentische Hilfskraft (ehrenamtlich)}{Feb. 2026 - heute}
+  \resumeItemListStart
+      \resumeItem{CuCLARK GPU- \& CUDA-Modernisierung}
+        {CuCLARK (GPU-Metagenom-Klassifikator, urspr. CUDA 7.5 / Single-Arch) geforkt und modernisiert; auf \textbf{CUDA 11.8} aktualisiert, mit Multi-Arch-Support für \textbf{10} GPU-Generationen (Kepler \texttt{sm\_35} bis Hopper \texttt{sm\_90}, u.\,a. K80, V100, A100, RTX 30xx/40xx, H100).}
+      \resumeItem{Build-System \& Containerisierung}
+        {Legacy-\texttt{install.sh} durch einen \textbf{CMake-3.20}-Build (C++17, CUDA 14, optional OpenMP) ersetzt und ein Multi-Arch-\texttt{Dockerfile} verfasst (veröffentlicht als \texttt{alkanlab/cuclark}); einheitliche CLI mit \textbf{6} Unterbefehlen ergänzt, die die ursprünglichen Skripte kapselt.}
+      \resumeItem{Batch-Klassifikations-Pipeline}
+        {Byte-Offset-Batching-Bug diagnostiziert, der bei kleinen Eingaben doppelte Read-Zuordnungen verursachte; List-Mode-Pipeline mit Resume, Crash-Recovery-Blacklist und Fortschrittsüberwachung gebaut, die \textbf{3000+} FASTA-Dateien in einem einzigen DB-Ladevorgang klassifiziert.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+  {Look \& Cash}{Ankara, Türkei}
+  {Werkstudent Software-Entwicklung}{Feb. 2025 - Okt. 2025}
+  \resumeItemListStart
+      \resumeItem{Ticket-basiertes Support-System}
+        {Ticket-Workflow für Web/Mobile entwickelt (Priorität, Kommentare, Anhänge, Status). \textbf{13} REST-Endpunkte, \textbf{4} Ticket-Zustände und \textbf{5} Admin-Aktionen ausgeliefert; durchschnittliche Bearbeitungszeit der Admins durch Massenaktionen und bessere Filter um \textbf{25\,\%} reduziert.}
+      \resumeItem{Echtzeit-Support-Chat (Mobile)}
+        {Echtzeit-Ticket-Chat auf Mobile mit Backend-Persistenz und State-Sync implementiert; \textbf{300 ms} p95-Zustellung und \textbf{99,5\,\%} Erfolgsrate bei \textbf{150} parallelen Sitzungen erreicht.}
+      \resumeItem{Reporting \& Diagrammerstellung}
+        {KPI-Reporting-APIs auf MongoDB (Tickets, Kampagnen, Scans, Benachrichtigungen) mit Datums- und Kampagnenfiltern entwickelt. \textbf{14} Dashboard-Datensätze für \textbf{4} Diagrammtypen erzeugt; Reportzeit durch Indizierung von \textbf{6,2 s} auf \textbf{1,9 s} reduziert.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projekte}
+  \resumeSubHeadingListStart
+
+\resumeSubItem{osguide.org — Interaktive Lernplattform für Betriebssysteme}
+{Interaktive Plattform (\textbf{React}, \textbf{TypeScript}, \textbf{Vite}) entwickelt, die sich am CS342-Lehrplan der Bilkent orientiert.}
+\resumeItemListStart
+  \resumeItem{Von Konzept zu Simulator}
+    {Pro Thema einen dreistufigen Lernfluss entworfen — Konzepterklärung, Animation und interaktiver Simulator — der zentrale Betriebssystemthemen wie Scheduling, Speicherverwaltung und Synchronisation abdeckt.}
+\resumeItemListEnd
+
+\resumeSubItem{NutriApp — Plattform für Mahlzeitenempfehlungen}
+{Backend-Dienste für eine Meal-Planning-App im Amazon University Engagement Program entwickelt.}
+\resumeItemListStart
+  \resumeItem{Serverless-REST-APIs}
+    {\textbf{16} REST-Endpunkte auf AWS Lambda implementiert; \textbf{People's Choice Award} gewonnen, \textbf{Platz 1 von 7} Teams.}
+\resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------------
+\section{Kenntnisse}
+ \resumeSubHeadingListStart
+    \item{
+      \textbf{Programmiersprachen}{: C++, TypeScript, JavaScript, PHP, Java}
+    }
+    \item{
+      \textbf{Frameworks \& Tools}{: React, Redux, Node.js, AWS Lambda, CUDA, Docker, Git}
+    }
+    \item{
+      \textbf{Datenbanken}{: MongoDB, DynamoDB, MySQL, Redis}
+    }
+
+ \resumeSubHeadingListEnd
+
+
+\end{document}

@@ -1,0 +1,100 @@
+\input{preamble}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Sırrı Kaan Oğuzkan} & E-posta : \href{mailto:kaan.oguzkan@ug.bilkent.edu.tr}{kaan.oguzkan@ug.bilkent.edu.tr}\\
+  \href{https://www.linkedin.com/in/kaan-oguzkan/}{{linkedin.com/in/kaan-oguzkan}} & \href{https://kaanoguzkan.com}{{kaanoguzkan.com}} \\
+  \href{https://github.com/kaanoguzkan}{{github.com/kaanoguzkan}} & \href{https://orcid.org/0009-0000-3272-7333}{{ORCID: 0009-0000-3272-7333}} \\
+\end{tabular*}
+
+\section{Eğitim}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bilkent Üniversitesi}{Ankara, Türkiye}
+      {Bilgisayar Mühendisliği Lisans}{Eylül 2023 -- Devam ediyor}
+  \resumeSubHeadingListEnd
+%-----------EXPERIENCE-----------------
+\section{Deneyim}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+  {JotForm}{Ankara, Türkiye}
+  {Yazılım Mühendisliği Stajyeri}{Haziran 2026 - Ağustos 2026}
+  \resumeItemListStart
+      \resumeItem{Element Registry Mimarisi}
+        {Sürükle-bırak bir e-posta oluşturucu (\textbf{React 18}, \textbf{TypeScript}, \textbf{Redux}) için eklenti-sözleşmesi (plugin-contract) mimarisi tasarladım; \textbf{20} içerik bloğu türü canvas, panel, önizleme ve dışa aktarıcı boyunca tek bir tipli arayüzü paylaşıyor, böylece yeni bloklar mevcut tüketicilerin \textbf{hiçbirine} dokunmayı gerektirmedi.}
+      \resumeItem{Toplu Gönderim Hattı}
+        {Asenkron bir toplu e-posta hattı (PHP, MySQL, Redis) geliştirdim; parçalı SMTP oturumlarıyla (\textbf{25} alıcı/grup) teslimat yapan bir cron worker ve takılı kalan gruplar için \textbf{900 sn} zaman aşımına dayalı geri alma (reclaim) mekanizması ekledim.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+  {Alkan Biyoenformatik ve Hesaplamalı Genomik Laboratuvarı}{Ankara, Türkiye}
+  {Lisans Gönüllü Araştırmacı}{Şubat 2026 - Devam ediyor}
+  \resumeItemListStart
+      \resumeItem{CuCLARK GPU \& CUDA Modernizasyonu}
+        {CuCLARK'ı (GPU tabanlı metagenomik sınıflandırıcı, orijinali CUDA 7.5 / tek mimari) forkladım ve modernize ettim; \textbf{CUDA 11.8}'e yükselttim ve \textbf{10} GPU neslini (Kepler \texttt{sm\_35}'ten Hopper \texttt{sm\_90}'a; K80, V100, A100, RTX 30xx/40xx, H100) kapsayan çoklu mimari desteği ekledim.}
+      \resumeItem{Build Sistemi \& Konteynerleştirme}
+        {Eski \texttt{install.sh} betiğini \textbf{CMake 3.20} tabanlı bir build (C++17, CUDA 14, isteğe bağlı OpenMP) ile değiştirdim ve \texttt{alkanlab/cuclark} olarak yayımlanan çok mimarili bir \texttt{Dockerfile} yazdım; orijinal betikleri saran \textbf{6} alt komutlu birleşik bir CLI ekledim.}
+      \resumeItem{Toplu Sınıflandırma İşlem Hattı}
+        {Küçük girdilerde tekrarlanan okuma (read) atamalarına yol açan bir bayt-ofset batch hatasını teşhis ettim; devam ettirme, çökme sonrası kara liste ve ilerleme takibi içeren bir liste modu işlem hattı kurarak \textbf{3000+} FASTA dosyasını tek bir veritabanı yüklemesinde sınıflandırdım.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+  {Look \& Cash}{Ankara, Türkiye}
+  {Yarı Zamanlı Yazılım Mühendisi}{Şubat 2025 - Ekim 2025}
+  \resumeItemListStart
+      \resumeItem{Bilet Tabanlı Destek Sistemi}
+        {Web ve mobil için bilet (ticket) iş akışı geliştirdim (öncelik, yorumlar, ekler, durumlar). \textbf{13} REST uç noktası, \textbf{4} bilet durumu ve \textbf{5} yönetici aksiyonu sevk ettim; toplu işlemler ve gelişmiş filtreleme ile ortalama yönetici işlem süresini \textbf{\%25} azalttım.}
+      \resumeItem{Mobil Gerçek Zamanlı Destek Sohbeti}
+        {Mobilde, backend kalıcılığı ve durum senkronizasyonu ile gerçek zamanlı bilet sohbeti geliştirdim; \textbf{150} eşzamanlı oturum altında \textbf{300 ms} p95 iletim süresine ve \textbf{\%99,5} başarıya ulaştım.}
+      \resumeItem{Raporlama \& Grafik Üretimi}
+        {MongoDB üzerinde tarih aralığı ve kampanya filtreleri ile KPI raporlama API'leri (biletler, kampanyalar, taramalar, bildirimler) geliştirdim. \textbf{4} grafik tipini besleyen \textbf{14} pano veri seti ürettim; rapor üretim süresini indeksleme ile \textbf{6,2 sn}'den \textbf{1,9 sn}'ye düşürdüm.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projeler}
+  \resumeSubHeadingListStart
+
+\resumeSubItem{osguide.org — Etkileşimli İşletim Sistemi Öğrenme Platformu}
+{Bilkent'in CS342 müfredatı etrafında yapılandırılmış etkileşimli bir platform geliştirdim (\textbf{React}, \textbf{TypeScript}, \textbf{Vite}).}
+\resumeItemListStart
+  \resumeItem{Kavramdan Simülatöre Katmanlar}
+    {Her konu için üç katmanlı bir öğrenme akışı tasarladım — kavram anlatımı, animasyon ve etkileşimli simülatör — zamanlama, bellek yönetimi ve senkronizasyon gibi temel işletim sistemi konularını kapsıyor.}
+\resumeItemListEnd
+
+\resumeSubItem{NutriApp — Yemek Öneri Platformu}
+{Amazon University Engagement Program kapsamında bir yemek planlama uygulamasının backend servislerini geliştirdim.}
+\resumeItemListStart
+  \resumeItem{Sunucusuz REST API'leri}
+    {AWS Lambda üzerinde \textbf{16} REST uç noktası geliştirdim; \textbf{People's Choice Award} kazandım, \textbf{7 takım arasında 1.} oldum.}
+\resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------------
+\section{Yetkinlikler}
+ \resumeSubHeadingListStart
+    \item{
+      \textbf{Programlama Dilleri}{: C++, TypeScript, JavaScript, PHP, Java}
+    }
+    \item{
+      \textbf{Çerçeveler \& Araçlar}{: React, Redux, Node.js, AWS Lambda, CUDA, Docker, Git}
+    }
+    \item{
+      \textbf{Veritabanları}{: MongoDB, DynamoDB, MySQL, Redis}
+    }
+
+ \resumeSubHeadingListEnd
+
+
+\end{document}
