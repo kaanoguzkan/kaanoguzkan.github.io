@@ -59,7 +59,7 @@ function CaseStudy() {
             <span className="v cs-links">
               {project.demo && (
                 <a className="link-u" href={project.demo} target="_blank" rel="noopener noreferrer">
-                  {t('projects.demoText')} ↗
+                  {project.demoLabel || t('projects.demoText')} ↗
                 </a>
               )}
               {project.github && (
@@ -101,6 +101,32 @@ function CaseStudy() {
               ))}
             </div>
           </section>
+
+          {Array.isArray(study.team) && (
+            <section aria-labelledby="cs-team">
+              <h2 id="cs-team" className="cs-h mono">{t('caseStudy.team')}</h2>
+              <ul className="cs-team">
+                {study.team.map((name) => (
+                  <li key={name}>{name}</li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {Array.isArray(study.advisors) && (
+            <section aria-labelledby="cs-advisors">
+              <h2 id="cs-advisors" className="cs-h mono">{t('caseStudy.advisors')}</h2>
+              <div className="cs-advisors">
+                {study.advisors.map((a) => (
+                  <div key={a.name} className="cs-advisor">
+                    <a className="link-u" href={a.url} target="_blank" rel="noopener noreferrer">{a.name} ↗</a>
+                    <div className="mono">{a.role}</div>
+                    <div className="cs-advisor-aff">{a.affiliation}</div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </div>
 

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const SLUGS = ['osguide', 'artifactum', 'nutriapp'];
+const SLUGS = ['genie5', 'osguide', 'artifactum', 'nutriapp'];
 const SECTIONS = ['about', 'experience', 'academics', 'projects', 'skills', 'volunteering', 'contact'];
 
 // Keep tests deterministic and offline: stub every third-party request (GitHub API,

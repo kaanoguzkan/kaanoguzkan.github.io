@@ -24,7 +24,7 @@
       "line2": "für Genomik",
       "line3": "und Lernen"
     },
-    "metaText": "Informatikstudent (Bachelor) an der <strong>Bilkent-Universität</strong> und ehrenamtliche studentische Hilfskraft am <strong>Alkan Lab</strong>. Ich arbeite an GPU-Software zur Analyse von DNA-Sequenzierdaten und an Werkzeugen, die das Lernen der Informatik erleichtern.",
+    "metaText": "Informatikstudent (Bachelor) an der <strong>Bilkent-Universität</strong> und ehrenamtliche studentische Hilfskraft am <strong>Alkan Lab</strong>. Ich arbeite an GPU-Software für DNA-Sequenzierdaten und an belegbasierten Karten der Genregulation und baue Werkzeuge, die das Lernen der Informatik erleichtern.",
     "subtitle": "CS @ Bilkent | Studentische Hilfskraft @ Alkan Lab",
     "tagline": "Computing für Genomik und Lernen.",
     "cta": "Meine Projekte",
@@ -44,10 +44,10 @@
       "statusLabel": "Status",
       "statusValue": "Offen für Forschungsmöglichkeiten und Kollaborationen",
       "focusLabel": "Fokus",
-      "focusValue": "GPU-Computing · Bioinformatik · Informatikdidaktik"
+      "focusValue": "Computational Biology · GPU-Computing · Informatikdidaktik"
     },
-    "paragraph1": "Ich studiere Informatik (Computer Engineering, Bachelor) an der <strong>Bilkent-Universität</strong> (Abschluss 2027) und interessiere mich für Hochleistungsrechnen in den Lebenswissenschaften und für die Didaktik der Informatik. Mich reizen Arbeiten, bei denen sorgfältiges Engineering eine Analyse schneller, reproduzierbarer oder verständlicher macht.",
-    "paragraph2": "Ich bin ehrenamtliche studentische Hilfskraft am <strong>Alkan Lab für Bioinformatik und Computational Genomics</strong>: Dort modernisiere ich CuCLARK, ein GPU-Werkzeug, das bestimmt, welche Organismen in einer DNA-Probe vorkommen, und baue Pipelines, die es über Tausende Sequenzdateien laufen lassen. Außerdem habe ich <strong>OSGuide</strong> gebaut, eine kostenlose interaktive Plattform zum Lernen von Betriebssystemen. Zuvor habe ich Software-Entwicklung bei <strong>JotForm</strong> (Praktikum) und <strong>Look & Cash</strong> (Werkstudent) betrieben.",
+    "paragraph1": "Ich studiere Informatik (Computer Engineering, Bachelor) an der <strong>Bilkent-Universität</strong> (Abschluss 2027) und interessiere mich für Computational Biology, Hochleistungsrechnen und die Didaktik der Informatik. Mich reizen Arbeiten, bei denen sorgfältiges Engineering eine Analyse schneller, reproduzierbarer oder verständlicher macht.",
+    "paragraph2": "Ich bin ehrenamtliche studentische Hilfskraft am <strong>Alkan Lab für Bioinformatik und Computational Genomics</strong> (Leitung: Prof. Can Alkan): Dort modernisiere ich CuCLARK, ein GPU-Werkzeug, das bestimmt, welche Organismen in einer DNA-Probe vorkommen, und baue Pipelines, die es über Tausende Sequenzdateien laufen lassen. Mit vier Kommilitonen und ebenfalls unter Betreuung von Prof. Alkan baue ich außerdem <strong>Genie5</strong>, unser Senior-Design-Projekt, das biomedizinische Fragen in belegbasierte Karten der Genregulation übersetzt. Außerdem habe ich <strong>OSGuide</strong> gebaut, eine kostenlose interaktive Plattform zum Lernen von Betriebssystemen. Zuvor habe ich Software-Entwicklung bei <strong>JotForm</strong> (Praktikum) und <strong>Look & Cash</strong> (Werkstudent) betrieben.",
     "labels": {
       "location": "Standort",
       "languages": "Sprachen"
@@ -76,7 +76,7 @@
         "role": "Studentische Hilfskraft (ehrenamtlich)",
         "company": "Alkan Lab für Bioinformatik und Computational Genomics — Ankara, Türkei",
         "date": "Feb. 2026 – heute",
-        "summary": "Forschungsgruppe für Computational Genomics. CuCLARK, das Werkzeug, an dem ich arbeite, ordnet DNA-Sequenzierreads dem Organismus zu, aus dem sie am wahrscheinlichsten stammen.",
+        "summary": "Von Prof. Can Alkan geleitete Forschungsgruppe für Computational Genomics. CuCLARK, das Werkzeug, an dem ich arbeite, ordnet DNA-Sequenzierreads dem Organismus zu, aus dem sie am wahrscheinlichsten stammen.",
         "bullets": [
           {
             "head": "CuCLARK GPU- & CUDA-Modernisierung",
@@ -172,6 +172,29 @@
     "viewDetails": "Details ansehen",
     "highlightsTitle": "Wichtige Highlights",
     "items": [
+      {
+        "online": true,
+        "year": "2026",
+        "name": "Genie5",
+        "slug": "genie5",
+        "label": "CS491/CS492 — Senior-Design-Projekt",
+        "description": "Ein Multiagentensystem, das eine biomedizinische Forschungsfrage in eine gerichtete, belegbasierte Karte der Genregulation übersetzt, aufgebaut aus wissenschaftlichen Artikeln und kuratierten biologischen Datenbanken. Ein CS491/CS492-Senior-Design-Projekt an der Bilkent unter Betreuung von Prof. Can Alkan.",
+        "detailedDescription": "Genie5 (GEne Network Inference from Evidence) ist unser CS491/CS492-Senior-Design-Projekt an der Bilkent-Universität, umgesetzt vom Team Twin-Pathways. Statistische Analysen können zeigen, dass zwei Gene zusammenhängen, aber selten, welches das andere reguliert; deshalb klären Forschende die Frage oft per Hand in der Literatur, Genpaar für Genpaar. Genie5 automatisiert diese Recherche: Es sammelt Belege aus wissenschaftlichen Artikeln und kuratierten biologischen Datenbanken, gleicht widersprüchliche Berichte ab und bestimmt Richtung und Art jeder Interaktion, etwa Aktivierung oder Repression. Forschende erhalten ein interaktives 2D/3D-Netzwerk, das sie erkunden, überprüfen und in ihre bestehenden Analysewerkzeuge exportieren können.",
+        "highlights": [
+          "Verwandelt ungerichtete biologische Netzwerke in gerichtete Wissensgraphen mit Quellenangaben",
+          "Sammelt Belege aus wissenschaftlichen Artikeln und kuratierten biologischen Datenbanken",
+          "Gleicht widersprüchliche Berichte ab und klassifiziert jede Interaktion, zum Beispiel als Aktivierung oder Repression",
+          "Interaktives 2D/3D-Netzwerk zum Erkunden, Überprüfen und Exportieren",
+          "Betreut von Prof. Can Alkan, mit Asst. Prof. Gurkan Bebek (Case Western Reserve University) als Innovationsexperte"
+        ],
+        "screenshots": [],
+        "tags": ["Bioinformatik", "Genregulation", "Wissensgraphen", "Multiagentensysteme"],
+        "github": "",
+        "linkText": "Projektberichte werden auf der Projektwebsite veröffentlicht.",
+        "demo": "https://twin-pathways.github.io",
+        "demoLabel": "Projektwebsite",
+        "image": ""
+      },
       {
         "online": true,
         "year": "2026",
@@ -367,12 +390,62 @@
     "outcome": "Ergebnis",
     "stack": "Technologien",
     "links": "Links",
+    "team": "Team",
+    "advisors": "Betreuer",
     "more": "Weitere Fallstudien",
     "readCaseStudy": "Fallstudie lesen",
     "notFound": "Diese Fallstudie existiert nicht.",
     "notFoundLink": "Zurück zu den Projekten"
   },
   "caseStudies": {
+    "genie5": {
+      "role": "Teammitglied, Senior-Design-Projekt (Team aus fünf Personen)",
+      "context": "Statistische Analysen von Gendaten können zeigen, dass zwei Gene zusammenhängen, aber selten, welches das andere reguliert. Forschende klären das meist per Hand in der Literatur, Genpaar für Genpaar. Genie5 (GEne Network Inference from Evidence) automatisiert diese Recherche als CS491/CS492-Senior-Design-Projekt an der Bilkent-Universität.",
+      "approach": [
+        {
+          "head": "Belege aus Artikeln und Datenbanken",
+          "body": "Genie5 geht von einer biomedizinischen Forschungsfrage aus und sammelt Belege aus wissenschaftlichen Artikeln und kuratierten biologischen Datenbanken. Das Beispiel auf der Projektwebsite zeigt Quellen wie Europe PMC, NCBI Entrez und STRING."
+        },
+        {
+          "head": "Von ungerichtet zu gerichtet",
+          "body": "Assoziationsdatenbanken wie STRING melden, dass zwei Gene verbunden sind, enthalten aber keine Richtung. Genie5, ein Multiagentensystem, verwandelt solche ungerichteten Netzwerke in gerichtete Wissensgraphen mit Quellenangaben."
+        },
+        {
+          "head": "Widersprüchliche Berichte abgleichen",
+          "body": "Es gleicht widersprüchliche Berichte ab und bestimmt Richtung und Art jeder Interaktion, etwa Aktivierung oder Repression."
+        },
+        {
+          "head": "Erkundbare Ausgabe",
+          "body": "Forschende erhalten ein interaktives 2D/3D-Netzwerk, das sie erkunden, überprüfen und in ihre bestehenden Analysewerkzeuge exportieren können."
+        }
+      ],
+      "outcome": [
+        "In Arbeit: CS491/CS492-Senior-Design-Projekt",
+        "Betreut von Prof. Can Alkan",
+        "Berichte werden auf der Projektwebsite veröffentlicht"
+      ],
+      "team": [
+        "Sırrı Kaan Oğuzkan",
+        "Alper Koçyiğit",
+        "Derin Ceylin Atalar",
+        "Ayça Topkaya",
+        "Ömer Turab Memiş"
+      ],
+      "advisors": [
+        {
+          "name": "Prof. Can Alkan",
+          "role": "Betreuer",
+          "affiliation": "Fachbereich Computer Engineering, Bilkent-Universität; Leitung (PI) des Alkan Lab",
+          "url": "https://www.cs.bilkent.edu.tr/~calkan/"
+        },
+        {
+          "name": "Asst. Prof. Gurkan Bebek",
+          "role": "Innovationsexperte",
+          "affiliation": "Case Center for Proteomics and Bioinformatics, Case Western Reserve University",
+          "url": "https://case.edu/medicine/nutrition/about-us/faculty/gurkan-bebek"
+        }
+      ]
+    },
     "osguide": {
       "role": "Einzelprojekt: Konzept, Inhalt und Entwicklung",
       "context": "Den klassischen Betriebssystem-Lehrplan, angelehnt an Bilkents CS342, in ein Web-Erlebnis verwandeln, in dem sich jede Idee lesen, ansehen und ausprobieren lässt.",
@@ -459,7 +532,7 @@
       },
       {
         "k": "Baue",
-        "v": "OSGuide: eine kostenlose interaktive Plattform zum Lernen von Betriebssystemen."
+        "v": "Genie5, unser Senior-Design-Projekt: belegbasierte Karten der Genregulation."
       },
       {
         "k": "Studium",

@@ -4079,3 +4079,28 @@ nav#navbar { display: none; }
     color: var(--ink-3);
     max-width: 260px;
 }
+
+/* Case study: team and advisors */
+.cs-team {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 28px;
+    font-size: 16px;
+    color: var(--ink-2);
+}
+.cs-advisors { display: flex; flex-direction: column; }
+.cs-advisor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 16px 0;
+    border-top: 1px solid var(--rule);
+    font-family: var(--display);
+    font-size: 18px;
+}
+.cs-advisor:last-child { border-bottom: 1px solid var(--rule); }
+.cs-advisor-aff { font-family: var(--body); font-size: 14px; color: var(--ink-3); }

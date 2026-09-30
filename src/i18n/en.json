@@ -24,7 +24,7 @@
       "line2": "for genomics",
       "line3": "and learning"
     },
-    "metaText": "Computer Engineering undergraduate at <strong>Bilkent University</strong> and research volunteer at <strong>Alkan Lab</strong>. I work on GPU software for analyzing DNA sequencing data, and on tools that make computer science easier to learn.",
+    "metaText": "Computer Engineering undergraduate at <strong>Bilkent University</strong> and research volunteer at <strong>Alkan Lab</strong>. I work on GPU software for DNA sequencing data and on evidence-backed maps of gene regulation, and I build tools that make computer science easier to learn.",
     "subtitle": "CS @ Bilkent | Undergrad Volunteer @ Alkan Lab",
     "tagline": "Computing for genomics and learning.",
     "cta": "View My Work",
@@ -38,15 +38,15 @@
   },
   "about": {
     "title": "About",
-    "paragraph1": "I'm a Computer Engineering undergraduate at <strong>Bilkent University</strong> (class of 2027) interested in high-performance computing for the life sciences and in computer science education. I like work where careful engineering makes an analysis faster, more reproducible, or easier to understand.",
-    "paragraph2": "I volunteer as an undergraduate researcher at <strong>Alkan Lab for Bioinformatics & Computational Genomics</strong>, where I modernize CuCLARK, a GPU tool that identifies which organisms are present in a DNA sample, and build pipelines that run it over thousands of sequencing files. I also built <strong>OSGuide</strong>, a free interactive platform for learning operating systems. Earlier, I did software engineering at <strong>JotForm</strong> (internship) and <strong>Look & Cash</strong> (part-time).",
+    "paragraph1": "I'm a Computer Engineering undergraduate at <strong>Bilkent University</strong> (class of 2027) interested in computational biology, high-performance computing, and computer science education. I like work where careful engineering makes an analysis faster, more reproducible, or easier to understand.",
+    "paragraph2": "I volunteer as an undergraduate researcher at <strong>Alkan Lab for Bioinformatics & Computational Genomics</strong>, led by Prof. Can Alkan, where I modernize CuCLARK, a GPU tool that identifies which organisms are present in a DNA sample, and build pipelines that run it over thousands of sequencing files. With four classmates, and under Prof. Alkan's supervision, I'm also building <strong>Genie5</strong>, our senior design project, which turns biomedical questions into evidence-backed maps of gene regulation. I also built <strong>OSGuide</strong>, a free interactive platform for learning operating systems. Earlier, I did software engineering at <strong>JotForm</strong> (internship) and <strong>Look & Cash</strong> (part-time).",
     "sidebar": {
       "basedLabel": "Based",
       "languagesLabel": "Languages",
       "statusLabel": "Status",
       "statusValue": "Open to research opportunities & collaborations",
       "focusLabel": "Focus",
-      "focusValue": "GPU computing · Bioinformatics · CS education"
+      "focusValue": "Computational biology · GPU computing · CS education"
     },
     "labels": {
       "location": "Location",
@@ -76,7 +76,7 @@
         "role": "Undergraduate Volunteer",
         "company": "Alkan Lab for Bioinformatics & Computational Genomics — Ankara, Turkey",
         "date": "Feb 2026 – Present",
-        "summary": "A computational genomics research group. CuCLARK, the tool I work on, classifies DNA sequencing reads by the organism they most likely came from.",
+        "summary": "A computational genomics research group led by Prof. Can Alkan. CuCLARK, the tool I work on, classifies DNA sequencing reads by the organism they most likely came from.",
         "bullets": [
           {
             "head": "CuCLARK GPU & CUDA Modernization",
@@ -172,6 +172,29 @@
     "viewDetails": "View Details",
     "highlightsTitle": "Key Highlights",
     "items": [
+      {
+        "online": true,
+        "year": "2026",
+        "name": "Genie5",
+        "slug": "genie5",
+        "label": "CS491/CS492 — Senior Design Project",
+        "description": "A multi-agent system that turns a biomedical research question into a directed, evidence-backed map of gene regulation, built from scientific papers and curated biological databases. A CS491/CS492 senior design project at Bilkent, supervised by Prof. Can Alkan.",
+        "detailedDescription": "Genie5 (GEne Network Inference from Evidence) is our CS491/CS492 senior design project at Bilkent University, built by the Twin-Pathways team. Statistical analysis can reveal that two genes are linked, but rarely which one regulates the other, so researchers often settle the question by hand-searching the literature, one gene pair at a time. Genie5 automates that review: it collects evidence from scientific papers and curated biological databases, reconciles conflicting reports, and determines the direction and type of each interaction, such as activation or repression. Researchers receive an interactive 2D/3D network that they can explore, verify, and export to their existing analysis tools.",
+        "highlights": [
+          "Turns undirected biological networks into directed, sourced knowledge graphs",
+          "Collects evidence from scientific papers and curated biological databases",
+          "Reconciles conflicting reports and classifies each interaction, for example as activation or repression",
+          "Interactive 2D/3D network that can be explored, verified, and exported",
+          "Supervised by Prof. Can Alkan, with Asst. Prof. Gurkan Bebek (Case Western Reserve University) as innovation expert"
+        ],
+        "screenshots": [],
+        "tags": ["Bioinformatics", "Gene Regulation", "Knowledge Graphs", "Multi-Agent Systems"],
+        "github": "",
+        "linkText": "Project reports will be published on the project website.",
+        "demo": "https://twin-pathways.github.io",
+        "demoLabel": "Project website",
+        "image": ""
+      },
       {
         "online": true,
         "year": "2026",
@@ -367,12 +390,62 @@
     "outcome": "Outcome",
     "stack": "Stack",
     "links": "Links",
+    "team": "Team",
+    "advisors": "Advisors",
     "more": "More case studies",
     "readCaseStudy": "Read case study",
     "notFound": "This case study doesn't exist.",
     "notFoundLink": "Back to projects"
   },
   "caseStudies": {
+    "genie5": {
+      "role": "Team member, senior design project (team of five)",
+      "context": "Statistical analysis of gene data can reveal that two genes are linked, but rarely which one regulates the other. Researchers usually settle this by hand-searching the literature, one gene pair at a time. Genie5 (GEne Network Inference from Evidence) automates that review as a CS491/CS492 senior design project at Bilkent University.",
+      "approach": [
+        {
+          "head": "Evidence from papers and databases",
+          "body": "Genie5 starts from a biomedical research question and collects evidence from scientific papers and curated biological databases. The example on the project website shows sources such as Europe PMC, NCBI Entrez and STRING."
+        },
+        {
+          "head": "From undirected to directed",
+          "body": "Association databases such as STRING report that two genes are linked but carry no direction. Genie5, a multi-agent system, turns such undirected networks into directed, sourced knowledge graphs."
+        },
+        {
+          "head": "Reconciling conflicting reports",
+          "body": "It reconciles conflicting reports and determines the direction and type of each interaction, such as activation or repression."
+        },
+        {
+          "head": "Explorable output",
+          "body": "Researchers receive an interactive 2D/3D network that they can explore, verify, and export to their existing analysis tools."
+        }
+      ],
+      "outcome": [
+        "In progress: CS491/CS492 senior design project",
+        "Supervised by Prof. Can Alkan",
+        "Reports to be published on the project website"
+      ],
+      "team": [
+        "Sırrı Kaan Oğuzkan",
+        "Alper Koçyiğit",
+        "Derin Ceylin Atalar",
+        "Ayça Topkaya",
+        "Ömer Turab Memiş"
+      ],
+      "advisors": [
+        {
+          "name": "Prof. Can Alkan",
+          "role": "Supervisor",
+          "affiliation": "Department of Computer Engineering, Bilkent University; PI of Alkan Lab",
+          "url": "https://www.cs.bilkent.edu.tr/~calkan/"
+        },
+        {
+          "name": "Asst. Prof. Gurkan Bebek",
+          "role": "Innovation Expert",
+          "affiliation": "Case Center for Proteomics and Bioinformatics, Case Western Reserve University",
+          "url": "https://case.edu/medicine/nutrition/about-us/faculty/gurkan-bebek"
+        }
+      ]
+    },
     "osguide": {
       "role": "Solo project: design, content and engineering",
       "context": "Turn the classic operating systems curriculum, structured around Bilkent's CS342, into a web experience where each idea can be read, watched and tried.",
@@ -459,7 +532,7 @@
       },
       {
         "k": "Building",
-        "v": "OSGuide: a free interactive platform for learning operating systems."
+        "v": "Genie5, our senior design project: evidence-backed maps of gene regulation."
       },
       {
         "k": "Studying",

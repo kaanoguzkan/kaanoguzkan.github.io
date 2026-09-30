@@ -159,7 +159,7 @@ function ProjectModal() {
                 rel="noopener noreferrer"
               >
                 <ExternalLinkIcon />
-                {t('projects.demoText')}
+                {project.demoLabel || t('projects.demoText')}
               </a>
             )}
           </div>

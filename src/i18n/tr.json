@@ -24,7 +24,7 @@
       "line2": "öğrenme için",
       "line3": "hesaplama"
     },
-    "metaText": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği lisans öğrencisi ve <strong>Alkan Lab</strong>'da gönüllü araştırmacı. DNA dizileme verilerini analiz eden GPU yazılımları ve bilgisayar bilimini öğrenmeyi kolaylaştıran araçlar üzerinde çalışıyorum.",
+    "metaText": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği lisans öğrencisi ve <strong>Alkan Lab</strong>'da gönüllü araştırmacı. DNA dizileme verileri için GPU yazılımları ve kanıta dayalı gen düzenlenmesi haritaları üzerinde çalışıyor, bilgisayar bilimini öğrenmeyi kolaylaştıran araçlar geliştiriyorum.",
     "subtitle": "CS @ Bilkent | Lisans Gönüllü Araştırmacı @ Alkan Lab",
     "tagline": "Genomik ve öğrenme için hesaplama.",
     "cta": "Projelerimi Gör",
@@ -44,10 +44,10 @@
       "statusLabel": "Durum",
       "statusValue": "Araştırma fırsatlarına ve iş birliklerine açık",
       "focusLabel": "Odak",
-      "focusValue": "GPU ile hesaplama · Biyoenformatik · Bilgisayar bilimi eğitimi"
+      "focusValue": "Hesaplamalı biyoloji · GPU ile hesaplama · Bilgisayar bilimi eğitimi"
     },
-    "paragraph1": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği lisans öğrencisiyim (2027 mezunu); yaşam bilimleri için yüksek başarımlı hesaplama ve bilgisayar bilimi eğitimi ilgi alanlarım. Dikkatli mühendisliğin bir analizi daha hızlı, daha tekrarlanabilir veya daha anlaşılır kıldığı işleri seviyorum.",
-    "paragraph2": "<strong>Alkan Biyoenformatik ve Hesaplamalı Genomik Laboratuvarı</strong>'nda lisans gönüllü araştırmacıyım; bir DNA örneğinde hangi organizmaların bulunduğunu belirleyen GPU tabanlı CuCLARK aracını modernize ediyor ve onu binlerce dizileme dosyası üzerinde çalıştıran işlem hatları kuruyorum. Ayrıca işletim sistemlerini öğrenmek için ücretsiz, etkileşimli bir platform olan <strong>OSGuide</strong>'ı geliştirdim. Daha önce <strong>JotForm</strong>'da (staj) ve <strong>Look & Cash</strong>'te (yarı zamanlı) yazılım mühendisliği yaptım.",
+    "paragraph1": "<strong>Bilkent Üniversitesi</strong>'nde Bilgisayar Mühendisliği lisans öğrencisiyim (2027 mezunu); hesaplamalı biyoloji, yüksek başarımlı hesaplama ve bilgisayar bilimi eğitimi ilgi alanlarım. Dikkatli mühendisliğin bir analizi daha hızlı, daha tekrarlanabilir veya daha anlaşılır kıldığı işleri seviyorum.",
+    "paragraph2": "<strong>Alkan Biyoenformatik ve Hesaplamalı Genomik Laboratuvarı</strong>'nda (yönetici: Prof. Can Alkan) lisans gönüllü araştırmacıyım; bir DNA örneğinde hangi organizmaların bulunduğunu belirleyen GPU tabanlı CuCLARK aracını modernize ediyor ve onu binlerce dizileme dosyası üzerinde çalıştıran işlem hatları kuruyorum. Dört sınıf arkadaşımla birlikte, yine Prof. Alkan danışmanlığında, biyomedikal soruları kanıta dayalı gen düzenlenmesi haritalarına dönüştüren bitirme tasarım projemiz <strong>Genie5</strong>'i de geliştiriyorum. Ayrıca işletim sistemlerini öğrenmek için ücretsiz, etkileşimli bir platform olan <strong>OSGuide</strong>'ı geliştirdim. Daha önce <strong>JotForm</strong>'da (staj) ve <strong>Look & Cash</strong>'te (yarı zamanlı) yazılım mühendisliği yaptım.",
     "labels": {
       "location": "Konum",
       "languages": "Diller"
@@ -76,7 +76,7 @@
         "role": "Lisans Gönüllü Araştırmacı",
         "company": "Alkan Biyoenformatik ve Hesaplamalı Genomik Laboratuvarı — Ankara, Türkiye",
         "date": "Şub 2026 – Devam Ediyor",
-        "summary": "Hesaplamalı genomik araştırma grubu. Üzerinde çalıştığım CuCLARK aracı, DNA dizileme okumalarını en olası geldikleri organizmaya göre sınıflandırır.",
+        "summary": "Prof. Can Alkan'ın yönettiği hesaplamalı genomik araştırma grubu. Üzerinde çalıştığım CuCLARK aracı, DNA dizileme okumalarını en olası geldikleri organizmaya göre sınıflandırır.",
         "bullets": [
           {
             "head": "CuCLARK GPU ve CUDA Modernizasyonu",
@@ -172,6 +172,29 @@
     "viewDetails": "Detayları Gör",
     "highlightsTitle": "Öne Çıkanlar",
     "items": [
+      {
+        "online": true,
+        "year": "2026",
+        "name": "Genie5",
+        "slug": "genie5",
+        "label": "CS491/CS492 — Bitirme Tasarım Projesi",
+        "description": "Bir biyomedikal araştırma sorusunu, bilimsel makalelerden ve küratörlü biyolojik veri tabanlarından derlenen kanıtlarla desteklenmiş, yönlü bir gen düzenlenmesi haritasına dönüştüren çok ajanlı bir sistem. Bilkent'te Prof. Can Alkan danışmanlığında yürütülen bir CS491/CS492 bitirme tasarım projesi.",
+        "detailedDescription": "Genie5 (GEne Network Inference from Evidence), Twin-Pathways ekibi olarak Bilkent Üniversitesi'nde yürüttüğümüz CS491/CS492 bitirme tasarım projesidir. İstatistiksel analiz iki genin ilişkili olduğunu gösterebilir, ancak hangisinin diğerini düzenlediğini nadiren söyler; bu yüzden araştırmacılar soruyu çoğu zaman literatürü gen çifti gen çifti elle tarayarak çözer. Genie5 bu taramayı otomatikleştirir: bilimsel makalelerden ve küratörlü biyolojik veri tabanlarından kanıt toplar, çelişen raporları uzlaştırır ve her etkileşimin yönünü ve türünü (aktivasyon veya baskılama gibi) belirler. Araştırmacılar, keşfedip doğrulayabilecekleri ve mevcut analiz araçlarına aktarabilecekleri etkileşimli bir 2B/3B ağ elde eder.",
+        "highlights": [
+          "Yönsüz biyolojik ağları yönlü, kaynaklı bilgi grafiklerine dönüştürür",
+          "Bilimsel makalelerden ve küratörlü biyolojik veri tabanlarından kanıt toplar",
+          "Çelişen raporları uzlaştırır ve her etkileşimi sınıflandırır; örneğin aktivasyon veya baskılama",
+          "Keşfedilebilen, doğrulanabilen ve dışa aktarılabilen etkileşimli 2B/3B ağ",
+          "Prof. Can Alkan danışmanlığında; Asst. Prof. Gurkan Bebek (Case Western Reserve University) inovasyon uzmanı olarak"
+        ],
+        "screenshots": [],
+        "tags": ["Biyoenformatik", "Gen Düzenlenmesi", "Bilgi Grafikleri", "Çok Ajanlı Sistemler"],
+        "github": "",
+        "linkText": "Proje raporları proje web sitesinde yayımlanacak.",
+        "demo": "https://twin-pathways.github.io",
+        "demoLabel": "Proje web sitesi",
+        "image": ""
+      },
       {
         "online": true,
         "year": "2026",
@@ -367,12 +390,62 @@
     "outcome": "Sonuç",
     "stack": "Teknolojiler",
     "links": "Bağlantılar",
+    "team": "Ekip",
+    "advisors": "Danışmanlar",
     "more": "Diğer vaka çalışmaları",
     "readCaseStudy": "Vaka çalışmasını oku",
     "notFound": "Bu vaka çalışması bulunamadı.",
     "notFoundLink": "Projelere dön"
   },
   "caseStudies": {
+    "genie5": {
+      "role": "Ekip üyesi, bitirme tasarım projesi (beş kişilik ekip)",
+      "context": "Gen verilerinin istatistiksel analizi iki genin ilişkili olduğunu gösterebilir, ancak hangisinin diğerini düzenlediğini nadiren söyler. Araştırmacılar bunu çoğu zaman literatürü gen çifti gen çifti elle tarayarak çözer. Genie5 (GEne Network Inference from Evidence), Bilkent Üniversitesi'nde bir CS491/CS492 bitirme tasarım projesi olarak bu taramayı otomatikleştirir.",
+      "approach": [
+        {
+          "head": "Makalelerden ve veri tabanlarından kanıt",
+          "body": "Genie5 bir biyomedikal araştırma sorusundan yola çıkar ve bilimsel makalelerden ve küratörlü biyolojik veri tabanlarından kanıt toplar. Proje web sitesindeki örnek, Europe PMC, NCBI Entrez ve STRING gibi kaynakları gösterir."
+        },
+        {
+          "head": "Yönsüzden yönlüye",
+          "body": "STRING gibi ilişki veri tabanları iki genin bağlantılı olduğunu bildirir ancak yön içermez. Çok ajanlı bir sistem olan Genie5, bu tür yönsüz ağları yönlü, kaynaklı bilgi grafiklerine dönüştürür."
+        },
+        {
+          "head": "Çelişen raporları uzlaştırma",
+          "body": "Çelişen raporları uzlaştırır ve her etkileşimin yönünü ve türünü (aktivasyon veya baskılama gibi) belirler."
+        },
+        {
+          "head": "Keşfedilebilir çıktı",
+          "body": "Araştırmacılar, keşfedip doğrulayabilecekleri ve mevcut analiz araçlarına aktarabilecekleri etkileşimli bir 2B/3B ağ elde eder."
+        }
+      ],
+      "outcome": [
+        "Devam ediyor: CS491/CS492 bitirme tasarım projesi",
+        "Danışman: Prof. Can Alkan",
+        "Raporlar proje web sitesinde yayımlanacak"
+      ],
+      "team": [
+        "Sırrı Kaan Oğuzkan",
+        "Alper Koçyiğit",
+        "Derin Ceylin Atalar",
+        "Ayça Topkaya",
+        "Ömer Turab Memiş"
+      ],
+      "advisors": [
+        {
+          "name": "Prof. Can Alkan",
+          "role": "Danışman",
+          "affiliation": "Bilgisayar Mühendisliği Bölümü, Bilkent Üniversitesi; Alkan Lab'ın yürütücüsü (PI)",
+          "url": "https://www.cs.bilkent.edu.tr/~calkan/"
+        },
+        {
+          "name": "Asst. Prof. Gurkan Bebek",
+          "role": "İnovasyon Uzmanı",
+          "affiliation": "Case Center for Proteomics and Bioinformatics, Case Western Reserve University",
+          "url": "https://case.edu/medicine/nutrition/about-us/faculty/gurkan-bebek"
+        }
+      ]
+    },
     "osguide": {
       "role": "Tek kişilik proje: tasarım, içerik ve geliştirme",
       "context": "Bilkent'in CS342 müfredatı etrafında yapılandırılmış klasik işletim sistemleri dersini, her fikrin okunabildiği, izlenebildiği ve denenebildiği bir web deneyimine dönüştürmek.",
@@ -459,7 +532,7 @@
       },
       {
         "k": "Geliştiriyorum",
-        "v": "OSGuide: işletim sistemlerini öğrenmek için ücretsiz, etkileşimli bir platform."
+        "v": "Genie5, bitirme tasarım projemiz: kanıta dayalı gen düzenlenmesi haritaları."
       },
       {
         "k": "Okuyorum",
