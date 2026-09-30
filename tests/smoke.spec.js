@@ -173,3 +173,12 @@ test.describe('mobile layout', () => {
     });
   }
 });
+
+test('social preview image is referenced and served', async ({ request }) => {
+  const html = await (await request.get('/')).text();
+  const match = html.match(/<meta property="og:image" content="https:\/\/kaanoguzkan\.com(\/[^"]+)"/);
+  expect(match).not.toBeNull();
+  const res = await request.get(match[1]);
+  expect(res.status()).toBe(200);
+  expect(res.headers()['content-type']).toContain('image/png');
+});
