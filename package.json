@@ -15,7 +15,7 @@
     "i18next": "^26.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-i18next": "^17.0.15",
+    "react-i18next": "^17.0.16",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.13.1",
     "rehype-sanitize": "^6.0.0"
